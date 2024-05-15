@@ -40,7 +40,7 @@ public class FirstStage : MonoBehaviour
         theTimingManager = GetComponent<TimingManager>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (thePlayerController != null)
         {
