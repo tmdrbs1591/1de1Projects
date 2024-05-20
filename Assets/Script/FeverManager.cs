@@ -8,7 +8,7 @@ public class FeverManager : MonoBehaviour
     [SerializeField] GameObject Effect;
 
     [SerializeField] Slider feverSlider = null;
-    [SerializeField] float feverThreshold = 1.0f; // 피버타임이 시작되는 슬라이더 값의 임계치
+    [SerializeField] float feverThreshold = 2.0f; // 피버타임이 시작되는 슬라이더 값의 임계치
 
     [SerializeField] int increaseScore = 10;
     int currentScore = 0;

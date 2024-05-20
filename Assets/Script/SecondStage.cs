@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using static CartoonFX.CFXR_Effect;
 
 public class SecondStage : MonoBehaviour
 {
@@ -328,7 +326,7 @@ public class SecondStage : MonoBehaviour
         else if (noteCount < 211)
         {
 
-            if (currentTime >= beatInterval * 1f)
+            if (currentTime >= beatInterval * 0.932f)
             {
 
                 SpawnDoubleRandomNote();

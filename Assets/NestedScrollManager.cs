@@ -98,11 +98,11 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
 
         if (scrollbar.value >= 0.8f && scrollbar.value <= 1f)
         {
-            titlename.text = "5.YOU Ugly";
+            titlename.text = "5.AAAAAAAAAAAA";
         }
         if (scrollbar.value >= 0.55f && scrollbar.value <= 0.78f)
         {
-            titlename.text = "4.Fuck YXX";
+            titlename.text = "4.NOOOOOOO";
         }
         if (scrollbar.value >= 0.31f && scrollbar.value <= 0.54f)
         {
