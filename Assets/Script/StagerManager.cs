@@ -7,7 +7,8 @@ public class StagerManager : MonoBehaviour
     public enum Stage
     {
         FirstStage,
-        SecondStage
+        SecondStage,
+        CharPanel
     }
 
     public static StagerManager instance;

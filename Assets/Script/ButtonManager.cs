@@ -14,6 +14,7 @@ public class ButtonManager : MonoBehaviour
     bool isSetting = false;
     public bool isCharPanel = false;
 
+
     void Start()
     {
 
@@ -96,6 +97,7 @@ public class ButtonManager : MonoBehaviour
     public void OnPic()
     {
         isCharPanel = true;
+        StagerManager.instance.currentStage = StagerManager.Stage.CharPanel;
         CharPicPanel.SetActive(true);
     }
     public void SecondStage()

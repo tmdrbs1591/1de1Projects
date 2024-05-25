@@ -454,7 +454,7 @@ public class SecondStage : MonoBehaviour
 
        
 
-        map.MapSpeed *= 3000;
+        map.MapSpeed *= 17;
 
         PowerEffect.SetActive(true);
     }
