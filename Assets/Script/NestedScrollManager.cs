@@ -103,15 +103,15 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
 
         if (scrollbar.value >= 0.8f && scrollbar.value <= 1f)
         {
-            titlename.text = "5.AAAAAAAAAAAA";
+            titlename.text = "개발중";
         }
         if (scrollbar.value >= 0.55f && scrollbar.value <= 0.78f)
         {
-            titlename.text = "4.NOOOOOOO";
+            titlename.text = "개발중";
         }
         if (scrollbar.value >= 0.31f && scrollbar.value <= 0.54f)
         {
-            SetStage(StagerManager.Stage.SecondStage, "3.Hello", 2);
+            SetStage(StagerManager.Stage.SecondStage, "개발중", 2);
         }
         if (scrollbar.value >= 0.1f && scrollbar.value <= 0.3f)
         {
