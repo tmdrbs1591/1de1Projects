@@ -68,10 +68,10 @@ public class SecondStage : MonoBehaviour
         }
         else if (noteCount < 33)
         {
-            if (currentTime >= beatInterval * 0.94f)
+            if (currentTime >= beatInterval * 0.93f)
             {
                 SpawnDoubleRandomNote();
-                currentTime -= beatInterval * 0.94f;
+                currentTime -= beatInterval * 0.93f;
                 noteCount++;
             }
         }
@@ -162,19 +162,19 @@ public class SecondStage : MonoBehaviour
         else if (noteCount < 162)
         {
 
-            if (currentTime >= beatInterval * 0.94f)
+            if (currentTime >= beatInterval * 0.943f)
             {
 
                 SpawnRandomNote();
 
-                currentTime -= beatInterval * 0.94f;
+                currentTime -= beatInterval * 0.943f;
                 noteCount++;
             }
         }
         else if (noteCount < 171)
         {
 
-            if (currentTime >= beatInterval * 0.932f)
+            if (currentTime >= beatInterval * 0.943f)
             {
 
                 SpawnRandomNote();
@@ -182,7 +182,7 @@ public class SecondStage : MonoBehaviour
 
 
 
-                currentTime -= beatInterval * 0.932f;
+                currentTime -= beatInterval * 0.943f;
                 noteCount++;
             }
         }
@@ -326,14 +326,14 @@ public class SecondStage : MonoBehaviour
         else if (noteCount < 211)
         {
 
-            if (currentTime >= beatInterval * 0.932f)
+            if (currentTime >= beatInterval * 0.942f)
             {
 
                 SpawnDoubleRandomNote();
 
 
 
-                currentTime -= beatInterval * 0.972f;
+                currentTime -= beatInterval * 0.942f;
                 noteCount++;
             }
         }
@@ -446,15 +446,61 @@ public class SecondStage : MonoBehaviour
                 noteCount++;
             }
         }
+        else if (noteCount < 224)
+        {
+
+            if (currentTime >= beatInterval * 0.462f)
+            {
+
+                SpawnDoubleRandomNote();
+
+
+                currentTime -= beatInterval * 0.462f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 238)
+        {
+
+            if (currentTime >= beatInterval * 0.93f)
+            {
+
+                SpawnDoubleRandomNote();
+
+
+                currentTime -= beatInterval * 0.93f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 239)
+        {
+
+            if (currentTime >= beatInterval * 0.93f)
+            {
+
+                SpawnDoubleRandomNote();
+
+                StartCoroutine(ClearPanelCor());
+                currentTime -= beatInterval * 0.93f;
+                noteCount++;
+            }
+        }
     }
-        #endregion
+
+    IEnumerator ClearPanelCor()
+    {
+       
+        yield return new WaitForSeconds(4f);
+        ClearPanel.SetActive(true);
+    }
+    #endregion
     IEnumerator Effect()
     {
         yield return new WaitForSeconds(1.4f);
 
        
 
-        map.MapSpeed *= 17;
+        map.MapSpeed *= 1000;
 
         PowerEffect.SetActive(true);
     }

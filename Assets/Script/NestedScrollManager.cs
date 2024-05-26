@@ -103,15 +103,15 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
 
         if (scrollbar.value >= 0.8f && scrollbar.value <= 1f && !buttonManager.isCharPanel)
         {
-            titlename.text = "개발중";
+            SetStage(StagerManager.Stage.fifthStage, "개발중", 4);
         }
         if (scrollbar.value >= 0.55f && scrollbar.value <= 0.78f && !buttonManager.isCharPanel)
         {
-            titlename.text = "개발중";
+            SetStage(StagerManager.Stage.fourthStage, "개발중", 3);
         }
         if (scrollbar.value >= 0.31f && scrollbar.value <= 0.54f && !buttonManager.isCharPanel)
         {
-            SetStage(StagerManager.Stage.SecondStage, "개발중", 2);
+            SetStage(StagerManager.Stage.ThirdStage, "개발중", 2);
         }
         if (scrollbar.value >= 0.1f && scrollbar.value <= 0.3f && !buttonManager.isCharPanel)
         {

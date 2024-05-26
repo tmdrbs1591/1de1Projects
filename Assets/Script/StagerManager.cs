@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class StagerManager : MonoBehaviour
 {
@@ -8,12 +9,20 @@ public class StagerManager : MonoBehaviour
     {
         FirstStage,
         SecondStage,
+        ThirdStage,
+        fourthStage,
+        fifthStage,
         CharPanel
     }
 
     public static StagerManager instance;
     public GameObject Fadein;
     public ButtonManager buttonManager;
+
+    bool isStart;
+
+    [SerializeField] GameObject fixedPanel; 
+
     bool charpanel = false;
 
 
@@ -36,7 +45,7 @@ public class StagerManager : MonoBehaviour
     void Update()
     {
         // 이거를 지우고 하나의 로딩씬으로 가게 바꾸고 이걸 다른거에 옮겨 코루틴이랑 같이
-        if (Input.GetKeyDown(KeyCode.Return) && !buttonManager.isCharPanel)
+        if (Input.GetKeyDown(KeyCode.Return) && !buttonManager.isCharPanel && !isStart)
         {
             if (currentStage == Stage.FirstStage)
             {
@@ -52,14 +61,23 @@ public class StagerManager : MonoBehaviour
                 CameraShake.instance.Shake();
 
                 Fadein.SetActive(true);
-
                 StartCoroutine(SceneLate(2));
-
+            }
+            else
+            {
+                AudioManager.instance.PlaySound(transform.position, 5, Random.Range(1.0f, 1.0f), 1);
+                FixedPanel();
             }
         }
     }
+    void FixedPanel()
+    {
+        fixedPanel.SetActive(false);
+        fixedPanel.SetActive(true);
+    }
     IEnumerator SceneLate(int num)
     {
+        isStart = true;
         yield return new WaitForSeconds(0.7f);
         SceneManager.LoadScene(num);
     }

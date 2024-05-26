@@ -40,6 +40,11 @@ public class SoundManager : MonoBehaviour
         {
             PlaySong(1);
         }
+        else
+        {
+            PlaySong(2);
+        }
+
 
         // 음악이 끝났는지 확인하고, 재생 중인 곡이 없으면 isPlaying 변수를 false로 변경
         if (!audio.isPlaying)
