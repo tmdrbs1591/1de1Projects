@@ -490,7 +490,7 @@ public class SecondStage : MonoBehaviour
     IEnumerator ClearPanelCor()
     {
        
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(2f);
         ClearPanel.SetActive(true);
     }
     #endregion

@@ -81,7 +81,7 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
     {
         if (targetIndex < SIZE - 1)
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow) && !buttonManager.isCharPanel)
+            if (Input.GetKeyDown(KeyCode.RightArrow) && !buttonManager.isCharPanel || Input.GetKeyDown(KeyCode.D) && !buttonManager.isCharPanel)
             {
                 AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1f, 1f), 1);
 
@@ -91,7 +91,7 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
         }
         if (targetIndex > 0)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && !buttonManager.isCharPanel)
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && !buttonManager.isCharPanel || Input.GetKeyDown(KeyCode.A) && !buttonManager.isCharPanel)
             {
                 AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1f, 1f), 1);
 
