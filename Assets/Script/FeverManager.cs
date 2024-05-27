@@ -63,6 +63,7 @@ public class FeverManager : MonoBehaviour
 
     void StartFeverTime()
     {
+        AudioManager.instance.PlaySound(transform.position, 6, Random.Range(1f, 1f), 1);
         feverTime = true;
         feverSlider.value = currentScore / 1000f; // 초기값을 현재 값으로 설정
         StartCoroutine(FeverTime());

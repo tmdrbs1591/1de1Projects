@@ -8,6 +8,8 @@ public class TapManager : MonoBehaviour
 {
     public GameObject[] Tap;
     private int currentIndex = 0;
+    public ButtonManager buttonManager;
+
 
     void Start()
     {
@@ -25,14 +27,14 @@ public class TapManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) && buttonManager.isCharPanel|| Input.GetKeyDown(KeyCode.D) && buttonManager.isCharPanel)
         {
             if (currentIndex < Tap.Length - 1)
             {
                 TapClick(currentIndex + 1);
             }
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow) && buttonManager.isCharPanel || Input.GetKeyDown(KeyCode.A) && buttonManager.isCharPanel)
         {
             if (currentIndex > 0)
             {

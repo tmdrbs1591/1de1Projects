@@ -2994,7 +2994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -126, y: 454.575}
+  m_AnchoredPosition: {x: -126, y: 338}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &356185631
@@ -3017,10 +3017,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uD074\uB9AC\uC5B4!"
+  m_text: CLEAR!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2de2f6bd745717c46b0edd6a5c01159b, type: 2}
-  m_sharedMaterial: {fileID: -8044685902350653551, guid: 2de2f6bd745717c46b0edd6a5c01159b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 02f9532441ff49d45a73d9eaeca27199, type: 2}
+  m_sharedMaterial: {fileID: -8044685902350653551, guid: 02f9532441ff49d45a73d9eaeca27199, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3044,8 +3044,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 81.29
-  m_fontSizeBase: 81.29
+  m_fontSize: 250
+  m_fontSizeBase: 250
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3080,7 +3080,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -268.92227, w: -51.530003}
+  m_margin: {x: -727.44775, y: 0, z: -1030.6835, w: -51.530003}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3488,64 +3488,6 @@ Transform:
   m_Father: {fileID: 1251377082}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &411830174
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 411830176}
-  - component: {fileID: 411830175}
-  - component: {fileID: 411830177}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &411830175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411830174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 382cb7e971ee8bf489bc3534100083c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clips:
-  - {fileID: 8300000, guid: c016dc449762e07459acbe35c540f3f1, type: 3}
-  - {fileID: 8300000, guid: 6898d5de42563e345b7c72bf14af52b3, type: 3}
-  songs: []
-  audioObject: {fileID: 708117791136189665, guid: b444c2fc411f8634280b8dc8959ab1ac, type: 3}
---- !u!4 &411830176
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411830174}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2831837, y: -6.1851435, z: -0.10201478}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 860803886}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &411830177
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411830174}
-  m_Enabled: 1
 --- !u!1 &414846477
 GameObject:
   m_ObjectHideFlags: 0
@@ -6115,7 +6057,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 556791595}
-  - {fileID: 411830176}
+  - {fileID: 1426698980}
   - {fileID: 2027260399}
   - {fileID: 616009665}
   - {fileID: 461501685}
@@ -7868,7 +7810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00015259, y: -72}
+  m_AnchoredPosition: {x: -688, y: -57}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1093863492
@@ -9839,6 +9781,69 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1426698979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1426698980}
+  - component: {fileID: 1426698982}
+  - component: {fileID: 1426698981}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1426698980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426698979}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2831839, y: -6.1851435, z: -0.10201478}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 860803886}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1426698981
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426698979}
+  m_Enabled: 1
+--- !u!114 &1426698982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426698979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 382cb7e971ee8bf489bc3534100083c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: c016dc449762e07459acbe35c540f3f1, type: 3}
+  - {fileID: 8300000, guid: 6898d5de42563e345b7c72bf14af52b3, type: 3}
+  - {fileID: 8300000, guid: 791d4aa16d1b11f439dda487d6c5ddbf, type: 3}
+  - {fileID: 8300000, guid: fb52d95ef18e1514593fdce165e17cfa, type: 3}
+  - {fileID: 8300000, guid: 60e8b1e5059daae41a68c13fb1de3ae5, type: 3}
+  - {fileID: 8300000, guid: 519c28e3c5eb21d44a49dd9fdf1cfbc3, type: 3}
+  - {fileID: 8300000, guid: 0b47d2c4acb9d1e4d914a6e1f2711f94, type: 3}
+  songs: []
+  audioObject: {fileID: 708117791136189665, guid: b444c2fc411f8634280b8dc8959ab1ac, type: 3}
 --- !u!1 &1427607492
 GameObject:
   m_ObjectHideFlags: 0
@@ -16394,8 +16399,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2de2f6bd745717c46b0edd6a5c01159b, type: 2}
-  m_sharedMaterial: {fileID: -8044685902350653551, guid: 2de2f6bd745717c46b0edd6a5c01159b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 02f9532441ff49d45a73d9eaeca27199, type: 2}
+  m_sharedMaterial: {fileID: -8044685902350653551, guid: 02f9532441ff49d45a73d9eaeca27199, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17419,8 +17424,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: S
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2de2f6bd745717c46b0edd6a5c01159b, type: 2}
-  m_sharedMaterial: {fileID: -8044685902350653551, guid: 2de2f6bd745717c46b0edd6a5c01159b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cf63d61b850bc4547b8c7e59798aa2c1, type: 2}
+  m_sharedMaterial: {fileID: -8044685902350653551, guid: cf63d61b850bc4547b8c7e59798aa2c1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
