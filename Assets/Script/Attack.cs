@@ -21,13 +21,13 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q)|| Input.GetKeyDown(KeyCode.I) && !controller.Death)
+        if (Input.GetKeyDown(KeyCode.Q)|| Input.GetKeyDown(KeyCode.F) && !controller.Death)
         {
             animator.SetTrigger("QAttack");
             RotateLaser(Q);
             StartCoroutine(laserSetActive());
         }
-        else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.O) && !controller.Death)
+        else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) && !controller.Death)
         {
 
             animator.SetTrigger("WAttack");
@@ -35,7 +35,7 @@ public class Attack : MonoBehaviour
             StartCoroutine(laserSetActive());
 
         }
-        else if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.P) && !controller.Death)
+        else if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.J) && !controller.Death)
         {
             animator.SetTrigger("EAttack");
 
