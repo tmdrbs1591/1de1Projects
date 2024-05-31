@@ -40,9 +40,13 @@ public class SoundManager : MonoBehaviour
         {
             PlaySong(1);
         }
-        else
+        else if (StagerManager.instance.currentStage == StagerManager.Stage.ThirdStage)
         {
             PlaySong(2);
+        }
+        else
+        {
+            PlaySong(3);
         }
 
 

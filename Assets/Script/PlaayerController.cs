@@ -50,7 +50,7 @@ public class PlaayerController : MonoBehaviour
         if (!Death)
         {
             bool qPressed = Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.F);
-            bool wPressed = Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.Space);
+            bool wPressed = Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.H);
             bool ePressed = Input.GetKeyDown(KeyCode.E)|| Input.GetKeyDown(KeyCode.J);
 
             if ((Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.F)) && wPressed ||
@@ -60,7 +60,7 @@ public class PlaayerController : MonoBehaviour
                 return; // 동시 입력 처리 후 함수 종료
             }
             // W 또는 O가 눌린 상태에서 E 또는 P가 눌리면
-            else if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)) && ePressed ||
+            else if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.H)) && ePressed ||
                      (Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.J)) && wPressed)
             {
                 theTimingManager.CheckTimingWithKey("EW");
@@ -69,13 +69,13 @@ public class PlaayerController : MonoBehaviour
 
             if (qPressed)
             {
-                QPanel.SetActive(true);
+                QPanel.SetActive(true);     
                 theTimingManager.CheckTimingWithKey("Q");
 
             }
-
             if (Input.GetKey(KeyCode.Space))
             {
+                Debug.Log("d");
                 theTimingManager.CheckTimingWithKey("Space");
 
             }
