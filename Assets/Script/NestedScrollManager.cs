@@ -111,15 +111,15 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
         }
         if (scrollbar.value >= 0.31f && scrollbar.value <= 0.54f && !buttonManager.isCharPanel)
         {
-            SetStage(StagerManager.Stage.ThirdStage, "개발중", 2);
+            SetStage(StagerManager.Stage.ThirdStage, "IyaIya", 2);
         }
         if (scrollbar.value >= 0.1f && scrollbar.value <= 0.3f && !buttonManager.isCharPanel)
         {
-            SetStage(StagerManager.Stage.SecondStage, "2.Nitro Fun - Final Boss", 1);
+            SetStage(StagerManager.Stage.SecondStage, "Nitro Fun - Final Boss", 1);
         }
         if (scrollbar.value <= 0.09f && !buttonManager.isCharPanel)
         {
-            SetStage(StagerManager.Stage.FirstStage, "1.A Dance of Fire and Ice", 0);
+            SetStage(StagerManager.Stage.FirstStage, "A Dance of Fire and Ice", 0);
         }
     }
     void SetStage(StagerManager.Stage stage, string title, int waveIndex) //스테이지 설정
