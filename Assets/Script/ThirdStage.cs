@@ -66,19 +66,55 @@ public class ThirdStage : MonoBehaviour
                 noteCount++;
             }
         }
-        if (noteCount < 16)
+        else if (noteCount < 16)
         {
             if (currentTime >= beatInterval * 8)
             {
                 SpawnDoubleRandomNote();
-                currentTime -= beatInterval * 1.871f;
+                currentTime -= beatInterval * 8;
                 noteCount++;
             }
         }
-       
+        else if (noteCount < 17)
+        {
+            if (currentTime >= beatInterval * 7.3f)
+            {
+                SpawnDoubleRandomNote();
+                currentTime -= beatInterval * 7.5f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 19)
+        {
+            if (currentTime >= beatInterval * 0.8f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.5f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 21)
+        {
+            if (currentTime >= beatInterval * 1.5f)
+            {
+                SpawnDoubleRandomNote();
+                currentTime -= beatInterval * 1f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 23)
+        {
+            if (currentTime >= beatInterval * 1.5f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.5f;
+                noteCount++;
+
+            }
+        }
     }
 
-    IEnumerator ClearPanelCor()
+            IEnumerator ClearPanelCor()
     {
 
         yield return new WaitForSeconds(4f);
