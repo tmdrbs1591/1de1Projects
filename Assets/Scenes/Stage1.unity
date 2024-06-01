@@ -8623,6 +8623,7 @@ MonoBehaviour:
   CharPicPanel: {fileID: 0}
   anim: {fileID: 0}
   SettingPanel: {fileID: 617380323}
+  TitleSettingPanel: {fileID: 0}
   music: {fileID: 1914778836}
   isCharPanel: 0
 --- !u!4 &1424281496
@@ -11227,6 +11228,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876063270}
   m_CullTransparentMesh: 1
+--- !u!1 &1893924957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1893924959}
+  - component: {fileID: 1893924958}
+  m_Layer: 0
+  m_Name: ObjectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1893924958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893924957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2191c75ae6af6aa45a7f139f364b3592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolList:
+  - poolCount: 10
+    poolName: AudioObject
+    poolObject: {fileID: 708117791136189665, guid: b444c2fc411f8634280b8dc8959ab1ac, type: 3}
+    parentObject: {fileID: 0}
+--- !u!4 &1893924959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893924957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.2923229, y: 1.9701722, z: 222.78252}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1894136960
 GameObject:
   m_ObjectHideFlags: 0

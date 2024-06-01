@@ -10,9 +10,11 @@ public class ButtonManager : MonoBehaviour
     public GameObject CharPicPanel;
     public Animator anim;
     public GameObject SettingPanel;
+    public GameObject TitleSettingPanel;
     public Music music;
     bool isSetting = false;
     public bool isCharPanel = false;
+    public bool isTitleSettingPanel = false;
 
 
     void Start()
@@ -24,7 +26,7 @@ public class ButtonManager : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape) && !isSetting && !isCharPanel)
+        if (Input.GetKeyDown(KeyCode.Escape) && !isSetting && !isCharPanel && SettingPanel!=null)
         {
             SettingPanel.SetActive(true);
             if (music.audioSource.isPlaying) // 음악이 재생 중이라면 중단합니다.
@@ -45,6 +47,12 @@ public class ButtonManager : MonoBehaviour
         {
             CharPicPanel.SetActive(false);
             isCharPanel = false;    
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && isTitleSettingPanel)
+        {
+            TitleSettingPanel.SetActive(false);
+            isTitleSettingPanel = false;
         }
     }
     public void Stop()
@@ -91,14 +99,25 @@ public class ButtonManager : MonoBehaviour
     {
         isCharPanel = false;
         CharPicPanel.SetActive(false);
-
-
     }
     public void OnPic()
     {
+        OffTitleSetting();
         isCharPanel = true;
         StagerManager.instance.currentStage = StagerManager.Stage.CharPanel;
         CharPicPanel.SetActive(true);
+    } 
+    public void OnTitleSetting()
+    {
+        OffPic();
+        isTitleSettingPanel = true;
+        StagerManager.instance.currentStage = StagerManager.Stage.TitleSettingPanel;
+        TitleSettingPanel.SetActive(true);
+    }
+    public void OffTitleSetting()
+    {
+        isTitleSettingPanel = false;
+        TitleSettingPanel.SetActive(false);
     }
     public void SecondStage()
     {

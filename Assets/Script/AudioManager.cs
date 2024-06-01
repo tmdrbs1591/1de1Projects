@@ -64,7 +64,8 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySound(Vector3 position, int index, float pitch = 1, float volume = 1, Transform follower = null)
     {
-        AudioObject aud = GameObject.Instantiate(audioObject, new Vector3(position.x, position.y, -5), Quaternion.identity).GetComponent<AudioObject>();
+        //AudioObject aud = GameObject.Instantiate(audioObject, new Vector3(position.x, position.y, -5), Quaternion.identity).GetComponent<AudioObject>();
+        AudioObject aud = ObjectPool.SpawnFromPool("AudioObject", new Vector3(position.x, position.y, -5), Quaternion.identity).GetComponent<AudioObject>();
         aud.follow = follower;
         aud.clip = clips[index];
         aud.pitch = pitch;

@@ -101,23 +101,23 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
         }
         if (!isDrag) scrollbar.value = Mathf.Lerp(scrollbar.value, targetPos, 0.1f);
 
-        if (scrollbar.value >= 0.8f && scrollbar.value <= 1f && !buttonManager.isCharPanel)
+        if (scrollbar.value >= 0.8f && scrollbar.value <= 1f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
             SetStage(StagerManager.Stage.fifthStage, "개발중", 4);
         }
-        if (scrollbar.value >= 0.55f && scrollbar.value <= 0.78f && !buttonManager.isCharPanel)
+        if (scrollbar.value >= 0.55f && scrollbar.value <= 0.78f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
             SetStage(StagerManager.Stage.fourthStage, "개발중", 3);
         }
-        if (scrollbar.value >= 0.31f && scrollbar.value <= 0.54f && !buttonManager.isCharPanel)
+        if (scrollbar.value >= 0.31f && scrollbar.value <= 0.54f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
             SetStage(StagerManager.Stage.ThirdStage, "IyaIya", 2);
         }
-        if (scrollbar.value >= 0.1f && scrollbar.value <= 0.3f && !buttonManager.isCharPanel)
+        if (scrollbar.value >= 0.1f && scrollbar.value <= 0.3f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
             SetStage(StagerManager.Stage.SecondStage, "Nitro Fun - Final Boss", 1);
         }
-        if (scrollbar.value <= 0.09f && !buttonManager.isCharPanel)
+        if (scrollbar.value <= 0.09f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
             SetStage(StagerManager.Stage.FirstStage, "A Dance of Fire and Ice", 0);
         }

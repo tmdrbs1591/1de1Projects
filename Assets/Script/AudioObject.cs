@@ -25,7 +25,7 @@ public class AudioObject : MonoBehaviour
     {
         if (follow != null) transform.position = new Vector3(follow.position.x, follow.position.y, -5);
         if (following && follow == null) Destroy(gameObject);
-        if (!aud.isPlaying) Destroy(gameObject);
+        if (!aud.isPlaying) ObjectPool.ReturnToPool("AudioObject",gameObject);
     }
 }
 
