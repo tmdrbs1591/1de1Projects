@@ -170,7 +170,7 @@ Material:
     - _OutlineDistortAmount: 0.5
     - _OutlineDistortTexXSpeed: 5
     - _OutlineDistortTexYSpeed: 5
-    - _OutlineGlow: 2
+    - _OutlineGlow: 9
     - _OutlinePixelWidth: 1
     - _OutlineTexXSpeed: 10
     - _OutlineTexYSpeed: 0
@@ -200,7 +200,7 @@ Material:
     - _ShakeUvY: 1
     - _ShineGlow: 0.2
     - _ShineLocation: 0.59
-    - _ShineRotate: 2.9
+    - _ShineRotate: 3.49
     - _ShineWidth: 0.05
     - _TextureScrollXSpeed: 1
     - _TextureScrollYSpeed: 0
