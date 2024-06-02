@@ -119,7 +119,7 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
         }
         if (scrollbar.value <= 0.09f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
-            SetStage(StagerManager.Stage.FirstStage, "A Dance of Fire and Ice", 0);
+            SetStage(StagerManager.Stage.FirstStage, "Lian Ai Audio Navigation (short ver.)", 0);
         }
     }
     void SetStage(StagerManager.Stage stage, string title, int waveIndex) //스테이지 설정
