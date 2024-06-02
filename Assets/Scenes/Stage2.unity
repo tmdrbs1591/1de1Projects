@@ -1659,7 +1659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: f37d88bc06c0bf34496ce6f63a5ac363, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 0.8}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -5153,11 +5153,14 @@ MonoBehaviour:
   StagePanel: {fileID: 0}
   Fadein: {fileID: 0}
   CharPicPanel: {fileID: 0}
-  anim: {fileID: 0}
   SettingPanel: {fileID: 1988074059}
   TitleSettingPanel: {fileID: 0}
   VolumPanel: {fileID: 0}
+  CreditPanel: {fileID: 0}
+  MethodPanel: {fileID: 0}
+  anim: {fileID: 0}
   music: {fileID: 1914778836}
+  isSetting: 0
   isCharPanel: 0
   isTitleSettingPanel: 0
 --- !u!4 &616009665
@@ -6038,6 +6041,14 @@ PrefabInstance:
     - target: {fileID: 4896653716000216, guid: 18d653ec6ac008e43a69363f42d8c371, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 198913305880061536, guid: 18d653ec6ac008e43a69363f42d8c371, type: 3}
+      propertyPath: UVModule.mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198913305880061536, guid: 18d653ec6ac008e43a69363f42d8c371, type: 3}
+      propertyPath: UVModule.enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198913305880061536, guid: 18d653ec6ac008e43a69363f42d8c371, type: 3}
       propertyPath: InitialModule.maxNumParticles
@@ -24455,7 +24466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 8f3aa31d009e1ad49a37c94c82cb0c2c, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
