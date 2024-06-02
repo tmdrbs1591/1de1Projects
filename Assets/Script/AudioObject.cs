@@ -10,6 +10,8 @@ public class AudioObject : MonoBehaviour
     public float volume = 1;
     public Transform follow;
     bool following;
+
+
     void Start()
     {
         aud = gameObject.GetComponent<AudioSource>();
@@ -25,7 +27,7 @@ public class AudioObject : MonoBehaviour
     {
         if (follow != null) transform.position = new Vector3(follow.position.x, follow.position.y, -5);
         if (following && follow == null) Destroy(gameObject);
-        if (!aud.isPlaying) ObjectPool.ReturnToPool("AudioObject",gameObject);
+        if (!aud.isPlaying) Destroy(gameObject); //ObjectPool.ReturnToPool("AudioObject", gameObject);
     }
 }
 

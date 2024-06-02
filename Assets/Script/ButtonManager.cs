@@ -11,6 +11,9 @@ public class ButtonManager : MonoBehaviour
     public Animator anim;
     public GameObject SettingPanel;
     public GameObject TitleSettingPanel;
+    public GameObject VolumPanel;
+    public GameObject CreditPanel;
+    public GameObject MethodPanel;
     public Music music;
     bool isSetting = false;
     public bool isCharPanel = false;
@@ -51,6 +54,9 @@ public class ButtonManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) && isTitleSettingPanel)
         {
+            VolumPanel.SetActive(false);
+            CreditPanel.SetActive(false);
+            MethodPanel.SetActive(false);
             TitleSettingPanel.SetActive(false);
             isTitleSettingPanel = false;
         }
@@ -95,20 +101,32 @@ public class ButtonManager : MonoBehaviour
         StartCoroutine(SceneLate());
 
     }
+
+
+
     public void OffPic()
     {
+        AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
+
         isCharPanel = false;
         CharPicPanel.SetActive(false);
     }
     public void OnPic()
     {
+        AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1f, 1f), 1);
         OffTitleSetting();
         isCharPanel = true;
         StagerManager.instance.currentStage = StagerManager.Stage.CharPanel;
         CharPicPanel.SetActive(true);
     } 
+
+
+
+
     public void OnTitleSetting()
     {
+        AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
+
         OffPic();
         isTitleSettingPanel = true;
         StagerManager.instance.currentStage = StagerManager.Stage.TitleSettingPanel;
@@ -116,9 +134,49 @@ public class ButtonManager : MonoBehaviour
     }
     public void OffTitleSetting()
     {
+        AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
+
         isTitleSettingPanel = false;
         TitleSettingPanel.SetActive(false);
     }
+
+
+
+
+    public void OnVolumPanel()
+    {
+        VolumPanel.SetActive(true);
+    }
+    public void OffVolumPanel()
+    {
+        AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
+
+        VolumPanel.SetActive(false);
+    }
+
+
+    public void OnCreditPanel()
+    {
+        CreditPanel.SetActive(true);
+    }
+    public void OffCreditPanel()
+    {
+        AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
+
+        CreditPanel.SetActive(false);
+    }
+
+    public void OnMethodPanel()
+    {
+        MethodPanel.SetActive(true);
+    }
+    public void OffMethodPanel()
+    {
+        AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
+
+        MethodPanel.SetActive(false);
+    }
+
     public void SecondStage()
     {
         Fadein.SetActive(true);

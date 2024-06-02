@@ -21,7 +21,7 @@ public class HoverActivator : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         foreach (GameObject child in childObjectsToToggle)
         {
-            AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1.0f, 1.0f), 1);
+            AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.3f, 1.3f), 1);
             child.SetActive(state);
         }
     }
