@@ -5,31 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+
+    [Header("UI Panels")]
     public GameObject StagePanel;
     public GameObject Fadein;
     public GameObject CharPicPanel;
-    public Animator anim;
     public GameObject SettingPanel;
     public GameObject TitleSettingPanel;
     public GameObject VolumPanel;
     public GameObject CreditPanel;
     public GameObject MethodPanel;
+
+    [Header("Other Components")]
+    public Animator anim;
     public Music music;
-    bool isSetting = false;
+
+    public bool isSetting = false;
     public bool isCharPanel = false;
     public bool isTitleSettingPanel = false;
 
-
-    void Start()
-    {
-
-    }
 
 
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape) && !isSetting && !isCharPanel && SettingPanel!=null)
+        if (Input.GetKeyDown(KeyCode.Escape) && !isSetting && !isCharPanel && SettingPanel != null)
         {
             SettingPanel.SetActive(true);
             if (music.audioSource.isPlaying) // 음악이 재생 중이라면 중단합니다.
@@ -49,7 +49,7 @@ public class ButtonManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && isCharPanel)
         {
             CharPicPanel.SetActive(false);
-            isCharPanel = false;    
+            isCharPanel = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Escape) && isTitleSettingPanel)
@@ -118,7 +118,7 @@ public class ButtonManager : MonoBehaviour
         isCharPanel = true;
         StagerManager.instance.currentStage = StagerManager.Stage.CharPanel;
         CharPicPanel.SetActive(true);
-    } 
+    }
 
 
 
