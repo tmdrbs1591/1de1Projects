@@ -18,9 +18,10 @@ public class TapManager : MonoBehaviour
 
     public void TapClick(int n)
     {
+        AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
+
         for (int i = 0; i < Tap.Length; i++)
         {
-            AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
             Tap[i].SetActive(i == n);
         }
         currentIndex = n;
@@ -32,7 +33,6 @@ public class TapManager : MonoBehaviour
         {
             if (currentIndex < Tap.Length - 1)
             {
-                AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
                 TapClick(currentIndex + 1);
             }
         }
@@ -40,7 +40,6 @@ public class TapManager : MonoBehaviour
         {
             if (currentIndex > 0)
             {
-                AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
                 TapClick(currentIndex - 1);
             }
         }
