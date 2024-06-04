@@ -84,7 +84,7 @@ public class PlaayerController : MonoBehaviour
                 theTimingManager.CheckTimingWithKey("E");
 
             }
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.E))
             {
                 theTimingManager.CheckTimingWithKey("Space");
 
