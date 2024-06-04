@@ -50,7 +50,10 @@ public class ScorePanel : MonoBehaviour
         }
         // 등급 텍스트 업데이트
         if (targetScore >= S_Score)
+        {
             Tear.text = "S";
+            GoldManager.instance.CrearGold("S");
+        }
         else if (targetScore >= A_Score)
             Tear.text = "A";
         else if (targetScore >= B_Score)

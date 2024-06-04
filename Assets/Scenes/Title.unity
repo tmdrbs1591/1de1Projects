@@ -21513,6 +21513,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allGold: 1000
+  branch: 0
+  tier: 
+  database: {fileID: 11400000, guid: 1af60b1a7dada0c4ab9c76fc15bbc7aa, type: 2}
   goldText: {fileID: 566036979}
 --- !u!4 &1682756218 stripped
 Transform:
