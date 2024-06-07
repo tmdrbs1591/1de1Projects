@@ -31,15 +31,14 @@ public class PlaayerController : MonoBehaviour
         HpBar.value = Mathf.Lerp(HpBar.value, (float)CurHP / (float)MaxHP, Time.deltaTime * 20);
         HpBar2.value = Mathf.Lerp(HpBar2.value, (float)CurHP / (float)MaxHP, Time.deltaTime * 5);
 
-
         Die();
         Key();
-
     }
     public void TakeDamage(int damage)
     {
         CurHP -= damage;
         StartCoroutine(Hit());
+        CameraShake.instance.Shake();
     }
     IEnumerator Hit()
     {

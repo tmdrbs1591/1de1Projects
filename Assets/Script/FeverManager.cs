@@ -32,7 +32,7 @@ public class FeverManager : MonoBehaviour
 
     void Update()
     {
-        if (feverSlider.value >= feverThreshold)
+        if (feverSlider.value >= feverThreshold && !feverTime)
         {
             StartFeverTime();
         }
