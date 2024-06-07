@@ -240,7 +240,7 @@ public class ThirdStage : MonoBehaviour
 
             if (collision.GetComponent<Note>().GetNoteFlag())
             {
-                thePlayerController.CurHP--;
+                thePlayerController.TakeDamage(1);
                 theEffectManager.judgementEffect(4);
                 thecomboManager.ResetCombo();
             }

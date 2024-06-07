@@ -8,6 +8,7 @@ public class PlaayerController : MonoBehaviour
     TimingManager theTimingManager;
 
     public GameObject DiePanel;
+    public GameObject HitPanel;
     public GameObject QPanel;
     public GameObject WPanel;
     public GameObject EPanel;
@@ -33,6 +34,18 @@ public class PlaayerController : MonoBehaviour
 
         Die();
         Key();
+
+    }
+    public void TakeDamage(int damage)
+    {
+        CurHP -= damage;
+        StartCoroutine(Hit());
+    }
+    IEnumerator Hit()
+    {
+        HitPanel.SetActive(true);
+        yield return new WaitForSeconds(0.25f);
+        HitPanel.SetActive(false);
 
     }
     void Die()
