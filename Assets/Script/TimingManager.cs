@@ -95,7 +95,8 @@ public class TimingManager : MonoBehaviour
                         {
                             if (!feverManager.feverTime)
                             {
-                                Destroy(Instantiate(childEffectPrefab, child.position, Quaternion.identity, parentEffect.transform),2f);
+                               // Destroy(Instantiate(childEffectPrefab, child.position, Quaternion.identity, parentEffect.transform),2f);
+                                ObjectPool.SpawnFromPool("NoteEffect", child.position, Quaternion.identity);
                             }
                             else
                             {
