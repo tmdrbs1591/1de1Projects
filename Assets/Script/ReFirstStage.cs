@@ -8,6 +8,7 @@ public class ReFirstStage : MonoBehaviour
     public GameObject SpeedEffect;
     public GameObject ClearPanel;
     public GameObject Warning;
+    public AudioSource Song;
     public PlaayerController thePlayerController;
     public int bpm = 120;
     double currentTime = 0d;
@@ -39,7 +40,7 @@ public class ReFirstStage : MonoBehaviour
 
     void Start()
     {
-
+        Song.Stop();
         thecomboManager = FindObjectOfType<ComboManager>();
         theEffectManager = FindObjectOfType<EffectManager>();
         theTimingManager = GetComponent<TimingManager>();
@@ -62,6 +63,7 @@ public class ReFirstStage : MonoBehaviour
         {
             if (currentTime >= beatInterval * 4.4f)
             {
+                Song.Play();
                 SpawnRandomNote();
                 currentTime -= beatInterval * 4.4f;
                 noteCount++;
@@ -226,7 +228,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 59)
         {
-            if (currentTime >= beatInterval * 6.6f)
+            if (currentTime >= beatInterval * 6.5f)
             {
                 SpawnENote();
                 currentTime -= beatInterval * 0.2f;
@@ -244,7 +246,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 64)
         {
-            if (currentTime >= beatInterval * 7.2f)
+            if (currentTime >= beatInterval * 7.4f)
             {
                 SpawnQWNote();
                 currentTime -= beatInterval * 0.53f;
@@ -253,7 +255,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 68) // OOOO
         {
-            if (currentTime >= beatInterval * 7.3f)
+            if (currentTime >= beatInterval * 7.2f)
             {
 
                 SpawnRandomNote();
@@ -263,7 +265,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 71)
         {
-            if (currentTime >= beatInterval * 8.6f)
+            if (currentTime >= beatInterval * 8.5f)
             {
                 SpawnWNote();
                 currentTime -= beatInterval * 0.2f;
@@ -272,7 +274,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 73)
         {
-            if (currentTime >= beatInterval * 9f)
+            if (currentTime >= beatInterval * 9.1f)
             {
                 SpawnRandomNote();
                 currentTime -= beatInterval * 0.7f;
@@ -281,7 +283,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 74)
         {
-            if (currentTime >= beatInterval * 10.72f)
+            if (currentTime >= beatInterval * 10.9f)
             {
                 SpawnDoubleRandomNote();
                 currentTime -= beatInterval * 10.72f;
@@ -330,7 +332,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 88)
         {
-            if (currentTime >= beatInterval * 5.2f)
+            if (currentTime >= beatInterval * 5f)
             {
                 SpawnQNote();
                 currentTime -= beatInterval * 0.2f;
@@ -342,13 +344,13 @@ public class ReFirstStage : MonoBehaviour
             if (currentTime >= beatInterval * 5.5f)
             {
                 SpawnRandomNote();
-                currentTime -= beatInterval * 0.7f;
+                currentTime -= beatInterval * 0.65f;
                 noteCount++;
             }
         }
         else if (noteCount < 94) // OOOO
         {
-            if (currentTime >= beatInterval * 7f)
+            if (currentTime >= beatInterval * 7.2f)
             {
 
                 SpawnRandomNote();
@@ -358,7 +360,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 97)
         {
-            if (currentTime >= beatInterval * 8.4f)
+            if (currentTime >= beatInterval * 8.6f)
             {
                 SpawnENote();
                 currentTime -= beatInterval * 0.2f;
@@ -367,7 +369,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 99)
         {
-            if (currentTime >= beatInterval * 9.1f)
+            if (currentTime >= beatInterval * 9f)
             {
                 SpawnRandomNote();
                 currentTime -= beatInterval * 0.68f;
@@ -376,7 +378,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 102) // OOO
         {
-            if (currentTime >= beatInterval * 9.2f)
+            if (currentTime >= beatInterval * 9.3f)
             {
 
                 SpawnEWNote();
@@ -386,7 +388,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 106) // OOOO
         {
-            if (currentTime >= beatInterval * 9.1f)
+            if (currentTime >= beatInterval * 9.2f)
             {
                 
                 SpawnRandomNote();
@@ -405,7 +407,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 111)
         {
-            if (currentTime >= beatInterval * 11f)
+            if (currentTime >= beatInterval * 11.1f)
             {
                 SpawnRandomNote();
                 currentTime -= beatInterval * 0.68f;
@@ -441,7 +443,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 123)
         {
-            if (currentTime >= beatInterval * 17.3f)
+            if (currentTime >= beatInterval * 17.5f)
             {
                 SpawnRandomNote();
                 currentTime -= beatInterval * 0.45f;
@@ -468,7 +470,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 133)
         {
-            if (currentTime >= beatInterval * 20f)
+            if (currentTime >= beatInterval * 20.3f)
             {
                 SpawnRandomNote();
                 currentTime -= beatInterval * 0.45f;
@@ -477,7 +479,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 136)
         {
-            if (currentTime >= beatInterval * 21.4f)
+            if (currentTime >= beatInterval * 21.7f)
             {
                 SpawnENote();
                 currentTime -= beatInterval * 0.2f;
@@ -603,10 +605,10 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 194)
         {
-            if (currentTime >= beatInterval * 1.89f)
+            if (currentTime >= beatInterval * 2f)
             {
                 SpawnQNote();
-                currentTime -= beatInterval * 1.85f;
+                currentTime -= beatInterval * 1.9f;
                 noteCount++;
             }
         }
@@ -677,14 +679,14 @@ public class ReFirstStage : MonoBehaviour
         {
             if (currentTime >= beatInterval * 1f)
             {
-                SpawnENote();
-                currentTime -= beatInterval * 0.3f;
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.35f;
                 noteCount++;
             }
         }
         else if (noteCount < 207)
         {
-            if (currentTime >= beatInterval * 1.66f)
+            if (currentTime >= beatInterval * 1.4f)
             {
                 SpawnENote();
                 currentTime -= beatInterval * 0.2f;
@@ -693,7 +695,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 209)
         {
-            if (currentTime >= beatInterval * 2.5f)
+            if (currentTime >= beatInterval * 2.13f)
             {
                 SpawnRandomNote();
                 currentTime -= beatInterval * 0.3f;
@@ -702,7 +704,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 211)
         {
-            if (currentTime >= beatInterval * 3.2f)
+            if (currentTime >= beatInterval * 2.78f)
             {
                 SpawnRandomNote();
                 currentTime -= beatInterval * 0.3f;
@@ -711,7 +713,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 214)
         {
-            if (currentTime >= beatInterval * 3.5f)
+            if (currentTime >= beatInterval * 3.37f)
             {
                 SpawnWNote();
                 currentTime -= beatInterval * 0.2f;
@@ -720,56 +722,510 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 215)
         {
-            if (currentTime >= beatInterval * 4f)
+            if (currentTime >= beatInterval * 4.1f)
             {
                 SpawnRandomNote();
-                currentTime -= beatInterval * 4f;
+                currentTime -= beatInterval * 4.1f;
                 noteCount++;
             }
         }
         else if (noteCount < 218)
         {
-            if (currentTime >= beatInterval * 5f)
+            if (currentTime >= beatInterval * 0.95f)
             {
                 SpawnRandomNote();
-                currentTime -= beatInterval * 0.3f;
+                currentTime -= beatInterval * 0.32f;
                 noteCount++;
             }
         }
         else if (noteCount < 221)
         {
-            if (currentTime >= beatInterval * 2.6f)
+            if (currentTime >= beatInterval * 1.47f)
             {
-                SpawnENote();
+                SpawnWNote();
                 currentTime -= beatInterval * 0.2f;
                 noteCount++;
             }
         }
         else if (noteCount < 222)
         {
-            if (currentTime >= beatInterval * 4f)
+            if (currentTime >= beatInterval * 1.9f)
             {
-                SpawnRandomNote();
-                currentTime -= beatInterval * 4f;
+                SpawnQNote();
+                currentTime -= beatInterval * 2;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 223)
+        {
+            if (currentTime >= beatInterval * 1.1f)
+            {
+                SpawnENote();
+                currentTime -= beatInterval * 1.1f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 224)
+        {
+            if (currentTime >= beatInterval * 0.45f)
+            {
+                SpawnQNote();
+                currentTime -= beatInterval * 0.45f;
                 noteCount++;
             }
         }
         else if (noteCount < 225)
         {
+            if (currentTime >= beatInterval * 0.45f)
+            {
+                SpawnENote();
+                currentTime -= beatInterval * 0.45f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 226)
+        {
+            if (currentTime >= beatInterval * 0.45f)
+            {
+                SpawnQNote();
+                currentTime -= beatInterval * 0.45f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 227)
+        {
+            if (currentTime >= beatInterval * 0.45f)
+            {
+                SpawnENote();
+                currentTime -= beatInterval * 0.45f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 228)
+        {
+            if (currentTime >= beatInterval * 0.45f)
+            {
+                SpawnQNote();
+                currentTime -= beatInterval * 0.45f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 229)
+        {
+            if (currentTime >= beatInterval * 0.44f)
+            {
+                SpawnENote();
+                currentTime -= beatInterval * 0.45f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 234)
+        {
+            if (currentTime >= beatInterval * 0.85f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.45f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 237)
+        {
+            if (currentTime >= beatInterval * 1f)
+            {
+                SpawnWNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 238)
+        {
+            if (currentTime >= beatInterval * 1.3f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 240)
+        {
             if (currentTime >= beatInterval * 2f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.35f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 243)
+        {
+            if (currentTime >= beatInterval * 2.44f)
+            {
+                SpawnQNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 244)
+        {
+            if (currentTime >= beatInterval * 3f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 247)
+        {
+            if (currentTime >= beatInterval * 3.8f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.35f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 250)
+        {
+            if (currentTime >= beatInterval * 4f)
+            {
+                SpawnQNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 251)
+        {
+            if (currentTime >= beatInterval * 5f)
+            {
+                SpawnQWNote();
+                currentTime -= beatInterval * 5f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 252)
+        {
+            if (currentTime >= beatInterval * 0.8f)
+            {
+                SpawnEWNote();
+                currentTime -= beatInterval * 0.8f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 253)
+        {
+            if (currentTime >= beatInterval * 0.45f)
+            {
+                SpawnQWNote();
+                currentTime -= beatInterval * 0.45f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 254)
+        {
+            if (currentTime >= beatInterval * 0.45f)
+            {
+                SpawnEWNote();
+                currentTime -= beatInterval * 0.45f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 255)
+        {
+            if (currentTime >= beatInterval * 0.45f)
+            {
+                SpawnQWNote();
+                currentTime -= beatInterval * 0.45f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 256)
+        {
+            if (currentTime >= beatInterval * 0.45f)
+            {
+                SpawnEWNote();
+                currentTime -= beatInterval * 0.45f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 257)
+        {
+            if (currentTime >= beatInterval * 0.45f)
+            {
+                SpawnQWNote();
+                currentTime -= beatInterval * 0.45f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 258)
+        {
+            if (currentTime >= beatInterval * 0.45f)
+            {
+                SpawnEWNote();
+                currentTime -= beatInterval * 0.45f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 261)
+        {
+            if (currentTime >= beatInterval * 0.8f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.4f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 264)
+        {
+            if (currentTime >= beatInterval * 1.1f)
+            {
+                SpawnWNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 265)
+        {
+            if (currentTime >= beatInterval * 2.6f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 2.6f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 267)
+        {
+            if (currentTime >= beatInterval * 0.7f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.35f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 270)
+        {
+            if (currentTime >= beatInterval * 1f)
+            {
+                SpawnQWNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+         
+            }
+        }
+        else if (noteCount < 271)
+        {
+            if (currentTime >= beatInterval * 1.9f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 2f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 274)
+        {
+            if (currentTime >= beatInterval * 0.9f)
             {
                 SpawnRandomNote();
                 currentTime -= beatInterval * 0.3f;
                 noteCount++;
             }
         }
-        else if (noteCount < 228)
+        else if (noteCount < 277)
         {
-            if (currentTime >= beatInterval * 8f)
+            if (currentTime >= beatInterval * 1.23f)
+            {
+                SpawnEWNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 279)
+        {
+            if (currentTime >= beatInterval * 4.6f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.6f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 281)
+        {
+            if (currentTime >= beatInterval * 4.67f)
             {
                 SpawnQNote();
                 currentTime -= beatInterval * 0.2f;
                 noteCount++;
+
+            }
+        }
+        else if (noteCount < 283)
+        {
+            if (currentTime >= beatInterval * 5.1f)
+            {
+                SpawnWNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 285)
+        {
+            if (currentTime >= beatInterval * 5.5f)
+            {
+                SpawnENote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 320)
+        {
+            if (currentTime >= beatInterval * 7f)
+            {
+                SpawnSpaceNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 321)
+        {
+            if (currentTime >= beatInterval * 7.9f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 7.9f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 323)
+        {
+            if (currentTime >= beatInterval * 0.8f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.3f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 324)
+        {
+            if (currentTime >= beatInterval * 1.7f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 1.7f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 326)
+        {
+            if (currentTime >= beatInterval * 0.9f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.4f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 328)
+        {
+            if (currentTime >= beatInterval * 1.5f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.36f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 329)
+        {
+            if (currentTime >= beatInterval * 3.5f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 3.5f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 331)
+        {
+            if (currentTime >= beatInterval * 0.9f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.4f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 332)
+        {
+            if (currentTime >= beatInterval * 1.7f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 1.7f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 334)
+        {
+            if (currentTime >= beatInterval * 0.8f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.4f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 336)
+        {
+            if (currentTime >= beatInterval * 1.5f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.4f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 337)//dddddddddd
+        {
+            if (currentTime >= beatInterval * 4f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 4f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 338)
+        {
+            if (currentTime >= beatInterval * 2f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval *2f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 340)
+        {
+            if (currentTime >= beatInterval * 2.3f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+
+            }
+        }
+        else if (noteCount < 341)
+        {
+            if (currentTime >= beatInterval * 4.1f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 4.1f;
+                noteCount++;
+                StartCoroutine(ClearPanelCor());
+
             }
         }
     }

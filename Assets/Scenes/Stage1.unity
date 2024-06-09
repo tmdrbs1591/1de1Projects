@@ -1265,6 +1265,7 @@ MonoBehaviour:
   SpeedEffect: {fileID: 858256111}
   ClearPanel: {fileID: 270125147}
   Warning: {fileID: 299967961}
+  Song: {fileID: 1914778834}
   thePlayerController: {fileID: 1722014693}
   bpm: 120
   objectManager: {fileID: 556791594}
@@ -11440,7 +11441,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 38d6518e044bbb14db4dd44e1504fde4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c088d6e54310a75498c7927f71b8d0f1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.782
   m_Pitch: 1
