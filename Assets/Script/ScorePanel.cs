@@ -38,12 +38,12 @@ public class ScorePanel : MonoBehaviour
             int displayScore = Mathf.RoundToInt(Mathf.Lerp(0, targetScore, elapsedTimeRatio)); // 시작 값부터 목표 값까지의 보간된 값을 계산
 
             // 점수 텍스트 업데이트
-            Score.text = "점수:" + displayScore.ToString();
+            Score.text = "SCORE:" + displayScore.ToString();
 
             // 애니메이션 종료 후에는 실제 점수를 표시
             if (elapsedTimeRatio >= 1.0f)
             {
-                Score.text = "점수:" + targetScore.ToString();
+                Score.text = "SCORE:" + targetScore.ToString();
             }
 
            
@@ -68,6 +68,6 @@ public class ScorePanel : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Title");
     }
 }

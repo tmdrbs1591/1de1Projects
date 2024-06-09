@@ -4749,15 +4749,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Song Title
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 02f9532441ff49d45a73d9eaeca27199, type: 2}
-  m_sharedMaterial: {fileID: -8044685902350653551, guid: 02f9532441ff49d45a73d9eaeca27199, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 85051b321ba421540b1472ebb1cac0e7, type: 2}
+  m_sharedMaterial: {fileID: -143696375881030577, guid: 85051b321ba421540b1472ebb1cac0e7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293816575
-  m_fontColor: {r: 1, g: 0.44025153, b: 0.9319521, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
