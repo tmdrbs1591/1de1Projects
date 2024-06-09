@@ -15,6 +15,7 @@ public class ButtonManager : MonoBehaviour
     public GameObject VolumPanel;
     public GameObject CreditPanel;
     public GameObject MethodPanel;
+    public GameObject ExitPanel;
 
     [Header("Other Components")]
     public Animator anim;
@@ -177,6 +178,21 @@ public class ButtonManager : MonoBehaviour
         MethodPanel.SetActive(false);
     }
 
+    public void OnExitPanel()
+    {
+        ExitPanel.SetActive(true);
+    }
+    public void OffExitPanel()
+    {
+        AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
+
+        ExitPanel.SetActive(false);
+    }
+
+    public void GameExit()
+    {
+        Application.Quit();
+    }
     public void SecondStage()
     {
         Fadein.SetActive(true);

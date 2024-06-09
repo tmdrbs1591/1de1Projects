@@ -166,11 +166,11 @@ Material:
     - _OffsetUvY: 0
     - _OnlyInnerOutline: 0
     - _OnlyOutline: 0
-    - _OutlineAlpha: 0.69
+    - _OutlineAlpha: 0.6
     - _OutlineDistortAmount: 0.5
     - _OutlineDistortTexXSpeed: 5
     - _OutlineDistortTexYSpeed: 5
-    - _OutlineGlow: 12
+    - _OutlineGlow: 23
     - _OutlinePixelWidth: 1
     - _OutlineTexXSpeed: 10
     - _OutlineTexYSpeed: 0
@@ -233,15 +233,15 @@ Material:
     - _ColorSwapRed: {r: 1, g: 1, b: 1, a: 1}
     - _FadeBurnColor: {r: 1, g: 1, b: 0, a: 1}
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GradBotLeftCol: {r: 0, g: 0.6343899, b: 1, a: 1}
+    - _GradBotLeftCol: {r: 0.61006284, g: 0.8577877, b: 1, a: 1}
     - _GradBotRightCol: {r: 0.09800897, g: 0.09411762, b: 0.9254902, a: 1}
-    - _GradTopLeftCol: {r: 0.98794043, g: 0.13836467, b: 1, a: 1}
+    - _GradTopLeftCol: {r: 0.99108046, g: 0.34591186, b: 1, a: 1}
     - _GradTopRightCol: {r: 0.7334812, g: 0.07843137, b: 0.8392157, a: 1}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _HitEffectColor: {r: 1, g: 1, b: 1, a: 1}
     - _HologramStripeColor: {r: 0, g: 1, b: 1, a: 1}
     - _InnerOutlineColor: {r: 1, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 0.94576186, g: 0.70440245, b: 1, a: 1}
+    - _OutlineColor: {r: 0.98708594, g: 0.9308176, b: 1, a: 1}
     - _OverlayColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShineColor: {r: 1, g: 1, b: 1, a: 1}

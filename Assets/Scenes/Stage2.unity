@@ -5181,6 +5181,7 @@ MonoBehaviour:
   VolumPanel: {fileID: 0}
   CreditPanel: {fileID: 0}
   MethodPanel: {fileID: 0}
+  ExitPanel: {fileID: 0}
   anim: {fileID: 0}
   music: {fileID: 1914778836}
   isSetting: 0
@@ -6267,6 +6268,10 @@ PrefabInstance:
     - target: {fileID: 198913305880061536, guid: 18d653ec6ac008e43a69363f42d8c371, type: 3}
       propertyPath: InitialModule.maxNumParticles
       value: 320
+      objectReference: {fileID: 0}
+    - target: {fileID: 198913305880061536, guid: 18d653ec6ac008e43a69363f42d8c371, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 198913305880061536, guid: 18d653ec6ac008e43a69363f42d8c371, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b

@@ -52,7 +52,7 @@ public class ScorePanel : MonoBehaviour
         if (targetScore >= S_Score)
         {
             Tear.text = "S";
-            GoldManager.instance.CrearGold("S");
+            //GoldManager.instance.CrearGold("S");
         }
         else if (targetScore >= A_Score)
             Tear.text = "A";

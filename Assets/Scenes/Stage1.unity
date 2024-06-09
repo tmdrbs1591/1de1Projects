@@ -1271,8 +1271,8 @@ MonoBehaviour:
   objectManager: {fileID: 556791594}
   PowerEffect: {fileID: 111992, guid: ef697b4cb271b7642af97a1a70394631, type: 3}
   tfNoteAppear: {fileID: 1150853093}
-  go1: {fileID: 7274178576524805104, guid: 8e28fdd08ed09694bbe5e35bea12dae5, type: 3}
-  go2: {fileID: 7274178576524805104, guid: 2157e84cb9420224e937a4bff6829171, type: 3}
+  go1: {fileID: 7274178576524805104, guid: 764b7dd48d03f1d4a983fd569d20bc92, type: 3}
+  go2: {fileID: 7274178576524805104, guid: 3860c64153e1f044489af0c8df882a4a, type: 3}
   go3: {fileID: 7274178576524805104, guid: 719d27ca24bada34e992484c61ef62bb, type: 3}
   go4: {fileID: 7274178576524805104, guid: 57614447847cb864cb099a1e1da494d9, type: 3}
   go5: {fileID: 7274178576524805104, guid: aa474b92673ea2c449aa7ab01275485d, type: 3}
@@ -1891,8 +1891,8 @@ RectTransform:
   - {fileID: 2074786636}
   - {fileID: 1611680688}
   - {fileID: 85182020}
-  - {fileID: 1039499319}
   - {fileID: 1994313388}
+  - {fileID: 1039499319}
   m_Father: {fileID: 2085860983}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2424,13 +2424,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 10bd6f2e7570b004b948bbd6c3b48483, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d656cad102c9a384fbad555c24c43491, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6701,7 +6701,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122940976}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.8, y: 0.3, z: -7.3268313}
+  m_LocalPosition: {x: 17.8, y: 0.32, z: -7.3268313}
   m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8345,6 +8345,7 @@ MonoBehaviour:
   VolumPanel: {fileID: 0}
   CreditPanel: {fileID: 0}
   MethodPanel: {fileID: 0}
+  ExitPanel: {fileID: 0}
   anim: {fileID: 0}
   music: {fileID: 1914778836}
   isSetting: 0
