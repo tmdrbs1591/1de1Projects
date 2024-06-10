@@ -7,7 +7,7 @@ public class TimingManager : MonoBehaviour
      PlaayerController thePlayerController;
     public List<GameObject> boxNoteList = new List<GameObject>();
 
-    int[] judgmentRecord = new int[5]; //perfect...기록 저장
+    public int[] judgmentRecord = new int[5]; //perfect...기록 저장
 
     [SerializeField] Transform Center = null;
     [SerializeField] RectTransform[] timingRect = null;

@@ -1972,6 +1972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxNoteList: []
+  judgmentRecord: 0000000000000000000000000000000000000000
   Center: {fileID: 2093900394}
   timingRect:
   - {fileID: 745346675}

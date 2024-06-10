@@ -65,7 +65,7 @@ public class ScorePanel : MonoBehaviour
         else
             Tear.text = "E";
     }
-
+        
     public void Retry()
     {
         LoadingManager.LoadScene("Title");
