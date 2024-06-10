@@ -7,6 +7,8 @@ public class TimingManager : MonoBehaviour
      PlaayerController thePlayerController;
     public List<GameObject> boxNoteList = new List<GameObject>();
 
+    int[] judgmentRecord = new int[5]; //perfect...기록 저장
+
     [SerializeField] Transform Center = null;
     [SerializeField] RectTransform[] timingRect = null;
 
@@ -112,9 +114,10 @@ public class TimingManager : MonoBehaviour
                         if (x < timingBoxs.Length - 1)
                             theEffect.NoteHitEffect();
 
-                        theScoreManager.IncreaseScore(x);
-                        theEffect.judgementEffect(x);
-                        theFeverManager.IncreaseFever(x);
+                        theScoreManager.IncreaseScore(x);//점수증가
+                        theEffect.judgementEffect(x);//판 등장
+                        theFeverManager.IncreaseFever(x);//판정연출
+                        judgmentRecord[x]++;//판정기록
 
                         Destroy(destroyedNote);
 
@@ -124,7 +127,7 @@ public class TimingManager : MonoBehaviour
             }
         }
        // thePlayerController.CurHP--;
-        //thecomboManager.ResetCombo();
+        //thecomboManager.ResetCombo(); //미스
         theEffect.judgementEffect(timingBoxs.Length);
     }
 
@@ -135,5 +138,9 @@ public class TimingManager : MonoBehaviour
         {
             SetActiveRecursively(child.gameObject, active);
         }
+    }
+    public int[] GetJudgementRecord()
+    {
+        return judgmentRecord;
     }
 }

@@ -76,23 +76,23 @@ public class ButtonManager : MonoBehaviour
         SettingPanel.SetActive(false);
         Time.timeScale = 1;
     }
-    public void Retry(string Stage)
+    public void Retry(string Stage)//다시시작
     {
         SceneManager.LoadScene(Stage);
         Time.timeScale = 1;
 
     }
-    public void Title()
+    public void Title()//타이틀 씬 가기
     {
         SceneManager.LoadScene("Title");
         Time.timeScale = 1;
 
     }
-    public void OpenStage()
+    public void OpenStage() //스테이지 창 열기 
     {
         StagePanel.SetActive(true);
     }
-    public void CloseStage()
+    public void CloseStage()//스테이지 창 닫기
     {
         StagePanel.SetActive(false);
     }
@@ -105,14 +105,14 @@ public class ButtonManager : MonoBehaviour
 
 
 
-    public void OffPic()
+    public void OffPic()//캐릭터 픽창 딛기
     {
         AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
 
         isCharPanel = false;
         CharPicPanel.SetActive(false);
     }
-    public void OnPic()
+    public void OnPic()//캐릭터 픽창 열기
     {
         AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1f, 1f), 1);
         OffTitleSetting();
@@ -124,7 +124,7 @@ public class ButtonManager : MonoBehaviour
 
 
 
-    public void OnTitleSetting()
+    public void OnTitleSetting()//설정창 열기
     {
         AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
 
@@ -133,7 +133,7 @@ public class ButtonManager : MonoBehaviour
         StagerManager.instance.currentStage = StagerManager.Stage.TitleSettingPanel;
         TitleSettingPanel.SetActive(true);
     }
-    public void OffTitleSetting()
+    public void OffTitleSetting()//설정창 닫기
     {
         AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
 
@@ -144,11 +144,11 @@ public class ButtonManager : MonoBehaviour
 
 
 
-    public void OnVolumPanel()
+    public void OnVolumPanel()//볼륨창 열기
     {
         VolumPanel.SetActive(true);
     }
-    public void OffVolumPanel()
+    public void OffVolumPanel()//볼륨창 닫기
     {
         AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
 
@@ -156,40 +156,40 @@ public class ButtonManager : MonoBehaviour
     }
 
 
-    public void OnCreditPanel()
+    public void OnCreditPanel()//크레딧 창 열기
     {
         CreditPanel.SetActive(true);
     }
-    public void OffCreditPanel()
+    public void OffCreditPanel()//크레딧 창 닫기
     {
         AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
 
         CreditPanel.SetActive(false);
     }
 
-    public void OnMethodPanel()
+    public void OnMethodPanel()//설명창 열기
     {
         MethodPanel.SetActive(true);
     }
-    public void OffMethodPanel()
+    public void OffMethodPanel()//설명창 닫기
     {
         AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
 
         MethodPanel.SetActive(false);
     }
 
-    public void OnExitPanel()
+    public void OnExitPanel()//종료패널 열기
     {
         ExitPanel.SetActive(true);
     }
-    public void OffExitPanel()
+    public void OffExitPanel()//종료패널 닫기
     {
         AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
 
         ExitPanel.SetActive(false);
     }
 
-    public void GameExit()
+    public void GameExit()//게임종료
     {
         Application.Quit();
     }
@@ -199,7 +199,7 @@ public class ButtonManager : MonoBehaviour
         StartCoroutine(SceneLate2());
 
     }
-    IEnumerator SceneLate()
+    IEnumerator SceneLate() // 씬 늦게 이동
     {
         yield return new WaitForSeconds(0.7f);
         SceneManager.LoadScene(1);

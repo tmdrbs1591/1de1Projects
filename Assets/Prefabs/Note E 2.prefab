@@ -354,7 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2030117515650771590}
   - component: {fileID: 6689160437381485614}
-  - component: {fileID: 6261788084465067907}
+  - component: {fileID: 6937280924648623583}
   m_Layer: 5
   m_Name: Circle
   m_TagString: Untagged
@@ -425,7 +425,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1338523033, guid: 85ce34c23a6cede4baf57971447d185a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d949df64fafda546b8a6a40aba6481e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -436,7 +436,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6261788084465067907
+--- !u!95 &6937280924648623583
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -446,7 +446,7 @@ Animator:
   m_GameObject: {fileID: 3190121997622226857}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aa0746e0370e8174a963b51c8ff17781, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5be1136100067f74294c608a65f804b1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

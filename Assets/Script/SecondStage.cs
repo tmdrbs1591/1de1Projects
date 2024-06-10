@@ -57,12 +57,12 @@ public class SecondStage : MonoBehaviour
         currentTime += Time.deltaTime;
         #region beat
       
-        if (noteCount < 32)
+        if (noteCount < 32) // 비트생성
         {
-            if (currentTime >= beatInterval * 0.931f)
+            if (currentTime >= beatInterval * 0.935f)
             {
                 SpawnRandomNote();
-                currentTime -= beatInterval * 0.931f;
+                currentTime -= beatInterval * 0.935f;
                 noteCount++;
             }
         }
@@ -77,10 +77,10 @@ public class SecondStage : MonoBehaviour
         }
         else if (noteCount < 64)
         {
-            if (currentTime >= beatInterval * 0.944f)
+            if (currentTime >= beatInterval * 0.94f)
             {
                 SpawnDoubleRandomNote();
-                currentTime -= beatInterval * 0.944f;
+                currentTime -= beatInterval * 0.94f;
                 noteCount++;
             }
         }
@@ -504,7 +504,7 @@ public class SecondStage : MonoBehaviour
 
         PowerEffect.SetActive(true);
     }
-        void SpawnRandomNote()
+        void SpawnRandomNote()// 1개짜리 몬스터 랜덤생성
         {
             int randomIndex = Random.Range(1, 4);
             GameObject t_note = null;
@@ -529,7 +529,7 @@ public class SecondStage : MonoBehaviour
                 theTimingManager.boxNoteList.Add(t_note);
             }
         }
-    void SpawnDoubleRandomNote()
+    void SpawnDoubleRandomNote()// 2개짜리 몬스터 랜덤 생성
     {
         int randomIndex = Random.Range(1, 3);
         GameObject t_note = null;
@@ -552,7 +552,7 @@ public class SecondStage : MonoBehaviour
             theTimingManager.boxNoteList.Add(t_note);
         }
     }
-    void SpawnQNote()
+    void SpawnQNote()//q몬스터 생성
     {
         GameObject t_note = Instantiate(go1, tfNoteAppear.position, Quaternion.identity);
         if (t_note != null)
@@ -561,7 +561,7 @@ public class SecondStage : MonoBehaviour
             theTimingManager.boxNoteList.Add(t_note);
         }
     }
-    void SpawnWNote()
+    void SpawnWNote()//W몬스터 생성
     {
         GameObject t_note = Instantiate(go2, tfNoteAppear.position, Quaternion.identity);
         if (t_note != null)
@@ -570,7 +570,7 @@ public class SecondStage : MonoBehaviour
             theTimingManager.boxNoteList.Add(t_note);
         }
     }
-    void SpawnSpaceNote()
+    void SpawnSpaceNote() //QWE몬스터 생성
     {
         GameObject t_note = Instantiate(go6, tfNoteAppear.position, Quaternion.identity);
         if (t_note != null)
@@ -579,7 +579,7 @@ public class SecondStage : MonoBehaviour
             theTimingManager.boxNoteList.Add(t_note);
         }
     }
-    void SpawnENote()
+    void SpawnENote()//e몬스터 생성
     {
         GameObject t_note = Instantiate(go3, tfNoteAppear.position, Quaternion.identity);
         if (t_note != null)
@@ -588,7 +588,7 @@ public class SecondStage : MonoBehaviour
             theTimingManager.boxNoteList.Add(t_note);
         }
     }
-    void SpawnQWNote()
+    void SpawnQWNote()//QW몬스터 생성
     {
         GameObject t_note = Instantiate(go4, tfNoteAppear.position, Quaternion.identity);
         if (t_note != null)
@@ -597,7 +597,7 @@ public class SecondStage : MonoBehaviour
             theTimingManager.boxNoteList.Add(t_note);
         }
     }
-    void SpawnEWNote()
+    void SpawnEWNote()//EW몬스터 생성
     {
         GameObject t_note = Instantiate(go5, tfNoteAppear.position, Quaternion.identity);
         if (t_note != null)
@@ -613,7 +613,7 @@ public class SecondStage : MonoBehaviour
 
             if (collision.GetComponent<Note>().GetNoteFlag())
             {
-                thePlayerController.TakeDamage(1);
+                thePlayerController.TakeDamage(1); //플레이어HP 감소
                 theEffectManager.judgementEffect(4);
                 thecomboManager.ResetCombo();
             }

@@ -79,7 +79,7 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
     }
     void Update()
     {
-        if (targetIndex < SIZE - 1)
+        if (targetIndex < SIZE - 1) //노래 오른쪽으로 이동
         {
             if (Input.GetKeyDown(KeyCode.RightArrow) && !buttonManager.isCharPanel || Input.GetKeyDown(KeyCode.D) && !buttonManager.isCharPanel)
             {
@@ -89,7 +89,7 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
                 targetPos = pos[targetIndex];
             }
         }
-        if (targetIndex > 0)
+        if (targetIndex > 0) //노래 왼쪽으로 이동
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow) && !buttonManager.isCharPanel || Input.GetKeyDown(KeyCode.A) && !buttonManager.isCharPanel)
             {
@@ -101,6 +101,7 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
         }
         if (!isDrag) scrollbar.value = Mathf.Lerp(scrollbar.value, targetPos, 0.1f);
 
+        //특정 볼륨값에 따라 노래 제목 출력
         if (scrollbar.value >= 0.8f && scrollbar.value <= 1f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
             SetStage(StagerManager.Stage.fifthStage, "개발중", 4);
@@ -133,7 +134,7 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
             Wave[i].SetActive(i == waveIndex);
         }
     }
-    public void TabClick()
+    public void TabClick() //노래 오른쪽으로 이동
     {
         if (targetIndex < SIZE - 1) 
         {
@@ -143,7 +144,7 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
         }
     }
 
-    public void TabBackClick()
+    public void TabBackClick()//노래 왼쪽으로 이동
     {
         if (targetIndex > 0) 
         {

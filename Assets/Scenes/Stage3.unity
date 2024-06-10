@@ -4944,6 +4944,7 @@ MonoBehaviour:
   VolumPanel: {fileID: 0}
   CreditPanel: {fileID: 0}
   MethodPanel: {fileID: 0}
+  ExitPanel: {fileID: 0}
   anim: {fileID: 0}
   music: {fileID: 1914778836}
   isSetting: 0

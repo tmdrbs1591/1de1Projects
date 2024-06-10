@@ -19,7 +19,7 @@ public class ScorePanel : MonoBehaviour
     private int targetScore;
     private float animationDuration = 1.5f; // 애니메이션 지속 시간
     private float animationStartTime; // 애니메이션 시작 시간
-    private float delayBeforeAnimation = 1.7f; // 애니메이션 시작 전 지연 시간
+    private float delayBeforeAnimation = 1f; // 애니메이션 시작 전 지연 시간
 
     void Start()
     {
@@ -68,6 +68,6 @@ public class ScorePanel : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene("Title");
+        LoadingManager.LoadScene("Title");
     }
 }
