@@ -12,10 +12,7 @@ public class ClearPanel : MonoBehaviour
     {
         StartCoroutine(CameraShakes());
         image.sprite = sprites[0];
-    }
 
-    void Update()
-    {
         if (DataManager.instance.currentCharater == Character.White)
         {
             image.sprite = sprites[0];
@@ -27,6 +24,14 @@ public class ClearPanel : MonoBehaviour
         else if (DataManager.instance.currentCharater == Character.Blue)
         {
             image.sprite = sprites[2];
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Return))
+        {
+            LoadingManager.LoadScene("Title");
         }
     }
 

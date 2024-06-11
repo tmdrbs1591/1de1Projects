@@ -1219,10 +1219,10 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 341)
         {
-            if (currentTime >= beatInterval * 4.1f)
+            if (currentTime >= beatInterval * 3.9f)
             {
                 SpawnRandomNote();
-                currentTime -= beatInterval * 4.1f;
+                currentTime -= beatInterval * 3.9f;
                 noteCount++;
                 StartCoroutine(ClearPanelCor());
 

@@ -49,6 +49,7 @@ public class ScorePanel : MonoBehaviour
            
         }
         // 등급 텍스트 업데이트
+
         if (targetScore >= S_Score)
         {
             Tear.text = "S";

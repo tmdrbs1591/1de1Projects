@@ -116,8 +116,10 @@ public class TimingManager : MonoBehaviour
 
                         theScoreManager.IncreaseScore(x);//점수증가
                         theEffect.judgementEffect(x);//판 등장
-                        theFeverManager.IncreaseFever(x);//판정연출
-                        judgmentRecord[x]++;//판정기록
+                        if (Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.E))
+                            return;
+                            theFeverManager.IncreaseFever(x);//판정연출
+                         judgmentRecord[x]++;//판정기록
 
                         Destroy(destroyedNote);
 
