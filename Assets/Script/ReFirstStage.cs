@@ -551,7 +551,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 181)
         {
-            if (currentTime >= beatInterval * 25.47f)
+            if (currentTime >= beatInterval * 26f)
             {
                 SpawnRandomNote();
                 currentTime -= beatInterval * 25.3f;
@@ -560,7 +560,7 @@ public class ReFirstStage : MonoBehaviour
         }
         else if (noteCount < 183)
         {
-            if (currentTime >= beatInterval * 1.2f)
+            if (currentTime >= beatInterval * 1.24f)
             {
                 SpawnRandomNote();
                 currentTime -= beatInterval * 0.4f;
