@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class PlaayerController : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class PlaayerController : MonoBehaviour
     public bool Death = false;
     public int MaxHP;
     public int CurHP;
+    public Vector2 appearPosition;
+    private Animator animator;
 
     [SerializeField]
     Slider HpBar;
@@ -23,7 +26,12 @@ public class PlaayerController : MonoBehaviour
     Slider HpBar2;
     void Start()
     {
+        transform.position = new Vector3(-11f, -2.82f,2);
+        animator = GetComponent<Animator>();
+        StartCoroutine(ApplyRootMotion());
+        transform.DOMove(appearPosition, 2f);
         theTimingManager = FindObjectOfType<TimingManager>();
+       
     }
 
     void Update()
@@ -118,5 +126,11 @@ public class PlaayerController : MonoBehaviour
             EPanel.SetActive(false);
 
         }
+    }
+    IEnumerator ApplyRootMotion()
+    {
+        animator.applyRootMotion = true;
+        yield return new WaitForSeconds(2f);
+        animator.applyRootMotion = false;
     }
 }

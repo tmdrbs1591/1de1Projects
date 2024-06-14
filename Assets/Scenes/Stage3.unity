@@ -1445,6 +1445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxNoteList: []
+  judgmentRecord: 0000000000000000000000000000000000000000
   Center: {fileID: 2093900394}
   timingRect:
   - {fileID: 745346675}
@@ -1752,6 +1753,7 @@ MonoBehaviour:
   Death: 0
   MaxHP: 10
   CurHP: 10
+  appearPosition: {x: -6.02, y: -2.58}
   HpBar: {fileID: 1551562593}
   HpBar2: {fileID: 1304382071}
 --- !u!114 &189070086
@@ -4260,7 +4262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527349972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7, y: -2.86, z: 73.76165}
+  m_LocalPosition: {x: -6.24, y: -2.86, z: 73.76165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8864,6 +8866,7 @@ MonoBehaviour:
   Death: 0
   MaxHP: 10
   CurHP: 10
+  appearPosition: {x: -6.02, y: -2.58}
   HpBar: {fileID: 1551562593}
   HpBar2: {fileID: 1304382071}
 --- !u!1 &1252053660
@@ -15953,6 +15956,7 @@ MonoBehaviour:
   Death: 0
   MaxHP: 10
   CurHP: 10
+  appearPosition: {x: -6.02, y: -2.58}
   HpBar: {fileID: 1551562593}
   HpBar2: {fileID: 1304382071}
 --- !u!95 &1701642820
@@ -16798,6 +16802,7 @@ MonoBehaviour:
   Death: 0
   MaxHP: 10
   CurHP: 10
+  appearPosition: {x: -6.02, y: -2.58}
   HpBar: {fileID: 1551562593}
   HpBar2: {fileID: 1304382071}
 --- !u!95 &1824151718
