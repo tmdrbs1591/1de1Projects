@@ -20,7 +20,7 @@ public class TapManager : MonoBehaviour
     
     public void TapClick(int n)
     {
-        AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
+        AudioManager.instance.PlaySound(transform.position, 9, Random.Range(1.0f, 1.0f), 1);
 
         for (int i = 0; i < Tap.Length; i++)
         {

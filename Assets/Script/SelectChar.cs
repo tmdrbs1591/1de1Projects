@@ -50,9 +50,11 @@ public class SelectChar : MonoBehaviour
 
     void OnSelect()
     {
+
         if (spriteRenderer != null)
         {
             spriteRenderer.color = new Color(0.5f, 0.5f, 0.5f);
+            AudioManager.instance.PlaySound(transform.position, 10, Random.Range(1.0f, 1.0f), 1);
 
         }
 

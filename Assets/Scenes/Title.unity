@@ -1316,6 +1316,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0b47d2c4acb9d1e4d914a6e1f2711f94, type: 3}
   - {fileID: 8300000, guid: de81c18aac3028940ba88c6f6cc8e458, type: 3}
   - {fileID: 8300000, guid: 2bb9b87a20b4e2348ac394d991434bcb, type: 3}
+  - {fileID: 8300000, guid: b8c82efb8dae25448a3c2b1b9ec6426c, type: 3}
+  - {fileID: 8300000, guid: 22ab0dd653506fc4b987c4338949536f, type: 3}
   songs: []
   audioObject: {fileID: 708117791136189665, guid: b444c2fc411f8634280b8dc8959ab1ac, type: 3}
 --- !u!4 &60585508
@@ -2927,7 +2929,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.018705487, y: 0.009352744}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2938,7 +2940,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.28, y: 0.98}
+  m_Size: {x: 4.311866, y: 1.2766577}
   m_EdgeRadius: 0
 --- !u!212 &146109886
 SpriteRenderer:
@@ -6002,7 +6004,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.009352803}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6013,7 +6015,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.28, y: 0.98}
+  m_Size: {x: 4.262491, y: 1.2412198}
   m_EdgeRadius: 0
 --- !u!212 &355655706
 SpriteRenderer:
@@ -7282,7 +7284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 425dbdb402c10dd4b8e62e8d42394047, type: 2}
-  m_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+  m_Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9679,7 +9681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 425dbdb402c10dd4b8e62e8d42394047, type: 2}
-  m_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+  m_Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11124,7 +11126,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666234664}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 89993f410e2eba145a816eb60ed15fe1, type: 2}
   m_CullingMode: 0
@@ -17294,7 +17296,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.009352803, y: 0.018705606}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17305,7 +17307,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.28, y: 0.98}
+  m_Size: {x: 4.3079395, y: 1.307013}
   m_EdgeRadius: 0
 --- !u!212 &1053532886
 SpriteRenderer:
@@ -17417,7 +17419,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 937, y: -569}
+  m_AnchoredPosition: {x: 37, y: -569}
   m_SizeDelta: {x: 1305.94, y: 2138.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1056549842
@@ -17482,7 +17484,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056549839}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bdb5384a2b40bb641ab8bd3ec54b044a, type: 2}
   m_CullingMode: 0
@@ -17801,7 +17803,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079694883}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bdb5384a2b40bb641ab8bd3ec54b044a, type: 2}
   m_CullingMode: 0
@@ -18333,7 +18335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 425dbdb402c10dd4b8e62e8d42394047, type: 2}
-  m_Color: {r: 0.81960785, g: 0.81960785, b: 0.81960785, a: 1}
+  m_Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -20475,7 +20477,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340037032}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 89993f410e2eba145a816eb60ed15fe1, type: 2}
   m_CullingMode: 0
@@ -20640,7 +20642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 425dbdb402c10dd4b8e62e8d42394047, type: 2}
-  m_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+  m_Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -28736,7 +28738,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.037411094, y: -0.009352624}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -28747,7 +28749,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.28, y: 0.98}
+  m_Size: {x: 4.287548, y: 1.2605826}
   m_EdgeRadius: 0
 --- !u!212 &2030975664
 SpriteRenderer:
