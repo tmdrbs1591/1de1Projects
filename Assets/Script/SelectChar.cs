@@ -7,6 +7,8 @@ public class SelectChar : MonoBehaviour
     public Character character;
     SpriteRenderer spriteRenderer;
     public SelectChar[] chars;
+    
+    public ButtonManager buttonManager;
 
     void Start()
     {
@@ -21,9 +23,19 @@ public class SelectChar : MonoBehaviour
         {
             UpdateSelection();
         }
+        if (Input.GetKeyDown(KeyCode.Return) && StagerManager.instance.currentStage == StagerManager.Stage.CharPanel)
+        {
+            DataManager.instance.currentCharater = character;
+            UpdateSelection();
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (chars[i] != this && chars[i] != null)
+                    chars[i].UpdateSelection();
+            }
+        }
     }
-
-    private void OnMouseUpAsButton()
+   
+    private void OnMouseDown()
     {
         DataManager.instance.currentCharater = character;
         UpdateSelection();

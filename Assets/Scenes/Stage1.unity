@@ -11412,12 +11412,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layerSpeed:
-  - 10
-  - 6
+  - 12
+  - 7
+  - 5
   - 4
   - 3
   - 2
-  - 1
   layerObjects:
   - {fileID: 1122940976}
   - {fileID: 325954812}

@@ -104,11 +104,11 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
         //특정 볼륨값에 따라 노래 제목 출력
         if (scrollbar.value >= 0.8f && scrollbar.value <= 1f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
-            SetStage(StagerManager.Stage.fifthStage, "개발중", 4);
+            SetStage(StagerManager.Stage.fifthStage, "under development", 4);
         }
         if (scrollbar.value >= 0.55f && scrollbar.value <= 0.78f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
-            SetStage(StagerManager.Stage.fourthStage, "개발중", 3);
+            SetStage(StagerManager.Stage.fourthStage, "under development", 3);
         }
         if (scrollbar.value >= 0.34f && scrollbar.value <= 0.54f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
