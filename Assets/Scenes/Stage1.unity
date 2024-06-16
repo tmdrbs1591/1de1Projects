@@ -429,7 +429,7 @@ MonoBehaviour:
   Death: 0
   MaxHP: 15
   CurHP: 15
-  appearPosition: {x: -6.02, y: -2.58}
+  appearPosition: {x: -6.55, y: -2.58}
   HpBar: {fileID: 1133072866}
   HpBar2: {fileID: 2014170377}
 --- !u!95 &33047731
@@ -1627,7 +1627,7 @@ MonoBehaviour:
   Death: 0
   MaxHP: 15
   CurHP: 15
-  appearPosition: {x: -6.02, y: -2.58}
+  appearPosition: {x: -6.55, y: -2.58}
   HpBar: {fileID: 1133072866}
   HpBar2: {fileID: 2014170377}
 --- !u!95 &128844823
@@ -9525,7 +9525,7 @@ MonoBehaviour:
   Death: 0
   MaxHP: 15
   CurHP: 15
-  appearPosition: {x: -6.02, y: -2.58}
+  appearPosition: {x: -6.55, y: -2.58}
   HpBar: {fileID: 1133072866}
   HpBar2: {fileID: 2014170377}
 --- !u!95 &1239496935
@@ -12674,7 +12674,7 @@ MonoBehaviour:
   Death: 0
   MaxHP: 1500
   CurHP: 1500
-  appearPosition: {x: -6.2, y: -2.58}
+  appearPosition: {x: -6.55, y: -2.58}
   HpBar: {fileID: 1133072866}
   HpBar2: {fileID: 2014170377}
 --- !u!95 &1722014694

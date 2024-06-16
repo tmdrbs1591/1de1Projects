@@ -110,11 +110,11 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
         {
             SetStage(StagerManager.Stage.fourthStage, "°³¹ßÁß", 3);
         }
-        if (scrollbar.value >= 0.31f && scrollbar.value <= 0.54f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
+        if (scrollbar.value >= 0.34f && scrollbar.value <= 0.54f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
             SetStage(StagerManager.Stage.ThirdStage, "IyaIya", 2);
         }
-        if (scrollbar.value >= 0.1f && scrollbar.value <= 0.3f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
+        if (scrollbar.value >= 0.1f && scrollbar.value <= 0.33f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
             SetStage(StagerManager.Stage.SecondStage, "Nitro Fun - Final Boss", 1);
         }

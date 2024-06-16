@@ -71,13 +71,13 @@ public class TapManager : MonoBehaviour
         for (int i = 0; i < CharImage.Length; i++)
         {
             // 초기 위치로 이동 후, 이동 애니메이션 실행
-            CharImage[i].rectTransform.anchoredPosition = new Vector2(1412, -563);
+            CharImage[i].rectTransform.anchoredPosition = new Vector2(800, -563);
             CharImage[i].rectTransform.DOAnchorPos(new Vector2(-25, -568), 0.25f);
         }
         for (int i = 0; i < CharShadowImage.Length; i++)
         {
             // 초기 위치로 이동 후, 이동 애니메이션 실행
-            CharShadowImage[i].rectTransform.anchoredPosition = new Vector2(1412, -563);
+            CharShadowImage[i].rectTransform.anchoredPosition = new Vector2(800, -563);
             CharShadowImage[i].rectTransform.DOAnchorPos(new Vector2(-25, -568), 0.3f);
         }
     }
@@ -87,13 +87,13 @@ public class TapManager : MonoBehaviour
         for (int i = 0; i < CharImage.Length; i++)
         {
             // 초기 위치로 이동 후, 이동 애니메이션 실행
-            CharImage[i].rectTransform.anchoredPosition = new Vector2(-1412, -563);
+            CharImage[i].rectTransform.anchoredPosition = new Vector2(-800, -563);
             CharImage[i].rectTransform.DOAnchorPos(new Vector2(-25, -568), 0.25f);
         }
         for (int i = 0; i < CharShadowImage.Length; i++)
         {
             // 초기 위치로 이동 후, 이동 애니메이션 실행
-            CharShadowImage[i].rectTransform.anchoredPosition = new Vector2(-1412, -563);
+            CharShadowImage[i].rectTransform.anchoredPosition = new Vector2(-800, -563);
             CharShadowImage[i].rectTransform.DOAnchorPos(new Vector2(-25, -568), 0.3f);
         }
     }
