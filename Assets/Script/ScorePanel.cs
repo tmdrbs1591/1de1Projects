@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 public class ScorePanel : MonoBehaviour
 {
     public ScoreManager theScoreManager;
-    public TMP_Text Score;
-    public TMP_Text Tear;
+    public TMP_Text Score; // 스코어 텍스트
+    public TMP_Text Tear; // 티어 텍스트
 
-    [SerializeField] float S_Score;
+    [SerializeField] float S_Score; 
     [SerializeField] float A_Score;
     [SerializeField] float B_Score;
     [SerializeField] float C_Score;

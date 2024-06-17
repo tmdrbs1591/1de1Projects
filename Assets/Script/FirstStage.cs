@@ -5,13 +5,13 @@ using UnityEngine;
 public class FirstStage : MonoBehaviour
 {
 
-    public GameObject ClearPanel;
-    public PlaayerController thePlayerController;
-    public int bpm = 120;
+    public GameObject ClearPanel; // 클리어패널
+    public PlaayerController thePlayerController; // 플레이어 컨트롤러
+    public int bpm = 120; // bpm
     double currentTime = 0d;
     int noteCount = 0; // 생성된 노트의 수
 
-    enum BeatType
+    enum BeatType // 비트 타입
     {
         Whole = 1,
         Half = 2,
@@ -23,10 +23,10 @@ public class FirstStage : MonoBehaviour
     public ObjectManager objectManager;
 
     [SerializeField] Transform tfNoteAppear = null;
-    [SerializeField] GameObject go1 = null;
-    [SerializeField] GameObject go2 = null;
-    [SerializeField] GameObject go3 = null;
-    [SerializeField] GameObject go4 = null;
+    [SerializeField] GameObject go1 = null; // Q노트
+    [SerializeField] GameObject go2 = null;//W노트
+    [SerializeField] GameObject go3 = null;//E노트
+    [SerializeField] GameObject go4 = null;//QW노트
 
     TimingManager theTimingManager;
     EffectManager theEffectManager;

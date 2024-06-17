@@ -7,23 +7,23 @@ public class ButtonManager : MonoBehaviour
 {
 
     [Header("UI Panels")]
-    public GameObject StagePanel;
-    public GameObject Fadein;
-    public GameObject CharPicPanel;
-    public GameObject SettingPanel;
-    public GameObject TitleSettingPanel;
-    public GameObject VolumPanel;
-    public GameObject CreditPanel;
-    public GameObject MethodPanel;
-    public GameObject ExitPanel;
+    public GameObject StagePanel; // 스테이지 고르는 패널
+    public GameObject Fadein; //페이드인 패널
+    public GameObject CharPicPanel; //캐릭터 픽하는 창 패널
+    public GameObject SettingPanel;//인게임 설정창 패널
+    public GameObject TitleSettingPanel;//타이틀 설정창 패널
+    public GameObject VolumPanel; // 볼륨조절 세팅 패널
+    public GameObject CreditPanel; // 크레딧 패널
+    public GameObject MethodPanel; // 설명창 패널
+    public GameObject ExitPanel; //종료패널
 
     [Header("Other Components")]
     public Animator anim;
     public Music music;
 
-    public bool isSetting = false;
-    public bool isCharPanel = false;
-    public bool isTitleSettingPanel = false;
+    public bool isSetting = false; // 현재 세팅창인지
+    public bool isCharPanel = false; // 현재 캐릭터 창인지
+    public bool isTitleSettingPanel = false; // 현재 타이틀 세팅 창인지
 
 
 

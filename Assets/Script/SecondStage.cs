@@ -613,7 +613,7 @@ public class SecondStage : MonoBehaviour
 
             if (collision.GetComponent<Note>().GetNoteFlag())
             {
-                thePlayerController.TakeDamage(1); //플레이어HP 감소
+                thePlayerController.TakeDamage(10); //플레이어HP 감소
                 theEffectManager.judgementEffect(4);
                 thecomboManager.ResetCombo();
             }

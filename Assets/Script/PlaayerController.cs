@@ -8,16 +8,16 @@ public class PlaayerController : MonoBehaviour
 {
     TimingManager theTimingManager;
 
-    public GameObject DiePanel;
-    public GameObject HitPanel;
-    public GameObject QPanel;
-    public GameObject WPanel;
-    public GameObject EPanel;
+    public GameObject DiePanel; //죽으면 나오는 패널
+    public GameObject HitPanel;//빨간색 히트 이펙트 패널
+    public GameObject QPanel; //Q 줄 표시
+    public GameObject WPanel;//W 줄 표시
+    public GameObject EPanel;//E 줄 표시
 
-    public bool Death = false;
-    public int MaxHP;
-    public int CurHP;
-    public Vector2 appearPosition;
+    public bool Death = false;//현재 죽어있는지 확인하는 불값
+    public int MaxHP;//최대 HP
+    public int CurHP;//현재 HP
+    public Vector2 appearPosition;//처음에 움직일때 도착할 위치값
     private Animator animator;
 
     [SerializeField]
@@ -42,13 +42,13 @@ public class PlaayerController : MonoBehaviour
         Die();
         Key();
     }
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage) // 데미지 입기
     {
         CurHP -= damage;
         StartCoroutine(Hit());
         CameraShake.instance.Shake();
     }
-    IEnumerator Hit()
+    IEnumerator Hit()//패널 한번 깜빡이는 코루틴
     {
         HitPanel.SetActive(true);
         yield return new WaitForSeconds(0.25f);
