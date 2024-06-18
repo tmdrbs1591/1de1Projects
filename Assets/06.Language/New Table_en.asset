@@ -91,7 +91,28 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 57809345552384
-    m_Localized: LANGUAGE
+    m_Localized: LANGUA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60433188888576
+    m_Localized: Music Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60478529314816
+    m_Localized: SFX Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60792875622400
+    m_Localized: Let's beat the monster by pressing 'Q' 'W' 'E' to match the rhythm!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61149064306688
+    m_Localized: Press "QW" "WE" at the same time to attack the enemy coming at the
+      same time!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61780458053632
+    m_Localized: Press "QWE" at the same time to attack the incoming enemy!
     m_Metadata:
       m_Items: []
   references:

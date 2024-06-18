@@ -79,6 +79,26 @@ MonoBehaviour:
     m_Key: language
     m_Metadata:
       m_Items: []
+  - m_Id: 60433188888576
+    m_Key: Music Volume Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60478529314816
+    m_Key: SFX Volume Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60792875622400
+    m_Key: Method 1text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61149064306688
+    m_Key: Method 2text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 61780458053632
+    m_Key: Method 3text
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
