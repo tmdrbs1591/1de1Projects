@@ -10,6 +10,7 @@ public class ReFirstStage : MonoBehaviour
     public GameObject Warning;
     public AudioSource Song;
     public PlaayerController thePlayerController;
+    public Animator CameraAnim;
     public int bpm = 120;
     double currentTime = 0d;
     int noteCount = 0; // 생성된 노트의 수
@@ -33,6 +34,7 @@ public class ReFirstStage : MonoBehaviour
     [SerializeField] GameObject go4 = null;
     [SerializeField] GameObject go5 = null;
     [SerializeField] GameObject go6 = null;
+
 
     TimingManager theTimingManager;
     EffectManager theEffectManager;
@@ -1348,6 +1350,12 @@ public class ReFirstStage : MonoBehaviour
             t_note.transform.SetParent(this.transform);
             theTimingManager.boxNoteList.Add(t_note);
         }
+    }
+    IEnumerator CameraBounce(float time) //카메라 바운스
+    {
+        yield return new WaitForSeconds(time);
+        CameraAnim.SetTrigger("Bounce");
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

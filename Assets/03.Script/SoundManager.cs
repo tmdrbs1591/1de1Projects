@@ -6,7 +6,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public AudioClip[] songs;
-    private AudioSource audio;
+    public AudioSource audio;
     private int currentSongIndex = -1; // 현재 재생 중인 곡의 인덱스
     private bool isPlaying = false; // 재생 중인지 여부를 나타내는 변수
 
@@ -28,7 +28,10 @@ public class SoundManager : MonoBehaviour
         isPlaying = true; // 재생 중임을 표시
     }
 
-   
+   public void SetMusicVolume(float volume)
+    {
+        audio.volume = volume;
+    }
     void Update()
     {
         // 현재 스테이지에 따라 음악 재생

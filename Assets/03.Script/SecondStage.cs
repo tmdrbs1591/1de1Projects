@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class SecondStage : MonoBehaviour
 {
     public ParallaxScroll map;
     public GameObject SpeedEffect;
     public GameObject ClearPanel;
+    public AudioSource Song;
     public PlaayerController thePlayerController;
+    public Animator CameraAnim;
     public int bpm = 120;
     double currentTime = 0d;
     int noteCount = 0; // 생성된 노트의 수
+
 
     enum BeatType
     {
@@ -39,13 +41,18 @@ public class SecondStage : MonoBehaviour
     void Start()
     {
 
+        Song.Stop();
         thecomboManager = FindObjectOfType<ComboManager>();
         theEffectManager = FindObjectOfType<EffectManager>();
         theTimingManager = GetComponent<TimingManager>();
+        
+
     }
 
     void FixedUpdate()
     {
+
+
         if (thePlayerController != null)
         {
             thePlayerController = FindObjectOfType<PlaayerController>();
@@ -56,7 +63,18 @@ public class SecondStage : MonoBehaviour
 
         currentTime += Time.deltaTime;
         #region beat
-      
+
+        if (noteCount < 1) // 비트생성
+        {
+            if (currentTime >= beatInterval * 0.935f)
+            {
+                
+                Song.Play();
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.935f;
+                noteCount++;
+            }
+        }
         if (noteCount < 32) // 비트생성
         {
             if (currentTime >= beatInterval * 0.935f)
@@ -153,9 +171,6 @@ public class SecondStage : MonoBehaviour
                 currentTime -= beatInterval * 1.57f;
                 noteCount++;
                 StartCoroutine(Effect());
-              
-
-
             }
         }
        
@@ -164,7 +179,6 @@ public class SecondStage : MonoBehaviour
 
             if (currentTime >= beatInterval * 0.943f)
             {
-
                 SpawnRandomNote();
 
                 currentTime -= beatInterval * 0.943f;
@@ -479,7 +493,6 @@ public class SecondStage : MonoBehaviour
             {
 
                 SpawnDoubleRandomNote();
-
                 StartCoroutine(ClearPanelCor());
                 currentTime -= beatInterval * 0.93f;
                 noteCount++;
@@ -606,6 +619,13 @@ public class SecondStage : MonoBehaviour
             theTimingManager.boxNoteList.Add(t_note);
         }
     }
+    
+    IEnumerator CameraBounce(float time) //카메라 바운스
+    {
+        yield return new WaitForSeconds(time);
+        CameraAnim.SetTrigger("Bounce");
+
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Note"))
@@ -624,4 +644,5 @@ public class SecondStage : MonoBehaviour
         }
 
     }
+    
 }

@@ -21,4 +21,8 @@ public class Music : MonoBehaviour
             audioSource.Stop(); 
         }
     }
+    public void SetMusicVolume(float volume)
+    {
+        audioSource.volume = volume;
+    }
 }
