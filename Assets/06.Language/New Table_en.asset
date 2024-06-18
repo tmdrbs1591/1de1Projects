@@ -78,6 +78,22 @@ MonoBehaviour:
     m_Localized: Rider
     m_Metadata:
       m_Items: []
+  - m_Id: 56423228743680
+    m_Localized: AUDIO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56969264209920
+    m_Localized: CREDIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57290950549504
+    m_Localized: METHOD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57809345552384
+    m_Localized: LANGUAGE
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

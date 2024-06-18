@@ -63,6 +63,22 @@ MonoBehaviour:
     m_Key: SeanJob
     m_Metadata:
       m_Items: []
+  - m_Id: 56423228743680
+    m_Key: AudioText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56969264209920
+    m_Key: CreditText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57290950549504
+    m_Key: METHODText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57809345552384
+    m_Key: language
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
