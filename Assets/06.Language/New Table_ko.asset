@@ -130,6 +130,26 @@ MonoBehaviour:
       \uB300\uB7C9\uC758 \uBAAC\uC2A4\uD130\uB4E4\uC744 \uBB3C\uB9AC\uCE58\uC138\uC694!"
     m_Metadata:
       m_Items: []
+  - m_Id: 239639861923840
+    m_Localized: "\uD0A4\uC138\uD305"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242685736128512
+    m_Localized: "\uC21C\uC704"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 276524751654912
+    m_Localized: "\uC0C1\uB2E8 \uACF5\uACA9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 276755681644544
+    m_Localized: "\uC911\uB2E8 \uACF5\uACA9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 276812002758656
+    m_Localized: "\uD558\uB2E8 \uACF5\uACA9"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

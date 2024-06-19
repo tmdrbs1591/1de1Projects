@@ -115,6 +115,26 @@ MonoBehaviour:
     m_Localized: Press "QWE" at the same time to attack the incoming enemy!
     m_Metadata:
       m_Items: []
+  - m_Id: 239639861923840
+    m_Localized: KEYSET
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242685736128512
+    m_Localized: RANK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 276524751654912
+    m_Localized: TOP ATTACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 276755681644544
+    m_Localized: MID ATTACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 276812002758656
+    m_Localized: BOTTOM ATTACK
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

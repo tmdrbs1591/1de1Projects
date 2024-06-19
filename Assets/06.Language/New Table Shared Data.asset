@@ -99,6 +99,26 @@ MonoBehaviour:
     m_Key: Method 3text
     m_Metadata:
       m_Items: []
+  - m_Id: 239639861923840
+    m_Key: KEST Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242685736128512
+    m_Key: RANK Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 276524751654912
+    m_Key: TOP Attack Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 276755681644544
+    m_Key: MID ATTACK Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 276812002758656
+    m_Key: BOTTOM ATTACK Text
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

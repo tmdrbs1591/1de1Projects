@@ -16,7 +16,8 @@ public class ButtonManager : MonoBehaviour
     public GameObject CreditPanel; // 크레딧 패널
     public GameObject MethodPanel; // 설명창 패널
     public GameObject ExitPanel; //종료패널
-    public GameObject LanguagePanel; //종료패널
+    public GameObject LanguagePanel; //언어패널
+    public GameObject KeySetPanel; //키세팅패널
 
     [Header("Other Components")]
     public Animator anim;
@@ -60,6 +61,8 @@ public class ButtonManager : MonoBehaviour
             CreditPanel.SetActive(false);
             MethodPanel.SetActive(false);
             TitleSettingPanel.SetActive(false);
+            LanguagePanel.SetActive(false);
+            KeySetPanel.SetActive(false);
             isTitleSettingPanel = false;
         }
     }
@@ -190,17 +193,26 @@ public class ButtonManager : MonoBehaviour
         ExitPanel.SetActive(false);
     }
 
-    public void OnLanguagePanel()//종료패널 열기
+    public void OnLanguagePanel()//언어패널 열기
     {
         LanguagePanel.SetActive(true);
     }
-    public void OffLanguagePanel()//종료패널 닫기
+    public void OffLanguagePanel()//언어패널 닫기
     {
         AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
 
         LanguagePanel.SetActive(false);
     }
+    public void OnKeySetPanel()//언어패널 열기
+    {
+        KeySetPanel.SetActive(true);
+    }
+    public void OffKeySetPanel()//언어패널 닫기
+    {
+        AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1.0f, 1.0f), 1);
 
+        KeySetPanel.SetActive(false);
+    }
     public void GameExit()//게임종료
     {
         Application.Quit();

@@ -69,19 +69,17 @@ public class PlaayerController : MonoBehaviour
 
         if (!Death)
         {
-            bool qPressed = Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.F);
-            bool wPressed = Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.H);
-            bool ePressed = Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.J);
+            bool qPressed = Input.GetKeyDown(KeySetting.keys[KeyAction.TOP]);
+            bool wPressed = Input.GetKeyDown(KeySetting.keys[KeyAction.MID]);
+            bool ePressed = Input.GetKeyDown(KeySetting.keys[KeyAction.BOTTOM]);
 
-            if ((Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.F)) && wPressed ||
-          (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)) && qPressed)
+            if ((Input.GetKey(KeySetting.keys[KeyAction.TOP]) && wPressed) || (Input.GetKey(KeySetting.keys[KeyAction.MID]) && qPressed))
             {
                 theTimingManager.CheckTimingWithKey("QW");
                 return; // 동시 입력 처리 후 함수 종료
             }
             // W 또는 O가 눌린 상태에서 E 또는 P가 눌리면
-            else if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.H)) && ePressed ||
-                     (Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.J)) && wPressed)
+            if ((Input.GetKey(KeySetting.keys[KeyAction.MID]) && ePressed) || (Input.GetKey(KeySetting.keys[KeyAction.BOTTOM]) && wPressed))
             {
                 theTimingManager.CheckTimingWithKey("EW");
                 return; // 동시 입력 처리 후 함수 종료
@@ -104,7 +102,7 @@ public class PlaayerController : MonoBehaviour
                 theTimingManager.CheckTimingWithKey("E");
 
             }
-            if (Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeySetting.keys[KeyAction.TOP]) && Input.GetKey(KeySetting.keys[KeyAction.MID]) && Input.GetKey(KeySetting.keys[KeyAction.BOTTOM]))
             {
                 theTimingManager.CheckTimingWithKey("Space");
 
