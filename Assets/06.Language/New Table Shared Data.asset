@@ -119,6 +119,22 @@ MonoBehaviour:
     m_Key: BOTTOM ATTACK Text
     m_Metadata:
       m_Items: []
+  - m_Id: 333093575696384
+    m_Key: INBOX Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 333824890347520
+    m_Key: NOTICE Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 334401472929792
+    m_Key: Method Programing Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 334583782547456
+    m_Key: Method Graphic Text
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -135,6 +135,22 @@ MonoBehaviour:
     m_Localized: BOTTOM ATTACK
     m_Metadata:
       m_Items: []
+  - m_Id: 333093575696384
+    m_Localized: INBOX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 333824890347520
+    m_Localized: NOTICE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 334401472929792
+    m_Localized: "Programing:\uC774\uC2B9\uADE0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 334583782547456
+    m_Localized: "Graphic:\uC815\uC5EC\uD604"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
