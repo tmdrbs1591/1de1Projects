@@ -8,7 +8,7 @@ public class Language : MonoBehaviour
 
     private void Start()
     {
-        UserLocalization(0);
+        //UserLocalization(0);
     }
     public void UserLocalization(int index)
     {

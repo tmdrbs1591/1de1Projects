@@ -57,14 +57,18 @@ public class ButtonManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) && isTitleSettingPanel)
         {
-            VolumPanel.SetActive(false);
-            CreditPanel.SetActive(false);
-            MethodPanel.SetActive(false);
-            TitleSettingPanel.SetActive(false);
-            LanguagePanel.SetActive(false);
-            KeySetPanel.SetActive(false);
+            ButtonPanelOff();
             isTitleSettingPanel = false;
         }
+    }
+    public void ButtonPanelOff()//버튼 패널들 끄기
+    {
+        VolumPanel.SetActive(false);
+        CreditPanel.SetActive(false);
+        MethodPanel.SetActive(false);
+        TitleSettingPanel.SetActive(false);
+        LanguagePanel.SetActive(false);
+        KeySetPanel.SetActive(false);
     }
     public void Stop()
     {
@@ -119,10 +123,14 @@ public class ButtonManager : MonoBehaviour
     public void OnPic()//캐릭터 픽창 열기
     {
         AudioManager.instance.PlaySound(transform.position, 7, Random.Range(1f, 1f), 1);
+
+        ButtonPanelOff();
         OffTitleSetting();
-        isCharPanel = true;
-        StagerManager.instance.currentStage = StagerManager.Stage.CharPanel;
+
         CharPicPanel.SetActive(true);
+        isCharPanel = true;
+
+        StagerManager.instance.currentStage = StagerManager.Stage.CharPanel;
     }
 
 

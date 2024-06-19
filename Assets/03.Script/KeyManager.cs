@@ -22,10 +22,10 @@ public class KeyManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         // Initialize keys dictionary with default keys
-        for (int i = 0; i < (int)KeyAction.KEYCOUNT; i++)
-        {
-            KeySetting.keys[(KeyAction)i] = defaultKeys[i];
-        }
+        //for (int i = 0; i < (int)KeyAction.KEYCOUNT; i++)
+        //{
+        //    KeySetting.keys[(KeyAction)i] = defaultKeys[i];
+        //}
     }
 
     private void OnGUI()
