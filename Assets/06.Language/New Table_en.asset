@@ -151,6 +151,18 @@ MonoBehaviour:
     m_Localized: "Graphic:\uC815\uC5EC\uD604"
     m_Metadata:
       m_Items: []
+  - m_Id: 657366367866880
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 657413209853952
+    m_Localized: Retry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 657502162653184
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -135,6 +135,18 @@ MonoBehaviour:
     m_Key: Method Graphic Text
     m_Metadata:
       m_Items: []
+  - m_Id: 657366367866880
+    m_Key: Exit Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 657413209853952
+    m_Key: Retry Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 657502162653184
+    m_Key: Play Text
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
