@@ -7781,10 +7781,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17138dd1cc1c9034e92f8ccf71732820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txt:
+  txtArray:
   - {fileID: 1607321471}
   - {fileID: 1264341536}
   - {fileID: 989705956}
+  baseFontSize: 50
+  fontSizePerCharacter: 20
 --- !u!1 &1076079867
 GameObject:
   m_ObjectHideFlags: 0
