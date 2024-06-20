@@ -182,6 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2030117515650771590}
   - component: {fileID: 6689160437381485614}
+  - component: {fileID: 3870218550123172197}
   m_Layer: 5
   m_Name: Circle
   m_TagString: Untagged
@@ -263,6 +264,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3870218550123172197
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3190121997622226857}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7234e9d19a4caa547b8d33316d083899, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5116393340568471661
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,7 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301280c3eabb40c49844ee4fc4a30ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteSpeed: 550
+  noteSpeed: 700
   noteKey: F
 --- !u!61 &7235285762958409760
 BoxCollider2D:

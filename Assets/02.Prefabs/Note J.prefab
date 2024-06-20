@@ -182,6 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2030117515650771590}
   - component: {fileID: 6689160437381485614}
+  - component: {fileID: 8739352081879939025}
   m_Layer: 5
   m_Name: Circle
   m_TagString: Untagged
@@ -231,7 +232,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 142881ec79b985048be2c10730cb0d4f, type: 2}
+  - {fileID: 2100000, guid: e6818ddbc5d5c5740bb6840676146225, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -263,6 +264,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8739352081879939025
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3190121997622226857}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e113b87ad9aae09448a83615a3256250, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5116393340568471661
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,8 +519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: ee5f95e5ea8a92640814c580228948f4, type: 2}
-  m_Color: {r: 0.38679248, g: 0.38364774, b: 1, a: 1}
+  m_Material: {fileID: 2100000, guid: e6818ddbc5d5c5740bb6840676146225, type: 2}
+  m_Color: {r: 0.3843137, g: 0.50186074, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -527,7 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301280c3eabb40c49844ee4fc4a30ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteSpeed: 550
+  noteSpeed: 700
   noteKey: J
 --- !u!61 &7235285762958409760
 BoxCollider2D:

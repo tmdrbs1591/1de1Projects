@@ -64,11 +64,11 @@ public class FifthStage : MonoBehaviour
 
         if (noteCount < 1)
         {
-            if (currentTime >= beatInterval * 4.4f)
+            if (currentTime >= beatInterval * 5.4f)
             {
                 Song.Play();
                 SpawnRandomNote();
-                currentTime -= beatInterval * 4.4f;
+                currentTime -= beatInterval * 5.4f;
                 noteCount++;
             }
         }
@@ -77,7 +77,7 @@ public class FifthStage : MonoBehaviour
             if (currentTime >= beatInterval * 1.3f)
             {
                 SpawnRandomNote();
-                currentTime -= beatInterval * 0.67f;
+                currentTime -= beatInterval * 0.667f;
                 noteCount++;
             }
         }
