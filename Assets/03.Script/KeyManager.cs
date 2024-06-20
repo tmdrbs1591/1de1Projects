@@ -2,30 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum KeyAction { TOP, MID, BOTTOM, KEYCOUNT }
+public enum KeyAction { Q, W, E, D, F, J, K, KEYCOUNT }
 
 public static class KeySetting
 {
     public static Dictionary<KeyAction, KeyCode> keys = new Dictionary<KeyAction, KeyCode>()
     {
-        { KeyAction.TOP, KeyCode.Q },
-        { KeyAction.MID, KeyCode.W },
-        { KeyAction.BOTTOM, KeyCode.E }
+        { KeyAction.Q, KeyCode.Q },
+        { KeyAction.W, KeyCode.W },
+        { KeyAction.E, KeyCode.E },
+        { KeyAction.D, KeyCode.D },
+        { KeyAction.F, KeyCode.F },
+        { KeyAction.J, KeyCode.J },
+        { KeyAction.K, KeyCode.K }
     };
 }
 
+
 public class KeyManager : MonoBehaviour
 {
-    KeyCode[] defaultKeys = new KeyCode[] { KeyCode.Q, KeyCode.W, KeyCode.E };
+    KeyCode[] defaultKeys = new KeyCode[] { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.D, KeyCode.F, KeyCode.J, KeyCode.K };
 
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        // Initialize keys dictionary with default keys
-        //for (int i = 0; i < (int)KeyAction.KEYCOUNT; i++)
-        //{
-        //    KeySetting.keys[(KeyAction)i] = defaultKeys[i];
-        //}
+
+        // 기본 키로 키 사전 초기화
+        for (int i = 0; i < (int)KeyAction.KEYCOUNT; i++)
+        {
+            KeySetting.keys[(KeyAction)i] = defaultKeys[i];
+        }
     }
 
     private void OnGUI()
@@ -48,7 +54,7 @@ public class KeyManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Invalid key number!");
+            Debug.LogError("유효하지 않은 키 번호입니다!");
         }
     }
 }

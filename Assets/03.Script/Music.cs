@@ -14,7 +14,7 @@ public class Music : MonoBehaviour
             Controller = FindObjectOfType<PlaayerController>();
 
         }
-        if (Controller.Death && audioSource.isPlaying)
+        if (Controller.Death && audioSource.isPlaying )
         {
             AudioManager.instance.PlaySound(transform.position, 1, Random.Range(1f, 1f), 1);
 

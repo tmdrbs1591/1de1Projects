@@ -85,7 +85,7 @@ public class StagerManager : MonoBehaviour
             CameraShake.instance.Shake();
 
             Fadein.SetActive(true);
-            StartCoroutine(SceneLate(3));
+            StartCoroutine(SceneLate(4));
         }
         else
         {

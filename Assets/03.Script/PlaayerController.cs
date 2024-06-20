@@ -41,6 +41,7 @@ public class PlaayerController : MonoBehaviour
 
         Die();
         Key();
+        FourTrackKey();
     }
     public void TakeDamage(int damage) // 데미지 입기
     {
@@ -69,17 +70,18 @@ public class PlaayerController : MonoBehaviour
 
         if (!Death)
         {
-            bool qPressed = Input.GetKeyDown(KeySetting.keys[KeyAction.TOP]);
-            bool wPressed = Input.GetKeyDown(KeySetting.keys[KeyAction.MID]);
-            bool ePressed = Input.GetKeyDown(KeySetting.keys[KeyAction.BOTTOM]);
+            bool qPressed = Input.GetKeyDown(KeySetting.keys[KeyAction.Q]);
+            bool wPressed = Input.GetKeyDown(KeySetting.keys[KeyAction.W]);
+            bool ePressed = Input.GetKeyDown(KeySetting.keys[KeyAction.E]);
 
-            if ((Input.GetKey(KeySetting.keys[KeyAction.TOP]) && wPressed) || (Input.GetKey(KeySetting.keys[KeyAction.MID]) && qPressed))
+         
+            if ((Input.GetKey(KeySetting.keys[KeyAction.Q]) && wPressed) || (Input.GetKey(KeySetting.keys[KeyAction.W]) && qPressed))
             {
                 theTimingManager.CheckTimingWithKey("QW");
                 return; // 동시 입력 처리 후 함수 종료
             }
             // W 또는 O가 눌린 상태에서 E 또는 P가 눌리면
-            if ((Input.GetKey(KeySetting.keys[KeyAction.MID]) && ePressed) || (Input.GetKey(KeySetting.keys[KeyAction.BOTTOM]) && wPressed))
+            if ((Input.GetKey(KeySetting.keys[KeyAction.W]) && ePressed) || (Input.GetKey(KeySetting.keys[KeyAction.E]) && wPressed))
             {
                 theTimingManager.CheckTimingWithKey("EW");
                 return; // 동시 입력 처리 후 함수 종료
@@ -102,7 +104,7 @@ public class PlaayerController : MonoBehaviour
                 theTimingManager.CheckTimingWithKey("E");
 
             }
-            if (Input.GetKey(KeySetting.keys[KeyAction.TOP]) && Input.GetKey(KeySetting.keys[KeyAction.MID]) && Input.GetKey(KeySetting.keys[KeyAction.BOTTOM]))
+            if (Input.GetKey(KeySetting.keys[KeyAction.Q]) && Input.GetKey(KeySetting.keys[KeyAction.W]) && Input.GetKey(KeySetting.keys[KeyAction.E]))
             {
                 theTimingManager.CheckTimingWithKey("Space");
 
@@ -131,4 +133,42 @@ public class PlaayerController : MonoBehaviour
         yield return new WaitForSeconds(2f);
         animator.applyRootMotion = false;
     }
+
+
+
+    void FourTrackKey()
+    {
+
+        bool dPressed = Input.GetKeyDown(KeySetting.keys[KeyAction.D]);
+        bool fPressed = Input.GetKeyDown(KeySetting.keys[KeyAction.F]);
+        bool jPressed = Input.GetKeyDown(KeySetting.keys[KeyAction.J]);
+        bool kPressed = Input.GetKeyDown(KeySetting.keys[KeyAction.K]);
+
+        if (dPressed)
+        {
+            theTimingManager.CheckTimingWithKey("D");
+
+        }
+        if (fPressed)
+        {
+            theTimingManager.CheckTimingWithKey("F");
+
+        }
+        if (jPressed)
+        {
+            theTimingManager.CheckTimingWithKey("J");
+
+        }
+        if (kPressed)
+        {
+            theTimingManager.CheckTimingWithKey("K");
+
+        }
+        if (Input.GetKey(KeySetting.keys[KeyAction.D]) && Input.GetKey(KeySetting.keys[KeyAction.F]) && Input.GetKey(KeySetting.keys[KeyAction.J]) && Input.GetKey(KeySetting.keys[KeyAction.K]))
+        {
+            theTimingManager.CheckTimingWithKey("Space");
+
+        }
+    }
+
 }

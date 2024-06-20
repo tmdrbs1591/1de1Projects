@@ -23,24 +23,24 @@ public class Attack : MonoBehaviour
     {
         if (!controller.Death)
         {
-            if ((Input.GetKey(KeySetting.keys[KeyAction.TOP]) && Input.GetKey(KeySetting.keys[KeyAction.MID]) && Input.GetKey(KeySetting.keys[KeyAction.BOTTOM])) )
+            if ((Input.GetKey(KeySetting.keys[KeyAction.Q]) && Input.GetKey(KeySetting.keys[KeyAction.W]) && Input.GetKey(KeySetting.keys[KeyAction.E])) )
             {
                 QWEEffect.SetActive(true);
                 TripleAttack();
             }
-            else if (Input.GetKeyDown(KeySetting.keys[KeyAction.TOP]))
+            else if (Input.GetKeyDown(KeySetting.keys[KeyAction.Q]))
             {
                 animator.SetTrigger("QAttack");
                 RotateLaser(Q);
                 StartCoroutine(laserSetActive());
             }
-            else if (Input.GetKeyDown(KeySetting.keys[KeyAction.MID]))
+            else if (Input.GetKeyDown(KeySetting.keys[KeyAction.W]))
             {
                 animator.SetTrigger("WAttack");
                 RotateLaser(W);
                 StartCoroutine(laserSetActive());
             }
-            else if (Input.GetKeyDown(KeySetting.keys[KeyAction.BOTTOM]))
+            else if (Input.GetKeyDown(KeySetting.keys[KeyAction.E]))
             {
                 animator.SetTrigger("EAttack");
                 RotateLaser(E);
