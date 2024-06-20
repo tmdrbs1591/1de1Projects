@@ -124,15 +124,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 276524751654912
-    m_Localized: TOP ATTACK
+    m_Localized: Top Attack
     m_Metadata:
       m_Items: []
   - m_Id: 276755681644544
-    m_Localized: MID ATTACK
+    m_Localized: Mid Attack
     m_Metadata:
       m_Items: []
   - m_Id: 276812002758656
-    m_Localized: BOTTOM ATTACK
+    m_Localized: Bottom Attack
     m_Metadata:
       m_Items: []
   - m_Id: 333093575696384
@@ -161,6 +161,30 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 657502162653184
     m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774750125268992
+    m_Localized: FirstLine Attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774828684582912
+    m_Localized: SecondLine Attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774930207711232
+    m_Localized: ThirdLine Attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775002832084992
+    m_Localized: FourthLine Attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777139884498944
+    m_Localized: 3Track
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777184243458048
+    m_Localized: 4Track
     m_Metadata:
       m_Items: []
   references:

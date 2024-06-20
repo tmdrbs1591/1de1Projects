@@ -1952,7 +1952,7 @@ MonoBehaviour:
   - {fileID: 210834049}
   feverManager: {fileID: 1344671358}
   EffectPrefab: {fileID: 1257899049973296, guid: f569d19cf52ef304b82b58d4c05d9080, type: 3}
-  childEffectPrefab: {fileID: 4106976724461375026, guid: 06abd9172e6f68442a224aa828d1d5c8, type: 3}
+  childEffectPrefab: {fileID: 1211301365084078, guid: 2b7a8ea1144129848a6d7ae718ff080a, type: 3}
   FeverchildEffectPrefab: {fileID: 4106976724461375026, guid: 06abd9172e6f68442a224aa828d1d5c8, type: 3}
   laserRotation: {fileID: 583801227}
   secondStage: {fileID: 0}
@@ -20841,7 +20841,7 @@ MonoBehaviour:
     parentObject: {fileID: 0}
   - poolCount: 20
     poolName: NoteEffect
-    poolObject: {fileID: 1211301365084078, guid: ed6b8128683f4094f92b7a556760b26b, type: 3}
+    poolObject: {fileID: 1211301365084078, guid: 2b7a8ea1144129848a6d7ae718ff080a, type: 3}
     parentObject: {fileID: 0}
 --- !u!4 &2093276434
 Transform:

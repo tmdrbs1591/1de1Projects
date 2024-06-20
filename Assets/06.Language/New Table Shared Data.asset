@@ -147,6 +147,30 @@ MonoBehaviour:
     m_Key: Play Text
     m_Metadata:
       m_Items: []
+  - m_Id: 774750125268992
+    m_Key: FirstLine Attack Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774828684582912
+    m_Key: SecondLine Attack Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 774930207711232
+    m_Key: ThirdLine Attack Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 775002832084992
+    m_Key: FourthLine Attack Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777139884498944
+    m_Key: 3Track Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 777184243458048
+    m_Key: 4Track Text
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
