@@ -144,6 +144,18 @@ public class PlaayerController : MonoBehaviour
         bool jPressed = Input.GetKeyDown(KeySetting.keys[KeyAction.J]);
         bool kPressed = Input.GetKeyDown(KeySetting.keys[KeyAction.K]);
 
+        if ((Input.GetKey(KeySetting.keys[KeyAction.D]) && fPressed) || (Input.GetKey(KeySetting.keys[KeyAction.F]) && dPressed))
+        {
+            theTimingManager.CheckTimingWithKey("DF");
+            return; // 동시 입력 처리 후 함수 종료
+        }
+        // W 또는 O가 눌린 상태에서 E 또는 P가 눌리면
+        if ((Input.GetKey(KeySetting.keys[KeyAction.J]) && kPressed) || (Input.GetKey(KeySetting.keys[KeyAction.K]) && jPressed))
+        {
+            theTimingManager.CheckTimingWithKey("JK");
+            return; // 동시 입력 처리 후 함수 종료
+        }
+
         if (dPressed)
         {
             theTimingManager.CheckTimingWithKey("D");
@@ -166,7 +178,7 @@ public class PlaayerController : MonoBehaviour
         }
         if (Input.GetKey(KeySetting.keys[KeyAction.D]) && Input.GetKey(KeySetting.keys[KeyAction.F]) && Input.GetKey(KeySetting.keys[KeyAction.J]) && Input.GetKey(KeySetting.keys[KeyAction.K]))
         {
-            theTimingManager.CheckTimingWithKey("Space");
+            theTimingManager.CheckTimingWithKey("DFJK");
 
         }
     }

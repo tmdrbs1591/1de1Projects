@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 08f2db01e11588446bb28fdda9296170, type: 2}
-  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+  m_Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0.07058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1261,12 +1261,12 @@ MonoBehaviour:
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 1
-  m_colorMode: 1
+  m_colorMode: 2
   m_fontColorGradient:
-    topLeft: {r: 0.99401706, g: 0.45882356, b: 1, a: 1}
-    topRight: {r: 0.2235294, g: 1, b: 0.8364663, a: 1}
-    bottomLeft: {r: 0.99401706, g: 0.45882356, b: 1, a: 1}
-    bottomRight: {r: 0.2235294, g: 1, b: 0.8364663, a: 1}
+    topLeft: {r: 1, g: 0.028985508, b: 0, a: 1}
+    topRight: {r: 1, g: 0.028985508, b: 0, a: 1}
+    bottomLeft: {r: 0, g: 0, b: 0, a: 1}
+    bottomRight: {r: 0, g: 0, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -1400,7 +1400,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -4
   m_Sprite: {fileID: 21300000, guid: 33101413308547c468ce0a959942f51e, type: 3}
-  m_Color: {r: 1, g: 0.38364774, b: 0.38364774, a: 1}
+  m_Color: {r: 0.5188679, g: 0.14929688, b: 0.14929688, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1983,9 +1983,9 @@ MonoBehaviour:
   go1: {fileID: 7274178576524805104, guid: 1269aa4f33dc38048b269409f6d6de12, type: 3}
   go2: {fileID: 7274178576524805104, guid: f9d737defca92b34f8486ae29022b8db, type: 3}
   go3: {fileID: 7274178576524805104, guid: 6d1f3e7cbd4ff7040a3a4751964c4a54, type: 3}
-  go4: {fileID: 7274178576524805104, guid: 57614447847cb864cb099a1e1da494d9, type: 3}
-  go5: {fileID: 7274178576524805104, guid: aa474b92673ea2c449aa7ab01275485d, type: 3}
-  go6: {fileID: 7274178576524805104, guid: 11d2aa0af9817ab4f9613341c6ca4745, type: 3}
+  go4: {fileID: 7274178576524805104, guid: 0d6241b6a6d2bbc4988d76a2f8d45a0e, type: 3}
+  go5: {fileID: 7274178576524805104, guid: 29040fa33492c6a488a1ec9663e87d5c, type: 3}
+  go6: {fileID: 7274178576524805104, guid: 2d9b56cc571d5aa4a8e2eea7e8e22c95, type: 3}
   go7: {fileID: 7274178576524805104, guid: d68f7cbdee06f80458670c0505a7307c, type: 3}
 --- !u!1 &136425354
 GameObject:
@@ -4829,12 +4829,12 @@ MonoBehaviour:
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 1
-  m_colorMode: 1
+  m_colorMode: 2
   m_fontColorGradient:
-    topLeft: {r: 0.99401706, g: 0.45882356, b: 1, a: 1}
-    topRight: {r: 0.2235294, g: 1, b: 0.8364663, a: 1}
-    bottomLeft: {r: 0.99401706, g: 0.45882356, b: 1, a: 1}
-    bottomRight: {r: 0.2235294, g: 1, b: 0.8364663, a: 1}
+    topLeft: {r: 1, g: 0.028985508, b: 0, a: 1}
+    topRight: {r: 1, g: 0.028985508, b: 0, a: 1}
+    bottomLeft: {r: 0, g: 0, b: 0, a: 1}
+    bottomRight: {r: 0, g: 0, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -5286,7 +5286,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507322020}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.8, y: 0.41, z: -7.3268313}
+  m_LocalPosition: {x: 17.8, y: 0.3, z: -7.3268313}
   m_LocalScale: {x: 2.3, y: 2.3, z: 2.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5338,7 +5338,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: f7cab681179db7747a07b54b687fd3ea, type: 3}
-  m_Color: {r: 1, g: 0.38364774, b: 0.38364774, a: 1}
+  m_Color: {r: 1, g: 0.3066038, b: 0.3066038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7444,12 +7444,12 @@ MonoBehaviour:
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 1
-  m_colorMode: 1
+  m_colorMode: 2
   m_fontColorGradient:
-    topLeft: {r: 0.99401706, g: 0.45882356, b: 1, a: 1}
-    topRight: {r: 0.2235294, g: 1, b: 0.8364663, a: 1}
-    bottomLeft: {r: 0.99401706, g: 0.45882356, b: 1, a: 1}
-    bottomRight: {r: 0.2235294, g: 1, b: 0.8364663, a: 1}
+    topLeft: {r: 1, g: 0.028985508, b: 0, a: 1}
+    topRight: {r: 1, g: 0.028985508, b: 0, a: 1}
+    bottomLeft: {r: 0, g: 0, b: 0, a: 1}
+    bottomRight: {r: 0, g: 0, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -7585,7 +7585,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -4
   m_Sprite: {fileID: 21300000, guid: 33101413308547c468ce0a959942f51e, type: 3}
-  m_Color: {r: 1, g: 0.38364774, b: 0.38364774, a: 1}
+  m_Color: {r: 0.5188679, g: 0.14929688, b: 0.14929688, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9204,7 +9204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 08f2db01e11588446bb28fdda9296170, type: 2}
-  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+  m_Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0.07058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10589,7 +10589,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: f7cab681179db7747a07b54b687fd3ea, type: 3}
-  m_Color: {r: 1, g: 0.38364774, b: 0.38364774, a: 1}
+  m_Color: {r: 1, g: 0.3066038, b: 0.3066038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12621,7 +12621,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: f7cab681179db7747a07b54b687fd3ea, type: 3}
-  m_Color: {r: 1, g: 0.38364774, b: 0.38364774, a: 1}
+  m_Color: {r: 1, g: 0.3066038, b: 0.3066038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -15739,12 +15739,12 @@ MonoBehaviour:
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 1
-  m_colorMode: 1
+  m_colorMode: 2
   m_fontColorGradient:
-    topLeft: {r: 0.99401706, g: 0.45882356, b: 1, a: 1}
-    topRight: {r: 0.2235294, g: 1, b: 0.8364663, a: 1}
-    bottomLeft: {r: 0.99401706, g: 0.45882356, b: 1, a: 1}
-    bottomRight: {r: 0.2235294, g: 1, b: 0.8364663, a: 1}
+    topLeft: {r: 1, g: 0.028985508, b: 0, a: 1}
+    topRight: {r: 1, g: 0.028985508, b: 0, a: 1}
+    bottomLeft: {r: 0, g: 0, b: 0, a: 1}
+    bottomRight: {r: 0, g: 0, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -16310,7 +16310,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -4
   m_Sprite: {fileID: 21300000, guid: 33101413308547c468ce0a959942f51e, type: 3}
-  m_Color: {r: 1, g: 0.38364774, b: 0.38364774, a: 1}
+  m_Color: {r: 0.5188679, g: 0.14929688, b: 0.14929688, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -18667,7 +18667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 08f2db01e11588446bb28fdda9296170, type: 2}
-  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+  m_Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 0.07058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -20260,7 +20260,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: f7cab681179db7747a07b54b687fd3ea, type: 3}
-  m_Color: {r: 1, g: 0.38364774, b: 0.38364774, a: 1}
+  m_Color: {r: 1, g: 0.3066038, b: 0.3066038, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -21016,7 +21016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 8f3aa31d009e1ad49a37c94c82cb0c2c, type: 2}
+  m_Material: {fileID: 2100000, guid: 3ebca8f52f1a1114a81983ac1c1645b2, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}

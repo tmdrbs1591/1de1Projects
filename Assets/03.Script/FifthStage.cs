@@ -72,7 +72,7 @@ public class FifthStage : MonoBehaviour
                 noteCount++;
             }
         }
-        else if (noteCount < 103)
+        else if (noteCount < 31)
         {
             if (currentTime >= beatInterval * 1.3f)
             {
@@ -81,7 +81,53 @@ public class FifthStage : MonoBehaviour
                 noteCount++;
             }
         }
-
+        else if (noteCount < 63)
+        {
+            if (currentTime >= beatInterval * 1.3f)
+            {
+                SpawnDoubleRandomNote();
+                currentTime -= beatInterval * 0.667f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 87)
+        {
+            if (currentTime >= beatInterval * 1.3f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.667f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 122)
+        {
+            if (currentTime >= beatInterval * 1.3f)
+            {
+                SpawnSpaceNote();
+                currentTime -= beatInterval * 0.1f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 123)
+        {
+            if (currentTime >= beatInterval * 2f)
+            {
+                SpawnQNote();
+                SpawnEWNote();
+                currentTime -= beatInterval * 0.667f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 124)
+        {
+            if (currentTime >= beatInterval * 2f)
+            {
+                SpawnRNote();
+                SpawnQWNote();
+                currentTime -= beatInterval * 0.667f;
+                noteCount++;
+            }
+        }
     }
 
     IEnumerator ClearPanelCor()
@@ -182,6 +228,15 @@ public class FifthStage : MonoBehaviour
     void SpawnENote()
     {
         GameObject t_note = Instantiate(go3, tfNoteAppear.position, Quaternion.identity);
+        if (t_note != null)
+        {
+            t_note.transform.SetParent(this.transform);
+            theTimingManager.boxNoteList.Add(t_note);
+        }
+    }
+    void SpawnRNote()
+    {
+        GameObject t_note = Instantiate(go7, tfNoteAppear.position, Quaternion.identity);
         if (t_note != null)
         {
             t_note.transform.SetParent(this.transform);
