@@ -14,7 +14,8 @@ public class FifthStage : MonoBehaviour
     public int bpm = 120;
     double currentTime = 0d;
     int noteCount = 0; // 생성된 노트의 수
-
+    public GameObject GlitchVolume;
+    public GameObject DigitalGlitchVolume;
     enum BeatType
     {
         Whole = 1,
@@ -68,6 +69,7 @@ public class FifthStage : MonoBehaviour
             {
                 Song.Play();
                 SpawnRandomNote();
+                StartCoroutine(DigitalGlitchOn(1f));
                 currentTime -= beatInterval * 5.4f;
                 noteCount++;
             }
@@ -85,6 +87,8 @@ public class FifthStage : MonoBehaviour
         {
             if (currentTime >= beatInterval * 1.3f)
             {
+             //   DigitalGlitchVolume.SetActive(false);
+
                 SpawnDoubleRandomNote();
                 currentTime -= beatInterval * 0.667f;
                 noteCount++;
@@ -103,6 +107,8 @@ public class FifthStage : MonoBehaviour
         {
             if (currentTime >= beatInterval * 1.3f)
             {
+               
+
                 SpawnSpaceNote();
                 currentTime -= beatInterval * 0.1f;
                 noteCount++;
@@ -112,7 +118,6 @@ public class FifthStage : MonoBehaviour
         {
             if (currentTime >= beatInterval * 2f)
             {
-                SpawnQNote();
                 SpawnEWNote();
                 currentTime -= beatInterval * 0.667f;
                 noteCount++;
@@ -122,9 +127,18 @@ public class FifthStage : MonoBehaviour
         {
             if (currentTime >= beatInterval * 2f)
             {
-                SpawnRNote();
                 SpawnQWNote();
                 currentTime -= beatInterval * 0.667f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 150)
+        {
+            if (currentTime >= beatInterval * 2f)
+            {
+                SpawnRandomNote();
+                StartCoroutine(GlitchOn(1f));
+                currentTime -= beatInterval * 0.4f;
                 noteCount++;
             }
         }
@@ -284,5 +298,16 @@ public class FifthStage : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
+    }
+
+    IEnumerator GlitchOn(float time)
+    {
+        yield return new WaitForSeconds(time);
+        GlitchVolume.SetActive(true);
+    }  
+    IEnumerator DigitalGlitchOn(float time)
+    {
+        yield return new WaitForSeconds(time);
+        DigitalGlitchVolume.SetActive(true);
     }
 }
