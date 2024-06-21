@@ -105,7 +105,7 @@ public class FifthStage : MonoBehaviour
         }
         else if (noteCount < 122)
         {
-            if (currentTime >= beatInterval * 1.3f)
+            if (currentTime >= beatInterval * 1.15f)
             {
                
 
@@ -132,7 +132,7 @@ public class FifthStage : MonoBehaviour
                 noteCount++;
             }
         }
-        else if (noteCount < 150)
+        else if (noteCount < 250)
         {
             if (currentTime >= beatInterval * 2f)
             {
