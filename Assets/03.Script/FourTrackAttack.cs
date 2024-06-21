@@ -24,7 +24,7 @@ public class FourTrackAttack: MonoBehaviour
     {
         if (!controller.Death)
         {
-            if ((Input.GetKey(KeySetting.keys[KeyAction.Q]) && Input.GetKey(KeySetting.keys[KeyAction.W]) && Input.GetKey(KeySetting.keys[KeyAction.E])) )
+            if ((Input.GetKey(KeySetting.keys[KeyAction.D]) && Input.GetKey(KeySetting.keys[KeyAction.F]) && Input.GetKey(KeySetting.keys[KeyAction.J]) && Input.GetKey(KeySetting.keys[KeyAction.K])) )
             {
                 QWEEffect.SetActive(true);
                 TripleAttack();
