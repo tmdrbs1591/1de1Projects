@@ -13,21 +13,23 @@ public class CountDown : MonoBehaviour
         while (count > 0)
         {
             countDownText.text = count.ToString();
-            yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSecondsRealtime(0.4f); // 실제 시간 기준으로 0.4초 대기
             count--;
         }
+
         countDownText.text = "Go!";
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSecondsRealtime(0.4f); // 실제 시간 기준으로 0.4초 대기
         countDownText.text = "";
     }
+
     public void CountDowns()
     {
         StartCoroutine(StartCountDown());
-
     }
-    public void Start()
+
+    private void OnEnable()
     {
-      instance = this;
+        instance = this;
         StartCoroutine(StartCountDown());
     }
 }

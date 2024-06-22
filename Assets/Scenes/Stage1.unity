@@ -458,6 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef02d0d0e6beab244b490dfe95186799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonManager: {fileID: 1424281495}
   DiePanel: {fileID: 2036948872}
   HitPanel: {fileID: 1995621273}
   QPanel: {fileID: 28206069}
@@ -503,6 +504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 33047730}
+  buttonManager: {fileID: 1424281495}
   Q: {fileID: 433776209}
   W: {fileID: 1407969973}
   E: {fileID: 276163016}
@@ -1660,6 +1662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef02d0d0e6beab244b490dfe95186799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonManager: {fileID: 1424281495}
   DiePanel: {fileID: 2036948872}
   HitPanel: {fileID: 1995621273}
   QPanel: {fileID: 28206069}
@@ -1705,6 +1708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 128844822}
+  buttonManager: {fileID: 1424281495}
   Q: {fileID: 1641664447}
   W: {fileID: 588943464}
   E: {fileID: 1424205891}
@@ -1898,6 +1902,7 @@ MonoBehaviour:
   laserRotation: {fileID: 0}
   secondStage: {fileID: 0}
   camerashake: 1
+  mainCamera: {fileID: 0}
 --- !u!114 &132763606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4480,8 +4485,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 212.1
-  m_fontSizeBase: 212.1
+  m_fontSize: 300
+  m_fontSizeBase: 300
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4516,7 +4521,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -511.47165, y: 0, z: -521.35754, w: -137.18861}
+  m_margin: {x: -1120.2178, y: 0, z: -1185.8336, w: -137.18861}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4547,30 +4552,22 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 19}
+  m_AnchoredPosition: {x: -47, y: -15}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &473223337
-Animator:
-  serializedVersion: 5
+--- !u!114 &473223337
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473223333}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9ea2c9cc2c00d4d49b961d0a489ce676, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2882943dc986a704dadd61608e019873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countDownText: {fileID: 473223334}
 --- !u!1 &474770099
 GameObject:
   m_ObjectHideFlags: 0
@@ -4803,6 +4800,10 @@ PrefabInstance:
     - target: {fileID: 1436831549228342, guid: 4c91d4dd9336f414bb8b5a56d8bff1d2, type: 3}
       propertyPath: m_Name
       value: FireBigYellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436831549228342, guid: 4c91d4dd9336f414bb8b5a56d8bff1d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4269753228097834, guid: 4c91d4dd9336f414bb8b5a56d8bff1d2, type: 3}
       propertyPath: m_RootOrder
@@ -5402,51 +5403,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566802143}
   m_CullTransparentMesh: 1
---- !u!1 &575806383
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 575806385}
-  - component: {fileID: 575806384}
-  m_Layer: 0
-  m_Name: CountDownManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &575806384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575806383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2882943dc986a704dadd61608e019873, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countDownText: {fileID: 473223334}
---- !u!4 &575806385
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575806383}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.63445175, y: -0.55440617, z: 10.230822}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 860803886}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &588943463
 GameObject:
   m_ObjectHideFlags: 0
@@ -6371,7 +6327,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 575806385}
   - {fileID: 556791595}
   - {fileID: 1424281496}
   - {fileID: 1035790111}
@@ -10524,6 +10479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef02d0d0e6beab244b490dfe95186799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonManager: {fileID: 1424281495}
   DiePanel: {fileID: 2036948872}
   HitPanel: {fileID: 1995621273}
   QPanel: {fileID: 28206069}
@@ -10569,6 +10525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1239496934}
+  buttonManager: {fileID: 1424281495}
   Q: {fileID: 1466870718}
   W: {fileID: 1015534653}
   E: {fileID: 2095181142}
@@ -11695,11 +11652,13 @@ MonoBehaviour:
   ExitPanel: {fileID: 0}
   LanguagePanel: {fileID: 0}
   KeySetPanel: {fileID: 0}
+  CountDownObject: {fileID: 473223333}
   anim: {fileID: 0}
   music: {fileID: 1914778836}
   isSetting: 0
   isCharPanel: 0
   isTitleSettingPanel: 0
+  isCountDown: 0
 --- !u!4 &1424281496
 Transform:
   m_ObjectHideFlags: 0
@@ -13999,6 +13958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef02d0d0e6beab244b490dfe95186799, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonManager: {fileID: 1424281495}
   DiePanel: {fileID: 2036948872}
   HitPanel: {fileID: 1995621273}
   QPanel: {fileID: 28206069}
@@ -14044,6 +14004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1722014693}
+  buttonManager: {fileID: 1424281495}
   Q: {fileID: 1779009909}
   W: {fileID: 1895597067}
   E: {fileID: 142082587}
@@ -16209,6 +16170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FireBigYellow
       objectReference: {fileID: 0}
+    - target: {fileID: 1436831549228342, guid: 4c91d4dd9336f414bb8b5a56d8bff1d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4269753228097834, guid: 4c91d4dd9336f414bb8b5a56d8bff1d2, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -16687,6 +16652,10 @@ PrefabInstance:
     - target: {fileID: 1436831549228342, guid: 4c91d4dd9336f414bb8b5a56d8bff1d2, type: 3}
       propertyPath: m_Name
       value: FireBigYellow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436831549228342, guid: 4c91d4dd9336f414bb8b5a56d8bff1d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4269753228097834, guid: 4c91d4dd9336f414bb8b5a56d8bff1d2, type: 3}
       propertyPath: m_RootOrder

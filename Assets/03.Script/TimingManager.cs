@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,7 @@ public class TimingManager : MonoBehaviour
     public GameObject laserRotation;
     public SecondStage secondStage;
     public bool camerashake = true;
+    public Camera mainCamera;
 
     private void Update()
     {
@@ -86,7 +88,8 @@ public class TimingManager : MonoBehaviour
                     if (timingBoxs[x].x <= t_notePosX && t_notePosX <= timingBoxs[x].y)
                     {
                         AudioManager.instance.PlaySound(transform.position, 0, Random.Range(1f, 1f), 1);
-                        if (camerashake) { 
+                        
+                        if (camerashake) {
                             CameraShake.instance.Shake();
                         }
 

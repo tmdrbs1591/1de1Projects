@@ -5,6 +5,8 @@ using UnityEngine;
 public class FourTrackAttack: MonoBehaviour
 {
     public PlaayerController controller;
+    public ButtonManager buttonManager;
+
     public Transform Q;
     public Transform W;
     public Transform E;
@@ -22,7 +24,7 @@ public class FourTrackAttack: MonoBehaviour
 
     void Update()
     {
-        if (!controller.Death)
+        if (!controller.Death && !buttonManager.isCountDown)
         {
             if ((Input.GetKey(KeySetting.keys[KeyAction.D]) && Input.GetKey(KeySetting.keys[KeyAction.F]) && Input.GetKey(KeySetting.keys[KeyAction.J]) && Input.GetKey(KeySetting.keys[KeyAction.K])) )
             {

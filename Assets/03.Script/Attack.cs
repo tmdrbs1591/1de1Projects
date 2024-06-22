@@ -5,6 +5,8 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     public PlaayerController controller;
+    public ButtonManager buttonManager;
+
     public Transform Q;
     public Transform W;
     public Transform E;
@@ -21,7 +23,7 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-        if (!controller.Death)
+        if (!controller.Death && !buttonManager.isCountDown) // 죽지 않거나 카운트 중이 아닐때만
         {
             if ((Input.GetKey(KeySetting.keys[KeyAction.Q]) && Input.GetKey(KeySetting.keys[KeyAction.W]) && Input.GetKey(KeySetting.keys[KeyAction.E])) )
             {

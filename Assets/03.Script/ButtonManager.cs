@@ -18,6 +18,7 @@ public class ButtonManager : MonoBehaviour
     public GameObject ExitPanel; //종료패널
     public GameObject LanguagePanel; //언어패널
     public GameObject KeySetPanel; //키세팅패널
+    public GameObject CountDownObject; //카운트 다운
 
     [Header("Other Components")]
     public Animator anim;
@@ -26,13 +27,17 @@ public class ButtonManager : MonoBehaviour
     public bool isSetting = false; // 현재 세팅창인지
     public bool isCharPanel = false; // 현재 캐릭터 창인지
     public bool isTitleSettingPanel = false; // 현재 타이틀 세팅 창인지
+    public bool isCountDown = false; // 현재 카운트 다운 중인지
 
 
-
+    private void Start()
+    {
+        StartCoroutine(CountDown()); //게임 시작시 esc 못누르게
+    }
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape) && !isSetting && !isCharPanel && SettingPanel != null)
+        if (Input.GetKeyDown(KeyCode.Escape) && !isSetting && !isCharPanel && SettingPanel != null&& !isCountDown)
         {
             SettingPanel.SetActive(true);
             if (music.audioSource.isPlaying) // 음악이 재생 중이라면 중단합니다.
@@ -42,11 +47,8 @@ public class ButtonManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && isSetting && !isCharPanel)
         {
-            SettingPanel.SetActive(false);
-            if (!music.audioSource.isPlaying) // 음악이 중단되었다면 다시 재생합니다.
-                music.audioSource.Play();
             isSetting = false;
-            Time.timeScale = 1;
+            Play();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape) && isCharPanel)
@@ -72,17 +74,20 @@ public class ButtonManager : MonoBehaviour
     }
     public void Stop()
     {
+        if (isCountDown)
+            return;
         if (music.audioSource.isPlaying) // 음악이 재생 중이라면 중단합니다.
             music.audioSource.Pause();
         SettingPanel.SetActive(true);
         Time.timeScale = 0;
     }
     public void Play()
-    {
-        if (!music.audioSource.isPlaying) // 음악이 중단되었다면 다시 재생합니다.
-            music.audioSource.Play();
+    {   if (isCountDown)
+            return;
         SettingPanel.SetActive(false);
-        Time.timeScale = 1;
+        CountDownObject.SetActive(false);
+        CountDownObject.SetActive(true);
+        StartCoroutine(PlayCount());
     }
     public void Retry(string Stage)//다시시작
     {
@@ -240,5 +245,21 @@ public class ButtonManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.7f);
         SceneManager.LoadScene(2);
+    }
+    IEnumerator PlayCount()
+    {
+        isCountDown = true;
+        yield return new WaitForSecondsRealtime(1.7f);
+        Time.timeScale = 1;
+        if (!music.audioSource.isPlaying) // 음악이 중단되었다면 다시 재생합니다.
+            music.audioSource.Play();
+        isCountDown = false;
+
+    }
+    IEnumerator CountDown()
+    {
+        isCountDown = true;
+        yield return new WaitForSecondsRealtime(2f);
+        isCountDown = false;
     }
 }

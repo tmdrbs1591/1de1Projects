@@ -7,6 +7,7 @@ using DG.Tweening;
 public class PlaayerController : MonoBehaviour
 {
     TimingManager theTimingManager;
+    public ButtonManager buttonManager;
 
     public GameObject DiePanel; //죽으면 나오는 패널
     public GameObject HitPanel;//빨간색 히트 이펙트 패널
@@ -36,12 +37,15 @@ public class PlaayerController : MonoBehaviour
 
     void Update()
     {
+        if (!buttonManager.isCountDown) { 
+           
         HpBar.value = Mathf.Lerp(HpBar.value, (float)CurHP / (float)MaxHP, Time.deltaTime * 20);
         HpBar2.value = Mathf.Lerp(HpBar2.value, (float)CurHP / (float)MaxHP, Time.deltaTime * 3);
 
         Die();
         Key();
         FourTrackKey();
+        }
     }
     public void TakeDamage(int damage) // 데미지 입기
     {

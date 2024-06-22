@@ -116,7 +116,7 @@ public class FifthStage : MonoBehaviour
         }
         else if (noteCount < 123)
         {
-            if (currentTime >= beatInterval * 2f)
+            if (currentTime >= beatInterval * 1.9f)
             {
                 SpawnEWNote();
                 currentTime -= beatInterval * 0.667f;
@@ -137,7 +137,7 @@ public class FifthStage : MonoBehaviour
             if (currentTime >= beatInterval * 2f)
             {
                 SpawnRandomNote();
-                StartCoroutine(GlitchOn(1f));
+                StartCoroutine(GlitchOn(1.06f));
                 currentTime -= beatInterval * 0.4f;
                 noteCount++;
             }
