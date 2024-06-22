@@ -15,6 +15,10 @@ public class ReFirstStage : MonoBehaviour
     double currentTime = 0d;
     int noteCount = 0; // 생성된 노트의 수
 
+    [SerializeField] GameObject Glitch;//글리치 이펙트
+    [SerializeField] GameObject Flash;//플래시 이펙트
+
+
     enum BeatType
     {
         Whole = 1,
@@ -46,6 +50,7 @@ public class ReFirstStage : MonoBehaviour
         thecomboManager = FindObjectOfType<ComboManager>();
         theEffectManager = FindObjectOfType<EffectManager>();
         theTimingManager = GetComponent<TimingManager>();
+        StartCoroutine(StartEffect());
     }
 
     void FixedUpdate()
@@ -1373,6 +1378,15 @@ public class ReFirstStage : MonoBehaviour
             theTimingManager.boxNoteList.Remove(collision.gameObject);
             Destroy(collision.gameObject);
         }
+
+    }
+    IEnumerator StartEffect()
+    {
+        yield return new WaitForSeconds(2.2f);
+        Glitch.SetActive(true);
+        yield return new WaitForSeconds(1.3f);
+        Glitch.SetActive(false);
+        Flash.SetActive(true);
 
     }
 }

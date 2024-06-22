@@ -18,7 +18,7 @@ public class CountDown : MonoBehaviour
         }
 
         countDownText.text = "Go!";
-        yield return new WaitForSecondsRealtime(0.4f); // 실제 시간 기준으로 0.4초 대기
+        yield return new WaitForSecondsRealtime(0.41f); // 실제 시간 기준으로 0.4초 대기
         countDownText.text = "";
     }
 
@@ -26,9 +26,14 @@ public class CountDown : MonoBehaviour
     {
         StartCoroutine(StartCountDown());
     }
-
+    private void Start()
+    {
+        gameObject.SetActive(false);
+        gameObject.SetActive(true);
+    }
     private void OnEnable()
     {
+
         instance = this;
         StartCoroutine(StartCountDown());
     }

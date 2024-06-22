@@ -66,21 +66,21 @@ public class SecondStage : MonoBehaviour
 
         if (noteCount < 1) // 厚飘积己
         {
-            if (currentTime >= beatInterval * 0.935f)
+            if (currentTime >= beatInterval * 4)
             {
                 
                 Song.Play();
                 SpawnRandomNote();
-                currentTime -= beatInterval * 0.935f;
+                currentTime -= beatInterval * 4;
                 noteCount++;
             }
         }
-        if (noteCount < 32) // 厚飘积己
+        else if (noteCount < 32) // 厚飘积己
         {
-            if (currentTime >= beatInterval * 0.935f)
+            if (currentTime >= beatInterval * 0.94f)
             {
                 SpawnRandomNote();
-                currentTime -= beatInterval * 0.935f;
+                currentTime -= beatInterval * 0.94f;
                 noteCount++;
             }
         }

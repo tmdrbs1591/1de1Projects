@@ -16832,7 +16832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &533964339
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25811,7 +25811,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -77.21012, y: 0, z: -89.088615, w: 0}
+  m_margin: {x: -148.42673, y: 0, z: -164.05344, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -27725,11 +27725,13 @@ MonoBehaviour:
   ExitPanel: {fileID: 649311088}
   LanguagePanel: {fileID: 533964338}
   KeySetPanel: {fileID: 300188619}
+  CountDownObject: {fileID: 0}
   anim: {fileID: 0}
   music: {fileID: 0}
   isSetting: 0
   isCharPanel: 0
   isTitleSettingPanel: 0
+  isCountDown: 0
 --- !u!4 &982643564
 Transform:
   m_ObjectHideFlags: 0

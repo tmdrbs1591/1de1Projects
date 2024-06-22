@@ -42,8 +42,8 @@ public class ButtonManager : MonoBehaviour
             SettingPanel.SetActive(true);
             if (music.audioSource.isPlaying) // 음악이 재생 중이라면 중단합니다.
                 music.audioSource.Pause();
-            isSetting = true;
             Time.timeScale = 0;
+            isSetting = true;
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && isSetting && !isCharPanel)
         {
@@ -84,6 +84,7 @@ public class ButtonManager : MonoBehaviour
     public void Play()
     {   if (isCountDown)
             return;
+        isSetting = false;
         SettingPanel.SetActive(false);
         CountDownObject.SetActive(false);
         CountDownObject.SetActive(true);

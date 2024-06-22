@@ -69,7 +69,7 @@ public class FifthStage : MonoBehaviour
             {
                 Song.Play();
                 SpawnRandomNote();
-                StartCoroutine(DigitalGlitchOn(1f));
+                StartCoroutine(DigitalGlitchOn(1.08f));
                 currentTime -= beatInterval * 5.4f;
                 noteCount++;
             }
@@ -116,7 +116,7 @@ public class FifthStage : MonoBehaviour
         }
         else if (noteCount < 123)
         {
-            if (currentTime >= beatInterval * 1.9f)
+            if (currentTime >= beatInterval * 1.8f)
             {
                 SpawnEWNote();
                 currentTime -= beatInterval * 0.667f;
@@ -125,7 +125,7 @@ public class FifthStage : MonoBehaviour
         }
         else if (noteCount < 124)
         {
-            if (currentTime >= beatInterval * 2f)
+            if (currentTime >= beatInterval * 1.8f)
             {
                 SpawnQWNote();
                 currentTime -= beatInterval * 0.667f;
