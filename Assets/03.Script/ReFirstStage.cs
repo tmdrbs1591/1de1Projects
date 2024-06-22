@@ -50,7 +50,7 @@ public class ReFirstStage : MonoBehaviour
         thecomboManager = FindObjectOfType<ComboManager>();
         theEffectManager = FindObjectOfType<EffectManager>();
         theTimingManager = GetComponent<TimingManager>();
-        StartCoroutine(StartEffect());
+        
     }
 
     void FixedUpdate()
@@ -71,6 +71,7 @@ public class ReFirstStage : MonoBehaviour
             if (currentTime >= beatInterval * 4.4f)
             {
                 Song.Play();
+                StartCoroutine(StartEffect());
                 SpawnRandomNote();
                 currentTime -= beatInterval * 4.4f;
                 noteCount++;
@@ -1382,7 +1383,6 @@ public class ReFirstStage : MonoBehaviour
     }
     IEnumerator StartEffect()
     {
-        yield return new WaitForSeconds(2.2f);
         Glitch.SetActive(true);
         yield return new WaitForSeconds(1.3f);
         Glitch.SetActive(false);
