@@ -5,15 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class RoGoScene : MonoBehaviour
 {
+    public float sceneLoadTime;
+    public string sceneName;
 
     void Start()
     {
-        Invoke("Scene", 2.4f);
+        Invoke("Scene", sceneLoadTime);
     }
 
     void Scene()
     {
-        SceneManager.LoadScene("TTitle");
+        SceneManager.LoadScene(sceneName);
     }
   
     void Update()

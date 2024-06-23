@@ -1608,16 +1608,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: '- Press Any Key -'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 46ae2e6e19fa3854baf718f8d3026c6a, type: 2}
-  m_sharedMaterial: {fileID: -143696375881030577, guid: 46ae2e6e19fa3854baf718f8d3026c6a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ce1c39dc543a96344a5f67de96b2a367, type: 2}
+  m_sharedMaterial: {fileID: 2952003651432021203, guid: ce1c39dc543a96344a5f67de96b2a367, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294945020
-  m_fontColor: {r: 0.988317, g: 0.65723264, b: 1, a: 1}
-  m_enableVertexGradient: 1
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
   m_colorMode: 1
   m_fontColorGradient:
     topLeft: {r: 0.025157154, g: 0.99119216, b: 1, a: 1}
@@ -1633,8 +1633,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64.7
-  m_fontSizeBase: 64.7
+  m_fontSize: 51.89
+  m_fontSizeBase: 51.89
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

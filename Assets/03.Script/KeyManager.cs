@@ -28,10 +28,10 @@ public class KeyManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         // 기본 키로 키 사전 초기화
-        for (int i = 0; i < (int)KeyAction.KEYCOUNT; i++)
-        {
-            KeySetting.keys[(KeyAction)i] = defaultKeys[i];
-        }
+        //for (int i = 0; i < (int)KeyAction.KEYCOUNT; i++)
+        //{
+        //    KeySetting.keys[(KeyAction)i] = defaultKeys[i];
+        //}
     }
 
     private void OnGUI()
