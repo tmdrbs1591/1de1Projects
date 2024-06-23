@@ -7,13 +7,15 @@ using TMPro;
 public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDragHandler
 {
     public Scrollbar scrollbar;
-    const int SIZE = 5;
+    const int SIZE = 10;
     float[] pos = new float[SIZE];
     float distance,curPos,targetPos;
     bool isDrag;
     int targetIndex;
 
     [SerializeField]  TMP_Text titlename;
+
+    [SerializeField]  TMP_Text tracks;
 
     [SerializeField] GameObject[] Wave;
     
@@ -102,31 +104,40 @@ public class NestedScrollManager : MonoBehaviour,IBeginDragHandler,IDragHandler,
         if (!isDrag) scrollbar.value = Mathf.Lerp(scrollbar.value, targetPos, 0.1f);
 
         //특정 볼륨값에 따라 노래 제목 출력
-        if (scrollbar.value >= 0.8f && scrollbar.value <= 1f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
+       
+       
+     
+        if (scrollbar.value <= 0.07f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
-            SetStage(StagerManager.Stage.fifthStage, "Gritty Dash", 4);
+            SetStage(StagerManager.Stage.FirstStage, "Lian Ai Audio Navigation","3Track",0);
         }
-        if (scrollbar.value >= 0.55f && scrollbar.value <= 0.78f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
+        else if (scrollbar.value >= 0.08f && scrollbar.value <= 0.18f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
-            SetStage(StagerManager.Stage.fourthStage, "under development", 3);
+            SetStage(StagerManager.Stage.SecondStage, "Nitro Fun - Final Boss", "3Track", 1);
         }
-        if (scrollbar.value >= 0.34f && scrollbar.value <= 0.54f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
+        else if (scrollbar.value >= 0.19f && scrollbar.value <= 0.28f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
-            SetStage(StagerManager.Stage.ThirdStage, "IyaIya", 2);
+            SetStage(StagerManager.Stage.ThirdStage, "IyaIya", "3Track", 2);
         }
-        if (scrollbar.value >= 0.1f && scrollbar.value <= 0.33f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
+        else if (scrollbar.value >= 0.29f && scrollbar.value <= 0.38f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
-            SetStage(StagerManager.Stage.SecondStage, "Nitro Fun - Final Boss", 1);
+            SetStage(StagerManager.Stage.fourthStage, "개발중", "", 3);
         }
-        if (scrollbar.value <= 0.09f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
+        else if (scrollbar.value >= 0.39f && scrollbar.value <= 0.5f && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
         {
-            SetStage(StagerManager.Stage.FirstStage, "Lian Ai Audio Navigation", 0);
+            SetStage(StagerManager.Stage.fifthStage, "Gritty Dash", "4Track", 4);
         }
+        else if (scrollbar.value >= 0.51f  && !buttonManager.isCharPanel && !buttonManager.isTitleSettingPanel)
+        {
+            SetStage(StagerManager.Stage.fourthStage, "개발중", "", 3);
+        }
+       
     }
-    void SetStage(StagerManager.Stage stage, string title, int waveIndex) //스테이지 설정
+    void SetStage(StagerManager.Stage stage, string title, string track, int waveIndex) //스테이지 설정
     {
         StagerManager.instance.currentStage = stage;
         titlename.text = title;
+        tracks.text = track;
 
         // 모든 Wave 오브젝트를 비활성화
         for (int i = 0; i < Wave.Length; i++)
