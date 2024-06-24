@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Warning.unity
     guid: 45ad056c92f6bf94180d4b00b8401f7c
+  - enabled: 1
+    path: Assets/Scenes/TeamLogo.unity
+    guid: f383b9648fb71724f9983b79ff9efd6e
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: f964c1ab316bc4c49b119d629d76c994, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 0db0569edf7aa404a8cec25fa4f5afd8, type: 2}

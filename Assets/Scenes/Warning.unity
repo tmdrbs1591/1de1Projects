@@ -867,15 +867,15 @@ MonoBehaviour:
     \uADF8\uB7EC\uB2C8 \uBD80\uB514 \uC870\uC2EC\uD574\uC8FC\uC138\uC694. \uC2EC\uAC01\uD55C
     \uC601\uD5A5\uC744 \uCD08\uB798\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f8499e74db5d3cc418cc8f1076b68761, type: 2}
-  m_sharedMaterial: {fileID: -8667995590594304559, guid: f8499e74db5d3cc418cc8f1076b68761, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b88bd5c11dca11d428bd7a0b39580ea9, type: 2}
+  m_sharedMaterial: {fileID: -1680170419797540463, guid: b88bd5c11dca11d428bd7a0b39580ea9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4290230199
+  m_fontColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

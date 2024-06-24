@@ -4747,8 +4747,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 681424502}
   videoClips:
-  - {fileID: 32900000, guid: 832d6ff40b9b20b48974bcf5ebd43caa, type: 3}
-  - {fileID: 32900000, guid: 6fcca0c4d412dab45b21d706d4ff6d47, type: 3}
+  - {fileID: 32900000, guid: b8f3222dd0e009743abff5b8e2cfd96f, type: 3}
+  - {fileID: 32900000, guid: 4d65722a47039244ea4ad27fa3bbea4c, type: 3}
   - {fileID: 32900000, guid: 98a18bef7de574f49a97db18eb5f904e, type: 3}
 --- !u!95 &619107066
 Animator:
