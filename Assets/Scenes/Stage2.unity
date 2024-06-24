@@ -1565,7 +1565,9 @@ MonoBehaviour:
   notemap: []
   firstNote: 0
   allNotes: 0
+  maxNotes: 0
   powerEffect: {fileID: 194577089}
+  powerMap: {fileID: 580928399}
 --- !u!1 &136425354
 GameObject:
   m_ObjectHideFlags: 0
@@ -11729,8 +11731,8 @@ MonoBehaviour:
   WPanel: {fileID: 1427607492}
   EPanel: {fileID: 136425354}
   Death: 0
-  MaxHP: 150
-  CurHP: 150
+  MaxHP: 15000
+  CurHP: 15000
   appearPosition: {x: -6.2, y: -2.9}
   HpBar: {fileID: 1269317807}
   HpBar2: {fileID: 29881437}
@@ -14598,7 +14600,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1384.54, y: 200.33}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1501725183

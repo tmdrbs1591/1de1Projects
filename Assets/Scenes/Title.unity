@@ -4057,9 +4057,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songPath:
-  - \NoteMap\Test11.json
-  - \NoteMap\Test13.json
-  - \NoteMap\Test16.json
+  - \NoteMap\Stage1.json
+  - \NoteMap\Stage2.json
+  - \NoteMap\Stage3 2.json
   Fadein: {fileID: 224297814}
   buttonManager: {fileID: 982643563}
   fixedPanel: {fileID: 1272807604}
