@@ -4056,6 +4056,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46fe7cb24b020d24882d29d24e73b2a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  songPath:
+  - \NoteMap\Test11.json
+  - \NoteMap\Test13.json
+  - \NoteMap\Test16.json
   Fadein: {fileID: 224297814}
   buttonManager: {fileID: 982643563}
   fixedPanel: {fileID: 1272807604}
@@ -19822,6 +19826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCharater: 0
+  songPath: 
 --- !u!4 &602936787
 Transform:
   m_ObjectHideFlags: 0

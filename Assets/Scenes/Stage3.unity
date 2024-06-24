@@ -1049,10 +1049,15 @@ MonoBehaviour:
   map: {fileID: 2065697452}
   SpeedEffect: {fileID: 580928399}
   ClearPanel: {fileID: 1237198520}
+  Warning: {fileID: 0}
+  Song: {fileID: 1914778837}
   thePlayerController: {fileID: 1251377085}
+  CameraAnim: {fileID: 0}
   bpm: 120
-  objectManager: {fileID: 556791594}
-  PowerEffect: {fileID: 194577089}
+  currentTime: 0
+  noteCount: 0
+  Glitch: {fileID: 0}
+  Flash: {fileID: 0}
   tfNoteAppear: {fileID: 1150853093}
   go1: {fileID: 7274178576524805104, guid: 8e28fdd08ed09694bbe5e35bea12dae5, type: 3}
   go2: {fileID: 7274178576524805104, guid: 2157e84cb9420224e937a4bff6829171, type: 3}
@@ -1060,6 +1065,13 @@ MonoBehaviour:
   go4: {fileID: 7274178576524805104, guid: 57614447847cb864cb099a1e1da494d9, type: 3}
   go5: {fileID: 7274178576524805104, guid: aa474b92673ea2c449aa7ab01275485d, type: 3}
   go6: {fileID: 7274178576524805104, guid: 11d2aa0af9817ab4f9613341c6ca4745, type: 3}
+  theTimingManager: {fileID: 0}
+  theEffectManager: {fileID: 0}
+  thecomboManager: {fileID: 0}
+  notemap: []
+  firstNote: 0
+  allNotes: 0
+  maxNotes: 0
 --- !u!1 &136425354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,11 +1517,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192328661}
   m_CullTransparentMesh: 1
---- !u!1 &194577089 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1612385547688008, guid: 4d338de4aee3c554bb9ac71eb9ee293d, type: 3}
-  m_PrefabInstance: {fileID: 1282649671}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &194577096 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4155305085937062, guid: 4d338de4aee3c554bb9ac71eb9ee293d, type: 3}
@@ -3190,51 +3197,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &461501683
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 461501685}
-  - component: {fileID: 461501684}
-  m_Layer: 0
-  m_Name: CountDownManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &461501684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461501683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2882943dc986a704dadd61608e019873, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countDownText: {fileID: 0}
---- !u!4 &461501685
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 461501683}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.63445175, y: -0.55440617, z: 10.230822}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 860803886}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &472272960
 GameObject:
   m_ObjectHideFlags: 0
@@ -5948,7 +5910,6 @@ Transform:
   m_Children:
   - {fileID: 556791595}
   - {fileID: 616009665}
-  - {fileID: 461501685}
   - {fileID: 369972847}
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -18995,6 +18956,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f22b3ebf915b054284dbbd76b6ae555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1914778837 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4372413395565972820, guid: 2772cb51adb91934483b534753f3b156, type: 3}
+  m_PrefabInstance: {fileID: 3934405579867090890}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1914984088
 GameObject:
   m_ObjectHideFlags: 0
@@ -26079,6 +26045,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4372413395565972820, guid: 2772cb51adb91934483b534753f3b156, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e09d594082b7e254b8fbf564ecbaf13b, type: 3}
     - target: {fileID: 9106744459817086146, guid: 2772cb51adb91934483b534753f3b156, type: 3}
       propertyPath: Controller
       value: 

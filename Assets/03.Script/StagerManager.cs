@@ -16,6 +16,8 @@ public class StagerManager : MonoBehaviour
         TitleSettingPanel
     }
 
+    public string[] songPath;
+
     public static StagerManager instance;
     public GameObject Fadein;
     public ButtonManager buttonManager;
@@ -55,6 +57,7 @@ public class StagerManager : MonoBehaviour
     {
         if (!isStart)
         {
+            DataManager.instance.songPath = songPath[(int)currentStage];
         if (currentStage == Stage.FirstStage)
         {
             AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);

@@ -20,5 +20,6 @@ public class DataManager : MonoBehaviour
 
 
     public Character currentCharater;
+    public string songPath;
 
 }

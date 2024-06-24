@@ -1543,12 +1543,15 @@ MonoBehaviour:
   map: {fileID: 2065697452}
   SpeedEffect: {fileID: 580928399}
   ClearPanel: {fileID: 1186746813}
+  Warning: {fileID: 0}
   Song: {fileID: 1914778837}
   thePlayerController: {fileID: 1251377085}
   CameraAnim: {fileID: 519420034}
   bpm: 120
-  objectManager: {fileID: 556791594}
-  PowerEffect: {fileID: 194577089}
+  currentTime: 0
+  noteCount: 0
+  Glitch: {fileID: 0}
+  Flash: {fileID: 0}
   tfNoteAppear: {fileID: 1150853093}
   go1: {fileID: 7274178576524805104, guid: 8e28fdd08ed09694bbe5e35bea12dae5, type: 3}
   go2: {fileID: 7274178576524805104, guid: 2157e84cb9420224e937a4bff6829171, type: 3}
@@ -1556,6 +1559,13 @@ MonoBehaviour:
   go4: {fileID: 7274178576524805104, guid: 57614447847cb864cb099a1e1da494d9, type: 3}
   go5: {fileID: 7274178576524805104, guid: aa474b92673ea2c449aa7ab01275485d, type: 3}
   go6: {fileID: 7274178576524805104, guid: 11d2aa0af9817ab4f9613341c6ca4745, type: 3}
+  theTimingManager: {fileID: 0}
+  theEffectManager: {fileID: 0}
+  thecomboManager: {fileID: 0}
+  notemap: []
+  firstNote: 0
+  allNotes: 0
+  powerEffect: {fileID: 194577089}
 --- !u!1 &136425354
 GameObject:
   m_ObjectHideFlags: 0

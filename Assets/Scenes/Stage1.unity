@@ -1923,10 +1923,10 @@ MonoBehaviour:
   thePlayerController: {fileID: 1722014693}
   CameraAnim: {fileID: 519420034}
   bpm: 120
+  currentTime: 0
+  noteCount: 0
   Glitch: {fileID: 1201332860}
   Flash: {fileID: 1475611503}
-  objectManager: {fileID: 556791594}
-  PowerEffect: {fileID: 111992, guid: ef697b4cb271b7642af97a1a70394631, type: 3}
   tfNoteAppear: {fileID: 1150853093}
   go1: {fileID: 7274178576524805104, guid: 764b7dd48d03f1d4a983fd569d20bc92, type: 3}
   go2: {fileID: 7274178576524805104, guid: 3860c64153e1f044489af0c8df882a4a, type: 3}
@@ -1934,6 +1934,13 @@ MonoBehaviour:
   go4: {fileID: 7274178576524805104, guid: 412382b45095457468beafbe570c1ec9, type: 3}
   go5: {fileID: 7274178576524805104, guid: cb68d1a86f594e7409e6a0737d4b8db8, type: 3}
   go6: {fileID: 7274178576524805104, guid: 31d7cfff612f11c40a5d88167047a1df, type: 3}
+  theTimingManager: {fileID: 0}
+  theEffectManager: {fileID: 0}
+  thecomboManager: {fileID: 0}
+  notemap: []
+  firstNote: 0
+  allNotes: 0
+  maxNotes: 0
 --- !u!1 &136425354
 GameObject:
   m_ObjectHideFlags: 0
