@@ -63,6 +63,7 @@ public class EditorManager : MonoBehaviour
 
     void Save()
     {
+#if UNITY_EDITOR
         SerializableList<NoteInfo> r = new SerializableList<NoteInfo>(); // 리스트를 제이슨으로 변환할 수 있게 변환
         r.list = map; // r.list에 저장
         var path = EditorUtility.SaveFilePanel("Save your map", Application.dataPath, DateTime.Now.ToString("yyyyMMddHHmmss") + ".json", "json"); // 저장하는 창 열기
@@ -70,6 +71,9 @@ public class EditorManager : MonoBehaviour
         {
             sw.WriteLine(JsonUtility.ToJson(r));
         }
+#else
+        Debug.LogError("Save can only be called from within the Unity Editor.");
+#endif
     }
 
     void Start()

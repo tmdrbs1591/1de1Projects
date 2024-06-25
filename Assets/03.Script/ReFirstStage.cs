@@ -31,7 +31,7 @@ public class ReFirstStage : MonoBehaviour
     }
 
     protected ObjectManager objectManager;
-    protected  GameObject PowerEffect;
+    protected GameObject PowerEffect;
 
     [SerializeField] public Transform tfNoteAppear = null;
     [SerializeField] public GameObject go1 = null;
@@ -50,7 +50,7 @@ public class ReFirstStage : MonoBehaviour
 
     public bool firstNote;
 
-   public int allNotes;
+    public int allNotes;
     public int maxNotes;
 
     void Start()
@@ -60,15 +60,17 @@ public class ReFirstStage : MonoBehaviour
         theEffectManager = FindObjectOfType<EffectManager>();
         theTimingManager = GetComponent<TimingManager>();
 
+#if UNITY_EDITOR
         if (DataManager.instance.songPath == null) // 메인메뉴에서 고른게 없으면
         {
             // 창을 띄워서 할당하게 파일을
             var path = EditorUtility.OpenFilePanel("Load wave", Application.dataPath, "json");
-            using (StreamReader reader = new StreamReader(path)) 
+            using (StreamReader reader = new StreamReader(path))
             {
                 notemap = JsonUtility.FromJson<EditorManager.SerializableList<NoteInfo>>(reader.ReadToEnd()).list;
             }
-        } else //그게 아니면
+        }
+        else //그게 아니면
         {
             //데이터 매니저에서 정보 받아와서 할당
             var path = Application.dataPath + DataManager.instance.songPath;//경로
@@ -77,6 +79,9 @@ public class ReFirstStage : MonoBehaviour
                 notemap = JsonUtility.FromJson<EditorManager.SerializableList<NoteInfo>>(reader.ReadToEnd()).list;
             }
         }
+#else
+        Debug.LogError("Song path can only be set in the Unity Editor.");
+#endif
 
         foreach (NoteInfo e in notemap)
         {
@@ -106,7 +111,7 @@ public class ReFirstStage : MonoBehaviour
 
     }
 
-   protected IEnumerator QueueToSpawn(NoteInfo e) // 생성
+    protected IEnumerator QueueToSpawn(NoteInfo e) // 생성
     {
         yield return new WaitForSeconds(e.timing); //노트 나오는 타이밍 설정
         if (!firstNote) // 처음 노트가 생성되면 음악 시작
@@ -129,7 +134,7 @@ public class ReFirstStage : MonoBehaviour
         yield return new WaitForSeconds(time);
         ClearPanel.SetActive(true);
     }
-    public IEnumerator EffectTrue(float time,GameObject Effect)
+    public IEnumerator EffectTrue(float time, GameObject Effect)
     {
         yield return new WaitForSeconds(time);
         Effect.SetActive(true);
@@ -275,7 +280,7 @@ public class ReFirstStage : MonoBehaviour
             }
 
 
-                theTimingManager.boxNoteList.Remove(collision.gameObject);
+            theTimingManager.boxNoteList.Remove(collision.gameObject);
             Destroy(collision.gameObject);
         }
 
