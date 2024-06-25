@@ -10,54 +10,71 @@ public class NoteInfo
 {
     public string note;
     public float timing;
+    public GameObject gameObject; // 노트에 대응하는 게임 오브젝트
+
+    // 생성자
+    public NoteInfo(string noteType, float time, GameObject obj)
+    {
+        note = noteType;
+        timing = time;
+        gameObject = obj;
+    }
 }
+
 public class EditorManager : MonoBehaviour
 {
-    public class SerializableList<T> {
-        public List<T> list;
-    }
-
     [SerializeField] List<NoteInfo> map = new List<NoteInfo>();
-
     public float time;
-
-    public NoteInfo[] noteList;
     public EditNote editQNote;
     public EditNote editWNote;
     public EditNote editENote;
     public EditNote editQWNote;
     public EditNote editEWNote;
     public EditNote editSpaceNote;
+    public AudioSource audioSource;
 
-    public void Add(string noteType) { //맵에 저장하는 함수
-        NoteInfo added = new NoteInfo();
-        added.note = noteType;
-        added.timing = time;
-        map.Add(added);
-        GameObject a = null;
+    void Add(string noteType)
+    {
+        GameObject prefab = null;
         switch (noteType)
         {
-            case "Q": a = Instantiate(editQNote.gameObject); break; //q면 q생성 임시로 보이는 오브젝트
-            case "W": a = Instantiate(editWNote.gameObject); break;
-            case "E": a = Instantiate(editENote.gameObject); break;
-            case "QW": a = Instantiate(editQWNote.gameObject); break;
-            case "EW": a = Instantiate(editEWNote.gameObject); break;
-            case "QWE": a = Instantiate(editSpaceNote.gameObject); break;
+            case "Q": prefab = editQNote.gameObject; break;
+            case "W": prefab = editWNote.gameObject; break;
+            case "E": prefab = editENote.gameObject; break;
+            case "QW": prefab = editQWNote.gameObject; break;
+            case "EW": prefab = editEWNote.gameObject; break;
+            case "QWE": prefab = editSpaceNote.gameObject; break;
         }
-        
-        a.GetComponent<EditNote>().Sart(noteType, time); // 노트타임이랑 타입을 저장한다
+
+        if (prefab != null)
+        {
+            GameObject noteObject = Instantiate(prefab); // 프리팹 복제
+            EditNote editNoteComponent = noteObject.GetComponent<EditNote>();
+            editNoteComponent.Sart(noteType, time); // 노트 초기화
+
+            NoteInfo newNote = new NoteInfo(noteType, time, noteObject);
+            map.Add(newNote);
+        }
+        else
+        {
+            Debug.LogError("Prefab not found for note type: " + noteType);
+        }
     }
 
-    
-
-    void Save() {//저장
-        SerializableList<NoteInfo> r = new SerializableList<NoteInfo>(); // 리스트를 제이슨 으로 변형시킬수있게 변환
-        r.list = map;//r.list에 저장
-        var path = EditorUtility.SaveFilePanel("Save your map", Application.dataPath, DateTime.Now + ".json", "json"); // 저장하는 창 열기
-        using (StreamWriter sw = new StreamWriter(path,true))//파일저장
+    void Save()
+    {
+        SerializableList<NoteInfo> r = new SerializableList<NoteInfo>(); // 리스트를 제이슨으로 변환할 수 있게 변환
+        r.list = map; // r.list에 저장
+        var path = EditorUtility.SaveFilePanel("Save your map", Application.dataPath, DateTime.Now.ToString("yyyyMMddHHmmss") + ".json", "json"); // 저장하는 창 열기
+        using (StreamWriter sw = new StreamWriter(path)) // 파일 저장
         {
-            sw.WriteLine(JsonUtility.ToJson(r)); 
+            sw.WriteLine(JsonUtility.ToJson(r));
         }
+    }
+
+    void Start()
+    {
+        audioSource.Play();
     }
 
     void Update()
@@ -81,13 +98,38 @@ public class EditorManager : MonoBehaviour
             }
         }
 
+        // 백스페이스 입력 시 가장 최근에 추가된 노트 삭제
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            if (map.Count > 0)
+            {
+                // 가장 최근에 추가된 노트 삭제
+                NoteInfo removedNote = map[map.Count - 1];
+                map.RemoveAt(map.Count - 1);
+
+                // 삭제된 노트의 게임 오브젝트도 삭제
+                Destroy(removedNote.gameObject);
+
+                Debug.Log("Removed note: " + removedNote.note + " at timing: " + removedNote.timing);
+            }
+            else
+            {
+                Debug.Log("Map is empty, nothing to remove.");
+            }
+        }
+
         if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.S)) Save();
 
         time += Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.Space)) time = 0;
+        if (Input.GetKeyDown(KeyCode.Space)) { audioSource.Stop(); audioSource.Play(); time = 0; }
     }
 
     float nextNoteTime = 0f; // 다음 노트 추가 시간을 저장하는 변수
 
+    [System.Serializable]
+    public class SerializableList<T>
+    {
+        public List<T> list;
+    }
 }

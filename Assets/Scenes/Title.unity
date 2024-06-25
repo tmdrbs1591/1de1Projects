@@ -4059,7 +4059,7 @@ MonoBehaviour:
   songPath:
   - \NoteMap\Stage1.json
   - \NoteMap\Stage2.json
-  - \NoteMap\Stage3 2.json
+  - \NoteMap\stage3 6.json
   Fadein: {fileID: 224297814}
   buttonManager: {fileID: 982643563}
   fixedPanel: {fileID: 1272807604}
