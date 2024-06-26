@@ -4057,9 +4057,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songPath:
-  - Stage1.json
-  - \Resources\Stage2.json
-  - \Resources\Stage 3 10.json
+  - Stage1
+  - Stage2
+  - Stage 3 10
   Fadein: {fileID: 224297814}
   buttonManager: {fileID: 982643563}
   fixedPanel: {fileID: 1272807604}
