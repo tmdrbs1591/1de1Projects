@@ -37,7 +37,7 @@ public class ThirdStage : ReFirstStage
         }
         if (allNotes <= 0)
         {
-            ClearPanel.SetActive(true);
+            StartCoroutine(Clear(3f));
         }
       
 
