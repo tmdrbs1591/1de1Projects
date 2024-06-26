@@ -72,12 +72,9 @@ public class ReFirstStage : MonoBehaviour
         }
         else //그게 아니면
         {
-            //데이터 매니저에서 정보 받아와서 할당
-            var path = Application.dataPath + DataManager.instance.songPath;//경로
-            using (StreamReader reader = new StreamReader(path)) //파일을 제이슨으로 받아와서 변환
-            {
-                notemap = JsonUtility.FromJson<EditorManager.SerializableList<NoteInfo>>(reader.ReadToEnd()).list;
-            }
+            //빌드랑 공유된 리소스 파일에서 가져오기
+            var jsonString = (TextAsset) Resources.Load(DataManager.instance.songPath);
+                notemap = JsonUtility.FromJson<EditorManager.SerializableList<NoteInfo>>(jsonString.text).list;
         }
 #else
         Debug.LogError("Song path can only be set in the Unity Editor.");

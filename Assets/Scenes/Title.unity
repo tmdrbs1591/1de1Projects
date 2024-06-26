@@ -4057,7 +4057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songPath:
-  - \Resources\Stage1.json
+  - Stage1.json
   - \Resources\Stage2.json
   - \Resources\Stage 3 10.json
   Fadein: {fileID: 224297814}
