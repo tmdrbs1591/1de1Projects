@@ -10364,11 +10364,11 @@ MonoBehaviour:
   theScoreManager: {fileID: 954515750}
   Score: {fileID: 1106565363}
   Tear: {fileID: 1071543584}
-  S_Score: 95000
-  A_Score: 80000
-  B_Score: 70000
-  C_Score: 60000
-  D_Score: 40000
+  S_Score: 40000
+  A_Score: 35000
+  B_Score: 30000
+  C_Score: 25000
+  D_Score: 20000
 --- !u!114 &1106565363
 MonoBehaviour:
   m_ObjectHideFlags: 0
