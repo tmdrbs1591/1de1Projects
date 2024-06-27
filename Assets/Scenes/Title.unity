@@ -4060,6 +4060,8 @@ MonoBehaviour:
   - Stage1
   - Stage2
   - Stage3
+  - 
+  - 
   Fadein: {fileID: 224297814}
   buttonManager: {fileID: 982643563}
   fixedPanel: {fileID: 1272807604}
