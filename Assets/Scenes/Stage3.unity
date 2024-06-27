@@ -2567,8 +2567,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lian Ai Audio Navigation (short ver.)  Lian Ai Audio Navigation (short
-    ver.)
+  m_text: '  Iya Iya                                Iya Iya'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f6d9c456e5ab4104fa96b156c114a65c, type: 2}
   m_sharedMaterial: {fileID: -143696375881030577, guid: f6d9c456e5ab4104fa96b156c114a65c, type: 2}
