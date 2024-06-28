@@ -20,6 +20,9 @@ public class RoGoScene : MonoBehaviour
   
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }

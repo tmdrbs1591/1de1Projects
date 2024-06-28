@@ -2125,7 +2125,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 310, y: -524}
+  m_AnchoredPosition: {x: 307, y: -531}
   m_SizeDelta: {x: 547.58, y: 547.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &127896857
@@ -3607,6 +3607,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - GLOW_ON
   - GRADIENT2COL_ON
   - GRADIENT_ON
   - WAVEUV_ON
@@ -3718,7 +3719,7 @@ Material:
     - _GhostTransparency: 0
     - _GlitchAmount: 3
     - _GlitchSize: 1
-    - _Glow: 10
+    - _Glow: 3
     - _GlowGlobal: 1
     - _GradBlend: 1
     - _GradBoostX: 1.2
