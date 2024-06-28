@@ -34,6 +34,7 @@ public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1.2f, 1.2f), 1);
         // 마우스가 버튼 위에 있을 때 아웃라인 메테리얼로 교체합니다.
         buttonImage.material = outlineMaterial;
 
