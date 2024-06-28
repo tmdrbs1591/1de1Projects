@@ -3,16 +3,23 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using DG.Tweening;
 using System.Collections;
-public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+
+public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ISelectHandler, IDeselectHandler
 {
+    public ButtonManager buttonManager;
     [SerializeField] float startDelay;
     [SerializeField] float scaleDuration = 0.2f; // 스케일 애니메이션 실행 시간
     [SerializeField] Vector3 scaleUp = new Vector3(1.2f, 1.2f, 1.2f); // 마우스 오버 시 스케일
+    [SerializeField] Vector3 navScaleUp = new Vector3(1.1f, 1.1f, 1.1f); // 네비게이션 시 스케일
+
+    Button menuBtn;
 
     public Material outlineMaterial; // 아웃라인 메테리얼
 
     private Image buttonImage;
     private Material originalMaterial; // 기본 메테리얼 저장 변수
+
+    private bool isNavigated = false; // 네비게이션으로 선택된 상태인지 여부
 
     void Start()
     {
@@ -20,6 +27,8 @@ public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         originalMaterial = buttonImage.material;
 
         StartCoroutine(AnimateButton());
+
+        menuBtn = GetComponent<Button>();
     }
 
     IEnumerator AnimateButton()
@@ -34,25 +43,64 @@ public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1.2f, 1.2f), 1);
-        // 마우스가 버튼 위에 있을 때 아웃라인 메테리얼로 교체합니다.
-        buttonImage.material = outlineMaterial;
+        if (!isNavigated)
+        {
+            AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1.2f, 1.2f), 1);
+            // 마우스가 버튼 위에 있을 때 아웃라인 메테리얼로 교체합니다.
+            buttonImage.material = outlineMaterial;
 
-        // 추가적인 애니메이션 등을 실행할 수 있습니다.
-        transform.DOScale(scaleUp, scaleDuration).SetEase(Ease.OutSine);
+            // 추가적인 애니메이션 등을 실행할 수 있습니다.
+            transform.DOScale(scaleUp, scaleDuration).SetEase(Ease.OutSine);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        // 마우스가 버튼에서 벗어날 때 기본 메테리얼로 교체합니다.
-        buttonImage.material = originalMaterial;
+        if (!isNavigated)
+        {
+            // 마우스가 버튼에서 벗어날 때 기본 메테리얼로 교체합니다.
+            buttonImage.material = originalMaterial;
 
-        // 추가적인 애니메이션 등을 실행할 수 있습니다.
+            // 추가적인 애니메이션 등을 실행할 수 있습니다.
+            transform.DOScale(Vector3.one, scaleDuration).SetEase(Ease.OutSine);
+        }
+    }
+
+    public void OnSelect(BaseEventData eventData)
+    {
+        isNavigated = true;
+
+        // 네비게이션으로 버튼이 선택됐을 때의 처리
+        transform.DOScale(navScaleUp, scaleDuration).SetEase(Ease.OutSine);
+        buttonImage.material = outlineMaterial;
+        AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1.2f, 1.2f), 1);
+    }
+
+    public void OnDeselect(BaseEventData eventData)
+    {
+        isNavigated = false;
+
+        // 네비게이션에서 버튼이 선택 해제됐을 때의 처리
         transform.DOScale(Vector3.one, scaleDuration).SetEase(Ease.OutSine);
+        buttonImage.material = originalMaterial;
     }
 
     void Update()
     {
+        if (buttonManager.isCharPanel || buttonManager.isTitleSettingPanel)
+        {
+            var navigation = new Navigation();
+            navigation.mode = Navigation.Mode.None;
 
+            menuBtn.navigation = navigation;
+        }
+        else
+        {
+            var navigation = new Navigation();
+            navigation.mode = Navigation.Mode.Horizontal;
+
+            menuBtn.navigation = navigation;
+
+        }
     }
 }

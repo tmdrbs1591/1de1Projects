@@ -23,7 +23,7 @@ public class SelectChar : MonoBehaviour
         {
             UpdateSelection();
         }
-        if (Input.GetKeyDown(KeyCode.Return) && StagerManager.instance.currentStage == StagerManager.Stage.CharPanel)
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             DataManager.instance.currentCharater = character;
             UpdateSelection();

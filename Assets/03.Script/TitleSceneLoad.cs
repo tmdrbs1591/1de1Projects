@@ -15,7 +15,7 @@ public class TitleSceneLoad : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            LoadingManager.LoadScene("Title");
+            LoadingManager.LoadScene("Menu");
         }
     }
 }

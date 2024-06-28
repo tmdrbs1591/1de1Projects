@@ -8,6 +8,7 @@ public class ButtonManager : MonoBehaviour
     [Header("UI Panels")]
     public GameObject StagePanel; // 스테이지 고르는 패널
     public GameObject Fadein; // 페이드인 패널
+    public GameObject Fadeout; // 페이드아웃 패널
     public GameObject CharPicPanel; // 캐릭터 픽하는 창 패널
     public GameObject SettingPanel; // 인게임 설정창 패널
     public GameObject TitleSettingPanel; // 타이틀 설정창 패널
@@ -18,6 +19,7 @@ public class ButtonManager : MonoBehaviour
     public GameObject LanguagePanel; // 언어패널
     public GameObject KeySetPanel; // 키세팅패널
     public GameObject CountDownObject; // 카운트 다운
+
 
     [Header("Other Components")]
     public Animator anim;
@@ -32,12 +34,13 @@ public class ButtonManager : MonoBehaviour
 
     private void Start()
     {
+        Fadeout.SetActive(true);
         StartCoroutine(CountDown()); // 게임 시작시 ESC 못 누르게
     }
 
     void Update()
     {
-       
+
 
         if (Input.GetKeyDown(KeyCode.Escape) && !isCountDown)
         {
@@ -46,6 +49,7 @@ public class ButtonManager : MonoBehaviour
                 GameObject topPanel = panelStack.Pop();
                 topPanel.SetActive(false);
                 UpdatePanelFlags(topPanel, false);
+                Play();
             }
             else if (!isSetting && !isCharPanel && SettingPanel != null)
             {
@@ -89,7 +93,7 @@ public class ButtonManager : MonoBehaviour
 
     public void Play()
     {
-        if (isCountDown)
+        if (isCountDown || SettingPanel == null)
             return;
         isSetting = false;
         SettingPanel.SetActive(false);
@@ -124,7 +128,7 @@ public class ButtonManager : MonoBehaviour
     public void firstStage()
     {
         Fadein.SetActive(true);
-        StartCoroutine(SceneLate());
+        StartCoroutine(SceneLate(0.7f,"Stage1"));
     }
 
     public void OffPic() // 캐릭터 픽창 닫기
@@ -142,7 +146,7 @@ public class ButtonManager : MonoBehaviour
         CharPicPanel.SetActive(true);
         isCharPanel = true;
         panelStack.Push(CharPicPanel);
-        StagerManager.instance.currentStage = StagerManager.Stage.CharPanel;
+       // StagerManager.instance.currentStage = StagerManager.Stage.CharPanel;
     }
 
     public void OnTitleSetting() // 설정창 열기
@@ -232,9 +236,10 @@ public class ButtonManager : MonoBehaviour
         KeySetPanel.SetActive(false);
     }
 
-    public void GameExit() // 게임 종료
+    public void GameExit() // 메인 메뉴
     {
-        Application.Quit();
+        Fadein.SetActive(true);
+        StartCoroutine(SceneLate(1.3f, "Menu")); ;
     }
 
     public void SecondStage()
@@ -242,15 +247,18 @@ public class ButtonManager : MonoBehaviour
         Fadein.SetActive(true);
         StartCoroutine(SceneLate2());
     }
-    public void StageSceneLoad()
+    public void StageScenceLoad()
     {
-        LoadingManager.LoadScene("Title");
+        AudioManager.instance.PlaySound(transform.position, 11, Random.Range(1.0f, 1.0f), 1);
+        Fadein.SetActive(true);
+        StartCoroutine(SceneLate(1.3f,"Title"));
     }
+ 
 
-    IEnumerator SceneLate() // 씬 늦게 이동
+    IEnumerator SceneLate(float time, string sceneName) // 씬 늦게 이동
     {
-        yield return new WaitForSeconds(0.7f);
-        SceneManager.LoadScene(1);
+            yield return new WaitForSeconds(time);
+            SceneManager.LoadScene(sceneName);
     }
 
     IEnumerator SceneLate2()
