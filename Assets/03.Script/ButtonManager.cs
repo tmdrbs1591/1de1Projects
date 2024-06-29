@@ -32,6 +32,7 @@ public class ButtonManager : MonoBehaviour
     public bool isTitleSettingPanel = false; // 현재 타이틀 세팅 창인지
     public bool isCountDown = false; // 현재 카운트 다운 중인지
 
+
     private void Start()
     {
         Fadeout.SetActive(true);

@@ -5,14 +5,37 @@ public class BtnSelect : MonoBehaviour
 {
     public Button[] buttons; // 버튼 배열 선언
 
-    void Start()
-    {
-       
-    }
+    public KeyCode key;
+    public KeyCode key2;
+    public KeyCode key3;
+    public KeyCode key4;
+    public string type;
 
+    public GameObject MenuBtn;
+    public GameObject SettingBtn;
+    private void OnEnable()
+    {
+        if (type == "SettingBtn")
+            MenuBtn.SetActive(false);
+
+        if (type == "NextSettingBtn")
+        {
+            SettingBtn.SetActive(false);
+            MenuBtn.SetActive(false);
+
+        }
+
+    }
+    private void OnDisable()
+    {
+        if (type == "SettingBtn")
+            MenuBtn.SetActive(true);
+        if (type == "NextSettingBtn")
+            SettingBtn.SetActive(true);
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(key) || Input.GetKeyDown(key2) || Input.GetKeyDown(key3) || Input.GetKeyDown(key4))
         {
             if (!IsAnyButtonSelected())
             {

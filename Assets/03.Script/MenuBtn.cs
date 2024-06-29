@@ -21,31 +21,48 @@ public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
 
     private bool isNavigated = false; // 네비게이션으로 선택된 상태인지 여부
 
+    public string Type;
+
+    private Vector3 originalPosition;
+
+    private void Awake()
+    {
+        // Awake에서 초기 위치를 저장
+        originalPosition = transform.position;
+    }
+
+    private void OnEnable()
+    {
+        // 위치를 초기화하고 애니메이션을 시작
+        transform.position = originalPosition;
+        StartCoroutine(AnimateButton());
+    }
+
     void Start()
     {
         buttonImage = GetComponent<Image>();
         originalMaterial = buttonImage.material;
-
-        StartCoroutine(AnimateButton());
-
         menuBtn = GetComponent<Button>();
     }
 
     IEnumerator AnimateButton()
     {
         // 버튼의 초기 위치를 위로 이동시킵니다.
-        Vector3 startPos = transform.position + new Vector3(0, 10, 0); // 10은 임의의 값입니다.
+        Vector3 startPos = originalPosition + new Vector3(0, 10, 0); // 10은 임의의 값입니다.
         transform.position = startPos;
         yield return new WaitForSeconds(startDelay);
         // 버튼을 아래로 내린 후 살짝 튀어오르게 하는 애니메이션
-        transform.DOMoveY(transform.position.y - 10, 1f).SetEase(Ease.OutBounce);
+        transform.DOMoveY(originalPosition.y, 1f).SetEase(Ease.OutBounce);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!isNavigated)
         {
-            AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1.2f, 1.2f), 1);
+            if (Type == "MenuButton")
+                AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1.2f, 1.2f), 1);
+            else
+                AudioManager.instance.PlaySound(transform.position, 12, Random.Range(1f, 1f), 1);
             // 마우스가 버튼 위에 있을 때 아웃라인 메테리얼로 교체합니다.
             buttonImage.material = outlineMaterial;
 
@@ -73,7 +90,11 @@ public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
         // 네비게이션으로 버튼이 선택됐을 때의 처리
         transform.DOScale(navScaleUp, scaleDuration).SetEase(Ease.OutSine);
         buttonImage.material = outlineMaterial;
-        AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1.2f, 1.2f), 1);
+        if (Type == "MenuButton")
+             AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1.2f, 1.2f), 1);
+        else
+             AudioManager.instance.PlaySound(transform.position, 12, Random.Range(1f, 1f), 1);
+
     }
 
     public void OnDeselect(BaseEventData eventData)
@@ -87,10 +108,17 @@ public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
 
     void Update()
     {
-        if (buttonManager.isCharPanel || buttonManager.isTitleSettingPanel)
+        if (buttonManager.isCharPanel || buttonManager.isTitleSettingPanel && Type == "MenuButton")
         {
             var navigation = new Navigation();
             navigation.mode = Navigation.Mode.None;
+
+            menuBtn.navigation = navigation;
+        }
+        else if (Type == "SettingButton")
+        {
+            var navigation = new Navigation();
+            navigation.mode = Navigation.Mode.Vertical;
 
             menuBtn.navigation = navigation;
         }
@@ -100,7 +128,6 @@ public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
             navigation.mode = Navigation.Mode.Horizontal;
 
             menuBtn.navigation = navigation;
-
         }
     }
 }

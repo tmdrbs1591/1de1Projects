@@ -79,7 +79,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 56423228743680
-    m_Localized: AUDIO
+    m_Localized: Sound
     m_Metadata:
       m_Items: []
   - m_Id: 56969264209920
@@ -91,7 +91,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 57809345552384
-    m_Localized: LANGUAGE
+    m_Localized: Language
     m_Metadata:
       m_Items: []
   - m_Id: 60433188888576
@@ -185,6 +185,34 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 777184243458048
     m_Localized: 4Track
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3853357370417152
+    m_Localized: Adjust the sound volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3854126664491008
+    m_Localized: Lan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3854447193202688
+    m_Localized: Change the language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3854618442440704
+    m_Localized: Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3854751011807232
+    m_Localized: Change the key setting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3855201815601152
+    m_Localized: DisP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3855219565895680
+    m_Localized: Change the display
     m_Metadata:
       m_Items: []
   references:

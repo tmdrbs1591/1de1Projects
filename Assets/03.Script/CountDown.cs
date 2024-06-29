@@ -28,8 +28,6 @@ public class CountDown : MonoBehaviour
     }
     private void Start()
     {
-        gameObject.SetActive(false);
-        gameObject.SetActive(true);
     }
     private void OnEnable()
     {
