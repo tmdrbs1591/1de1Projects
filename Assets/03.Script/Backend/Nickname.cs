@@ -30,7 +30,7 @@ public class Nickname : LoginBase
         // 닉네임 변경에 실패해 에러 메시지를 출력한 상태에서
         // 닉네임 변경 팝업을 닫았다가 열 수 있기 때문에 상태를 초기화
         ResetUI(imageNickname);
-		SetMessage("닉네임을 입력하세요");
+		SetMessage("닉네임을 정해주세요!");
 	}
 
 	public void OnClickUpdateNickname()
@@ -51,12 +51,16 @@ public class Nickname : LoginBase
 	IEnumerator PanelOff()
 	{
 
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(1.5f);
         buttonManager.isNikEdit = false;
         NikPanel.SetActive(false);
 
     }
-	private void UpdateNickname()
+	public void NavOn()
+	{
+       buttonManager.isNikEdit = false;
+    }
+    private void UpdateNickname()
 	{
 		// 닉네임 설정
 		Backend.BMember.UpdateNickname(inputFieldNickname.text, callback =>
