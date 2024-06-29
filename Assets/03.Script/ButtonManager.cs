@@ -31,6 +31,7 @@ public class ButtonManager : MonoBehaviour
     public bool isCharPanel = false; // 현재 캐릭터 창인지
     public bool isTitleSettingPanel = false; // 현재 타이틀 세팅 창인지
     public bool isCountDown = false; // 현재 카운트 다운 중인지
+    public bool isNikEdit = false; // 현재닉네임변경 중인지
 
 
     private void Start()
@@ -256,7 +257,7 @@ public class ButtonManager : MonoBehaviour
     }
  
 
-    IEnumerator SceneLate(float time, string sceneName) // 씬 늦게 이동
+    public IEnumerator SceneLate(float time, string sceneName) // 씬 늦게 이동
     {
             yield return new WaitForSeconds(time);
             SceneManager.LoadScene(sceneName);
@@ -283,5 +284,13 @@ public class ButtonManager : MonoBehaviour
         isCountDown = true;
         yield return new WaitForSecondsRealtime(2f);
         isCountDown = false;
+    }
+    public void IsNikEditstrue()
+    {
+        isNikEdit = true;
+    }
+    public void IsNikEditsflase()
+    {
+        isNikEdit = false;
     }
 }

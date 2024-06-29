@@ -13,6 +13,8 @@ public class BtnSelect : MonoBehaviour
 
     public GameObject MenuBtn;
     public GameObject SettingBtn;
+
+    public ButtonManager buttonManager;
     private void OnEnable()
     {
         if (type == "SettingBtn")
@@ -35,12 +37,14 @@ public class BtnSelect : MonoBehaviour
     }
     void Update()
     {
+        if (!buttonManager.isNikEdit) { 
         if (Input.GetKeyDown(key) || Input.GetKeyDown(key2) || Input.GetKeyDown(key3) || Input.GetKeyDown(key4))
         {
             if (!IsAnyButtonSelected())
             {
                 SelectFirstButton();
             }
+        }
         }
     }
 

@@ -108,7 +108,11 @@ public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
 
     void Update()
     {
-        if (buttonManager.isCharPanel || buttonManager.isTitleSettingPanel && Type == "MenuButton")
+        NavLock();
+    }
+    public void NavLock()
+    {
+        if (buttonManager.isNikEdit || buttonManager.isCharPanel || buttonManager.isTitleSettingPanel && Type == "MenuButton")
         {
             var navigation = new Navigation();
             navigation.mode = Navigation.Mode.None;
@@ -130,4 +134,5 @@ public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
             menuBtn.navigation = navigation;
         }
     }
+   
 }

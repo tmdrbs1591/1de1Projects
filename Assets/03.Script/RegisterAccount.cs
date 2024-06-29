@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using BackEnd;
+using UnityEngine.SceneManagement;
+
 
 public class RegisterAccount : LoginBase
 {
@@ -24,6 +26,9 @@ public class RegisterAccount : LoginBase
 
     [SerializeField]
     private Button btnRegisterAccount;      // "계정 생성" 버튼 (상호작용 가능/불가능)
+
+    [SerializeField]
+    ButtonManager buttonManager;
 
     /// <summary>
     /// "계정 생성" 버튼을 눌렀을 때 호출
@@ -80,9 +85,8 @@ public class RegisterAccount : LoginBase
                     if (callback.IsSuccess())
                     {
                         SetMessage($"계정 생성 성공. {inputFieldID.text}님 환영합니다.");
-
                         // Lobby 씬으로 이동
-                        //Utils.LoadScene(SceneNames.Lobby);
+                        buttonManager.GameExit();
                     }
                 });
             }

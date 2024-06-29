@@ -18,6 +18,8 @@ public class Login : LoginBase
     [SerializeField]
     private Button btnLogin;            // 로그인 버튼 (상호작용 가능/불가능)
 
+    [SerializeField]
+    ButtonManager buttonManager;
     /// <summary>
     /// "로그인" 버튼을 눌렀을 때 호출
     /// </summary>
@@ -57,6 +59,7 @@ public class Login : LoginBase
                 SetMessage($"{inputFieldID.text}님 환영합니다.");
 
                 // Lobby 씬으로 이동
+                buttonManager.GameExit();
             }
             // 로그인 실패
             else
