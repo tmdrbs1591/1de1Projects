@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TitleSceneLoad : MonoBehaviour
 {
+    public string SceneName;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,7 @@ public class TitleSceneLoad : MonoBehaviour
     {
         if (Input.anyKey)
         {
-            LoadingManager.LoadScene("Menu");
+            LoadingManager.LoadScene(SceneName);
         }
     }
 }
