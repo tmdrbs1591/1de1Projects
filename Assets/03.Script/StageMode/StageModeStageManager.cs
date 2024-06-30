@@ -36,7 +36,7 @@ public class StageModeStageManager : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
         if (instance == null)
         {
             instance = this;
@@ -67,8 +67,9 @@ public class StageModeStageManager : MonoBehaviour
             {
                 AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
 
-                Fadein.SetActive(true);
                 StartCoroutine(SceneLate("StagdeModeStage1"));
+                Fadein.SetActive(true);
+
             }
             else if (currentStage == Stage.FirstTheSecondStage)
             {

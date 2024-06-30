@@ -317,4 +317,9 @@ public class ButtonManager : MonoBehaviour
         panelStack.Push(gameObject);
 
     }
+    public void IngameLodaingSceneLoad(string SceneName) // 인게임에서 스테이지 선택 창 로드
+    {
+        Time.timeScale = 1;
+        LoadingManager.LoadScene(SceneName);
+    }
 }

@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StageModeSoundManager : MonoBehaviour
@@ -9,10 +7,12 @@ public class StageModeSoundManager : MonoBehaviour
     public AudioSource audio;
     private int currentSongIndex = -1; // 현재 재생 중인 곡의 인덱스
     private bool isPlaying = false; // 재생 중인지 여부를 나타내는 변수
+    private float originalVolume; // 원래 볼륨 값 저장
 
     void Start()
     {
         audio = GetComponent<AudioSource>(); // AudioSource 컴포넌트를 가져옴
+        originalVolume = audio.volume; // 원래 볼륨 값을 저장
     }
 
     void PlaySong(int index)
@@ -21,17 +21,36 @@ public class StageModeSoundManager : MonoBehaviour
         if (currentSongIndex == index && isPlaying)
             return;
 
+        // 코루틴을 사용하여 곡을 바꾸고 볼륨을 서서히 키움
+        StartCoroutine(FadeInNewSong(index));
+    }
 
-        audio.clip = songs[index];
+    IEnumerator FadeInNewSong(int newIndex)
+    {
+        // 새로운 곡을 설정
+        audio.clip = songs[newIndex];
         audio.Play();
-        currentSongIndex = index; // 현재 재생 중인 곡의 인덱스 업데이트
-        isPlaying = true; // 재생 중임을 표시
+        currentSongIndex = newIndex;
+        isPlaying = true;
+
+        // 볼륨을 0에서 원래 값으로 서서히 키움
+        audio.volume = 0;
+        for (float v = 0; v <= originalVolume; v += Time.deltaTime * 0.9f)
+        {
+            audio.volume = v;
+            yield return null;
+        }
+
+        // 볼륨을 원래 값으로 설정
+        audio.volume = originalVolume;
     }
 
     public void SetMusicVolume(float volume)
     {
         audio.volume = volume;
+        originalVolume = volume;
     }
+
     void Update()
     {
         // 현재 스테이지에 따라 음악 재생
@@ -71,7 +90,6 @@ public class StageModeSoundManager : MonoBehaviour
         {
             PlaySong(0);
         }
-
 
         // 음악이 끝났는지 확인하고, 재생 중인 곡이 없으면 isPlaying 변수를 false로 변경
         if (!audio.isPlaying)

@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
         AudioListener existingListener = FindObjectOfType<AudioListener>();
 
         // 이미 오디오 리스너가 있으면 이를 비활성화
