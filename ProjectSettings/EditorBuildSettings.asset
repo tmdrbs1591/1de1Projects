@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/06.Scenes/Stage5.unity
     guid: 9298720aed7cf5449912cc5f793c233c
   - enabled: 1
+    path: Assets/06.Scenes/StagdeModeStage1.unity
+    guid: f7972dbb05d69cc42a7dc0b67933d05f
+  - enabled: 1
     path: Assets/06.Scenes/TTitle.unity
     guid: 601ab60e403adb940a779a42b20a54ca
   - enabled: 1
@@ -41,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/06.Scenes/TeamLogo.unity
     guid: f383b9648fb71724f9983b79ff9efd6e
+  - enabled: 1
+    path: Assets/06.Scenes/StageMode.unity
+    guid: 5200a30b1ae4aec4584c35394c21ba0a
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: f964c1ab316bc4c49b119d629d76c994, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 0db0569edf7aa404a8cec25fa4f5afd8, type: 2}

@@ -66,6 +66,7 @@ public class SettingButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             // 마우스가 버튼 위에 있을 때 아웃라인 메테리얼로 교체합니다.
             buttonImage.material = outlineMaterial;
 
+            transform.DOMoveX(originalPosition.x - 1f, 0.2f).SetEase(Ease.OutSine); // 왼쪽으로 이동하는 애니메이션 추가
             // 추가적인 애니메이션 등을 실행할 수 있습니다.
             transform.DOScale(scaleUp, scaleDuration).SetEase(Ease.OutSine);
         }
@@ -77,7 +78,7 @@ public class SettingButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         {
             // 마우스가 버튼에서 벗어날 때 기본 메테리얼로 교체합니다.
             buttonImage.material = originalMaterial;
-
+            transform.DOMoveX(originalPosition.x, 0.2f).SetEase(Ease.OutSine); // 초기 위치로 되돌아가는 애니메이션 추가
             // 추가적인 애니메이션 등을 실행할 수 있습니다.
             transform.DOScale(Vector3.one, scaleDuration).SetEase(Ease.OutSine);
         }
@@ -88,7 +89,7 @@ public class SettingButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         isNavigated = true;
 
         // 네비게이션으로 버튼이 선택됐을 때의 처리
-        transform.DOScale(navScaleUp, scaleDuration).SetEase(Ease.OutSine);
+        transform.DOMoveX(originalPosition.x - 1f, 0.2f).SetEase(Ease.OutSine); // 왼쪽으로 이동하는 애니메이션 추가
         buttonImage.material = outlineMaterial;
         if (Type == "MenuButton")
             AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1.2f, 1.2f), 1);
@@ -101,7 +102,7 @@ public class SettingButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         isNavigated = false;
 
         // 네비게이션에서 버튼이 선택 해제됐을 때의 처리
-        transform.DOScale(Vector3.one, scaleDuration).SetEase(Ease.OutSine);
+        transform.DOMoveX(originalPosition.x, 0.2f).SetEase(Ease.OutSine); // 초기 위치로 되돌아가는 애니메이션 추가
         buttonImage.material = originalMaterial;
     }
 

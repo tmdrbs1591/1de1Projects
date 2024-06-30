@@ -17,6 +17,7 @@ public class BtnSelect : MonoBehaviour
     public ButtonManager buttonManager;
     private void OnEnable()
     {
+        SelectFirstButton();
         if (type == "SettingBtn")
             MenuBtn.SetActive(false);
 
@@ -30,6 +31,7 @@ public class BtnSelect : MonoBehaviour
     }
     private void OnDisable()
     {
+        SelectFirstButton();
         if (type == "SettingBtn")
             MenuBtn.SetActive(true);
         if (type == "NextSettingBtn")

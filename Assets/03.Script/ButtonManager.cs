@@ -65,6 +65,11 @@ public class ButtonManager : MonoBehaviour
                 isSetting = true;
                 panelStack.Push(SettingPanel);
             }
+            else
+            {
+               ExitPanel.SetActive(true);
+                panelStack.Push(ExitPanel);
+            }
         }
     }
 
@@ -144,7 +149,7 @@ public class ButtonManager : MonoBehaviour
     public void firstStage()
     {
         Fadein.SetActive(true);
-        StartCoroutine(SceneLate(0.7f,"Stage1"));
+        StartCoroutine(SceneLate(0.7f, "Stage1"));
     }
 
     public void OffPic() // 캐릭터 픽창 닫기
@@ -162,7 +167,7 @@ public class ButtonManager : MonoBehaviour
         CharPicPanel.SetActive(true);
         isCharPanel = true;
         panelStack.Push(CharPicPanel);
-       // StagerManager.instance.currentStage = StagerManager.Stage.CharPanel;
+        // StagerManager.instance.currentStage = StagerManager.Stage.CharPanel;
     }
 
     public void OnTitleSetting() // 설정창 열기
@@ -263,18 +268,18 @@ public class ButtonManager : MonoBehaviour
         Fadein.SetActive(true);
         StartCoroutine(SceneLate2());
     }
-    public void StageScenceLoad()
+    public void StageScenceLoad(string sceneName)
     {
         AudioManager.instance.PlaySound(transform.position, 11, Random.Range(1.0f, 1.0f), 1);
         Fadein.SetActive(true);
-        StartCoroutine(SceneLate(1.3f,"Title"));
+        StartCoroutine(SceneLate(1.3f, sceneName));
     }
- 
+
 
     public IEnumerator SceneLate(float time, string sceneName) // 씬 늦게 이동
     {
-            yield return new WaitForSeconds(time);
-            SceneManager.LoadScene(sceneName);
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene(sceneName);
     }
 
     IEnumerator SceneLate2()

@@ -59,7 +59,8 @@ public class Login : LoginBase
                 SetMessage($"{inputFieldID.text}님 환영합니다.");
 
                 // Lobby 씬으로 이동
-                LoadingManager.LoadScene("Menu");
+                //  LoadingManager.LoadScene("Menu");
+                buttonManager.GameExit();
             }
             // 로그인 실패
             else

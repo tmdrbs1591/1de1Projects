@@ -73,7 +73,7 @@ public class StagerManager : MonoBehaviour
 
             Fadein.SetActive(true);
             StartCoroutine(SceneLate(2));
-        }
+        }   
         else if (currentStage == Stage.ThirdStage)
         {
             AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
