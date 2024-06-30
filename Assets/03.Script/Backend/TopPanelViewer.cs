@@ -19,7 +19,7 @@ public class TopPanelViewer : MonoBehaviour
 							UserInfo.Data.gamerId : UserInfo.Data.nickname;
 		if (UserInfo.Data.nickname == null)
 		{
-            button.isNikEdit = true;
+            button.isNavimpossible = true;
 
             NickPanel.SetActive(true);
 		}

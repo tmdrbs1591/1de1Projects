@@ -52,13 +52,13 @@ public class Nickname : LoginBase
 	{
 
 		yield return new WaitForSeconds(1.5f);
-        buttonManager.isNikEdit = false;
+        buttonManager.isNavimpossible = false;
         NikPanel.SetActive(false);
 
     }
 	public void NavOn()
 	{
-       buttonManager.isNikEdit = false;
+       buttonManager.isNavimpossible = false;
     }
     private void UpdateNickname()
 	{

@@ -37,7 +37,7 @@ public class BtnSelect : MonoBehaviour
     }
     void Update()
     {
-        if (!buttonManager.isNikEdit) { 
+        if (!buttonManager.isNavimpossible) { 
         if (Input.GetKeyDown(key) || Input.GetKeyDown(key2) || Input.GetKeyDown(key3) || Input.GetKeyDown(key4))
         {
             if (!IsAnyButtonSelected())

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,7 +32,7 @@ public class ButtonManager : MonoBehaviour
     public bool isCharPanel = false; // 현재 캐릭터 창인지
     public bool isTitleSettingPanel = false; // 현재 타이틀 세팅 창인지
     public bool isCountDown = false; // 현재 카운트 다운 중인지
-    public bool isNikEdit = false; // 현재닉네임변경 중인지
+    public bool isNavimpossible = false; // 네비게이션이 가능한지
 
 
     private void Start()
@@ -42,9 +43,11 @@ public class ButtonManager : MonoBehaviour
 
     void Update()
     {
+        if (isNavimpossible && Input.GetKeyDown(KeyCode.Escape)) isNavimpossible = false;
 
+        if (isTitleSettingPanel && Input.GetKeyDown(KeyCode.Escape)) isTitleSettingPanel = false;
 
-        if (Input.GetKeyDown(KeyCode.Escape) && !isCountDown)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (panelStack.Count > 0)
             {
@@ -80,6 +83,17 @@ public class ButtonManager : MonoBehaviour
         TitleSettingPanel.SetActive(false);
         LanguagePanel.SetActive(false);
         KeySetPanel.SetActive(false);
+    }
+
+    public void PanelSetActive(GameObject Panel) // 패널 열어주고 스텍에 추가 이제 패널은 이 한 메서드로만 가능 지금까지 하나하나 추가하면서 하드코딤했는데 이제 이거 하나로가능 나이스
+    {
+        isTitleSettingPanel = true;
+        Panel.SetActive(true);
+        panelStack.Push(Panel);
+    }
+    public void PanelSetActiveSound(int soungIndex)
+    {
+        AudioManager.instance.PlaySound(transform.position, soungIndex, Random.Range(1.0f, 1.0f), 1);
     }
 
     public void Stop()
@@ -287,10 +301,15 @@ public class ButtonManager : MonoBehaviour
     }
     public void IsNikEditstrue()
     {
-        isNikEdit = true;
+        isNavimpossible = true;
     }
     public void IsNikEditsflase()
     {
-        isNikEdit = false;
+        isNavimpossible = false;
+    }
+    public void StackPush(GameObject gameObject) // 스텍에 패널 추가
+    {
+        panelStack.Push(gameObject);
+
     }
 }

@@ -61,6 +61,8 @@ public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
         {
             if (Type == "MenuButton")
                 AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1.2f, 1.2f), 1);
+            else if (Type == "ModeButton")
+                AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1.2f, 1.2f), 1);
             else
                 AudioManager.instance.PlaySound(transform.position, 12, Random.Range(1f, 1f), 1);
             // 마우스가 버튼 위에 있을 때 아웃라인 메테리얼로 교체합니다.
@@ -92,6 +94,8 @@ public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
         buttonImage.material = outlineMaterial;
         if (Type == "MenuButton")
              AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1.2f, 1.2f), 1);
+          else if (Type == "ModeButton")
+            AudioManager.instance.PlaySound(transform.position, 3, Random.Range(1.2f, 1.2f), 1);
         else
              AudioManager.instance.PlaySound(transform.position, 12, Random.Range(1f, 1f), 1);
 
@@ -112,7 +116,7 @@ public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
     }
     public void NavLock()
     {
-        if (buttonManager.isNikEdit || buttonManager.isCharPanel || buttonManager.isTitleSettingPanel && Type == "MenuButton")
+        if (buttonManager.isNavimpossible && Type == "MenuButton" ||  buttonManager.isCharPanel && Type == "MenuButton" || buttonManager.isTitleSettingPanel && Type == "MenuButton")
         {
             var navigation = new Navigation();
             navigation.mode = Navigation.Mode.None;
