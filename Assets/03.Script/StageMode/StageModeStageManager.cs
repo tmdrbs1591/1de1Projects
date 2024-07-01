@@ -16,7 +16,16 @@ public class StageModeStageManager : MonoBehaviour
         FirstTheSixthStage,
         FirstTheSeventhStage,
         FirstTheEighthStage,
-       
+
+        SecondTheFirstStage,
+        SecondTheSecondStage,
+        SecondTheThirdStage,
+        SecondThefourthStage,
+        SecondThefifthStage,
+        SecondTheSixthStage,
+        SecondTheSeventhStage,
+        SecondTheEighthStage,
+
     }
 
     public string[] songPath;

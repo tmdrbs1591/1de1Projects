@@ -7,11 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Audio Button
+  m_Name: Wave 14
   m_Shader: {fileID: 4800000, guid: a36b7719ff0465b42ab1407d67672c5f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - GLOW_ON
+  - GRADIENT2COL_ON
   - GRADIENT_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -117,15 +119,15 @@ Material:
     - _FlickerFreq: 0.2
     - _FlickerPercent: 0.05
     - _GhostBlend: 1
-    - _GhostColorBoost: 0.45
+    - _GhostColorBoost: 1
     - _GhostTransparency: 0
     - _GlitchAmount: 3
     - _GlitchSize: 1
-    - _Glow: 0
+    - _Glow: 100
     - _GlowGlobal: 1
     - _GradBlend: 1
-    - _GradBoostX: 1.09
-    - _GradBoostY: 0.1
+    - _GradBoostX: 2.52
+    - _GradBoostY: 2.01
     - _GradIsRadial: 0
     - _GrassManualAnim: 1
     - _GrassManualToggle: 0
@@ -164,11 +166,11 @@ Material:
     - _OffsetUvY: 0
     - _OnlyInnerOutline: 0
     - _OnlyOutline: 0
-    - _OutlineAlpha: 1
+    - _OutlineAlpha: 0.588
     - _OutlineDistortAmount: 0.5
     - _OutlineDistortTexXSpeed: 5
     - _OutlineDistortTexYSpeed: 5
-    - _OutlineGlow: 1.5
+    - _OutlineGlow: 29.5
     - _OutlinePixelWidth: 1
     - _OutlineTexXSpeed: 10
     - _OutlineTexYSpeed: 0
@@ -180,7 +182,7 @@ Material:
     - _PinchUvAmount: 0.35
     - _PixelateSize: 32
     - _PosterizeGamma: 0.75
-    - _PosterizeNumColors: 4.8
+    - _PosterizeNumColors: 8
     - _PosterizeOutline: 0
     - _RadialClip: 45
     - _RadialClip2: 0
@@ -209,10 +211,10 @@ Material:
     - _WarpScale: 0.5
     - _WarpSpeed: 8
     - _WarpStrength: 0.025
-    - _WaveAmount: 7
-    - _WaveSpeed: 10
-    - _WaveStrength: 7.5
-    - _WaveX: 0
+    - _WaveAmount: 16.8
+    - _WaveSpeed: 13
+    - _WaveStrength: 14.5
+    - _WaveX: 0.5
     - _WaveY: 0.5
     - _ZTestMode: 4
     - _ZWrite: 0
@@ -231,10 +233,10 @@ Material:
     - _ColorSwapRed: {r: 1, g: 1, b: 1, a: 1}
     - _FadeBurnColor: {r: 1, g: 1, b: 0, a: 1}
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GradBotLeftCol: {r: 1, g: 0.36477983, b: 0.91779506, a: 1}
-    - _GradBotRightCol: {r: 0.011499882, g: 0, b: 1, a: 1}
-    - _GradTopLeftCol: {r: 1, g: 0.39215684, b: 0.6314506, a: 1}
-    - _GradTopRightCol: {r: 0.12300205, g: 0, b: 1, a: 1}
+    - _GradBotLeftCol: {r: 0.043137252, g: 0.3038719, b: 1, a: 1}
+    - _GradBotRightCol: {r: 0, g: 1, b: 0, a: 1}
+    - _GradTopLeftCol: {r: 0.9981153, g: 0.25157225, b: 1, a: 1}
+    - _GradTopRightCol: {r: 1, g: 1, b: 0, a: 1}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _HitEffectColor: {r: 1, g: 1, b: 1, a: 1}
     - _HologramStripeColor: {r: 0, g: 1, b: 1, a: 1}

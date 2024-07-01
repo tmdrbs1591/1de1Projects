@@ -7,11 +7,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Audio Button
+  m_Name: TItle 6
   m_Shader: {fileID: 4800000, guid: a36b7719ff0465b42ab1407d67672c5f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - GRADIENT2COL_ON
   - GRADIENT_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -117,15 +118,15 @@ Material:
     - _FlickerFreq: 0.2
     - _FlickerPercent: 0.05
     - _GhostBlend: 1
-    - _GhostColorBoost: 0.45
+    - _GhostColorBoost: 1
     - _GhostTransparency: 0
     - _GlitchAmount: 3
     - _GlitchSize: 1
-    - _Glow: 0
+    - _Glow: 10
     - _GlowGlobal: 1
     - _GradBlend: 1
-    - _GradBoostX: 1.09
-    - _GradBoostY: 0.1
+    - _GradBoostX: 5
+    - _GradBoostY: 1.55
     - _GradIsRadial: 0
     - _GrassManualAnim: 1
     - _GrassManualToggle: 0
@@ -168,7 +169,7 @@ Material:
     - _OutlineDistortAmount: 0.5
     - _OutlineDistortTexXSpeed: 5
     - _OutlineDistortTexYSpeed: 5
-    - _OutlineGlow: 1.5
+    - _OutlineGlow: 4
     - _OutlinePixelWidth: 1
     - _OutlineTexXSpeed: 10
     - _OutlineTexYSpeed: 0
@@ -180,7 +181,7 @@ Material:
     - _PinchUvAmount: 0.35
     - _PixelateSize: 32
     - _PosterizeGamma: 0.75
-    - _PosterizeNumColors: 4.8
+    - _PosterizeNumColors: 8
     - _PosterizeOutline: 0
     - _RadialClip: 45
     - _RadialClip2: 0
@@ -231,15 +232,15 @@ Material:
     - _ColorSwapRed: {r: 1, g: 1, b: 1, a: 1}
     - _FadeBurnColor: {r: 1, g: 1, b: 0, a: 1}
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GradBotLeftCol: {r: 1, g: 0.36477983, b: 0.91779506, a: 1}
-    - _GradBotRightCol: {r: 0.011499882, g: 0, b: 1, a: 1}
-    - _GradTopLeftCol: {r: 1, g: 0.39215684, b: 0.6314506, a: 1}
-    - _GradTopRightCol: {r: 0.12300205, g: 0, b: 1, a: 1}
+    - _GradBotLeftCol: {r: 0, g: 0.4078431, b: 1, a: 1}
+    - _GradBotRightCol: {r: 0.09800897, g: 0.09411762, b: 0.9254902, a: 1}
+    - _GradTopLeftCol: {r: 1, g: 0, b: 0.89411736, a: 1}
+    - _GradTopRightCol: {r: 0.7334812, g: 0.07843137, b: 0.8392157, a: 1}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _HitEffectColor: {r: 1, g: 1, b: 1, a: 1}
     - _HologramStripeColor: {r: 0, g: 1, b: 1, a: 1}
     - _InnerOutlineColor: {r: 1, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0.92172825, g: 0.572327, b: 1, a: 1}
     - _OverlayColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShineColor: {r: 1, g: 1, b: 1, a: 1}
