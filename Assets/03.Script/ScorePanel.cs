@@ -30,15 +30,17 @@ public class ScorePanel : MonoBehaviour
 
     void Update()
     {
-        int maxNotes = stage1.maxNotes;
+        if (stage1 != null)
+        {
+            int maxNotes = stage1.maxNotes;
 
-        S_Score = maxNotes * 320;
-        A_Score = maxNotes * 270;
-        B_Score = maxNotes * 227;
-        C_Score = maxNotes * 180;
-        D_Score = maxNotes * 140;
-
-
+            S_Score = maxNotes * 320;
+            A_Score = maxNotes * 270;
+            B_Score = maxNotes * 227;
+            C_Score = maxNotes * 180;
+            D_Score = maxNotes * 140;
+        }
+    
         // 현재 시간과 애니메이션 시작 시간 간의 경과 시간 비율 계산
         float elapsedTime = Time.time - animationStartTime;
 

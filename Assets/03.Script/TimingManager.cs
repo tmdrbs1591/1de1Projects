@@ -118,11 +118,12 @@ public class TimingManager : MonoBehaviour
                             theEffect.NoteHitEffect();
 
                         theScoreManager.IncreaseScore(x);//점수증가
-                        theEffect.judgementEffect(x);//판 등장
+                       
                         if (Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.E))
                             return;
                             theFeverManager.IncreaseFever(x);//판정연출
                          judgmentRecord[x]++;//판정기록
+                        theEffect.judgementEffect(x);//판 등장
 
                         Destroy(destroyedNote);
 
@@ -133,7 +134,7 @@ public class TimingManager : MonoBehaviour
         }
        // thePlayerController.CurHP--;
         //thecomboManager.ResetCombo(); //미스
-        theEffect.judgementEffect(timingBoxs.Length);
+       // theEffect.judgementEffect(timingBoxs.Length);
     }
 
     void SetActiveRecursively(GameObject obj, bool active)
