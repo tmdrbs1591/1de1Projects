@@ -15,7 +15,9 @@ Material:
   - GRADIENT2COL_ON
   - GRADIENT_ON
   - OUTBASE_ON
-  m_InvalidKeywords: []
+  - RADIALGRADIENT_ON
+  m_InvalidKeywords:
+  - _GRADISRADIAL_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -126,9 +128,9 @@ Material:
     - _Glow: 10
     - _GlowGlobal: 1
     - _GradBlend: 1
-    - _GradBoostX: 1.2
+    - _GradBoostX: 2.43
     - _GradBoostY: 0.5
-    - _GradIsRadial: 0
+    - _GradIsRadial: 1
     - _GrassManualAnim: 1
     - _GrassManualToggle: 0
     - _GrassRadialBend: 0.1
@@ -233,7 +235,7 @@ Material:
     - _ColorSwapRed: {r: 1, g: 1, b: 1, a: 1}
     - _FadeBurnColor: {r: 1, g: 1, b: 0, a: 1}
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GradBotLeftCol: {r: 1, g: 0.7232704, b: 0.95761013, a: 1}
+    - _GradBotLeftCol: {r: 1, g: 0.40251565, b: 0.90743196, a: 1}
     - _GradBotRightCol: {r: 0, g: 1, b: 0, a: 1}
     - _GradTopLeftCol: {r: 1, g: 0.30817604, b: 0.9864347, a: 1}
     - _GradTopRightCol: {r: 1, g: 1, b: 0, a: 1}
