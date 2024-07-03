@@ -8,14 +8,16 @@ public class Note : MonoBehaviour
     public string noteKey;
     UnityEngine.UI.Image noteImage;
 
-     void OnEnable()
+    void OnEnable()
     {
         if (noteImage   == null)
         noteImage = GetComponent<UnityEngine.UI.Image>();
 
         noteImage.enabled = true;
     }
-   
+    private void Start()
+    {
+    }
     void Update()
     {
         transform.localPosition += Vector3.left * noteSpeed * Time.deltaTime;
@@ -29,4 +31,5 @@ public class Note : MonoBehaviour
     {
         return noteImage.enabled;
     }
+
 }

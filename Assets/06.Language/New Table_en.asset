@@ -27,7 +27,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2970252480512
-    m_Localized: When Linastrit enters Fever Time, she becomes invulnerable to damage.
+    m_Localized: Lina activates a special mechanical device called the Sonic Amplifier,
+      enabling her to automatically attack enemies for 3 seconds.
     m_Metadata:
       m_Items: []
   - m_Id: 5953396674560

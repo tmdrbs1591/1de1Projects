@@ -15,7 +15,7 @@ public class FourTrackAttack: MonoBehaviour
     public GameObject QWEEffect;
     public List<GameObject> lasers; // 리스트로 laser GameObject들을 관리
 
-    Animator animator;
+    public Animator animator;
 
     private void Start()
     {
@@ -64,7 +64,7 @@ public class FourTrackAttack: MonoBehaviour
     }
 
 
-    void TripleAttack()
+    public void TripleAttack()
     {
         int randomValue = Random.Range(0, 3); // 0, 1, 2 중에서 랜덤한 값 생성
 
@@ -86,7 +86,7 @@ public class FourTrackAttack: MonoBehaviour
         }
     }
 
-    void RotateLaser(Transform targetTransform)
+    public void RotateLaser(Transform targetTransform)
     {
         // Calculate rotation direction
         Vector3 direction = targetTransform.position - laserRotation.transform.position;
@@ -99,7 +99,7 @@ public class FourTrackAttack: MonoBehaviour
         laserRotation.transform.rotation = rotation;
     }
 
-    IEnumerator laserSetActive()
+    public IEnumerator laserSetActive()
     {
         // Find an inactive laser GameObject to use
         GameObject inactiveLaser = lasers.Find(laser => !laser.activeSelf);

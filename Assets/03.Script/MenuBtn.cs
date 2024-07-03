@@ -105,7 +105,7 @@ public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
     {
         isNavigated = false;
 
-        // 네비게이션에서 버튼이 선택 해제됐을 때의 처리
+        //네비게이션에서 버튼이 선택 해제됐을 때의 처리
         transform.DOScale(Vector3.one, scaleDuration).SetEase(Ease.OutSine);
         buttonImage.material = originalMaterial;
     }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Note
   - buttonManager
+  - NoteAutoBox
   layers:
   - Default
   - TransparentFX

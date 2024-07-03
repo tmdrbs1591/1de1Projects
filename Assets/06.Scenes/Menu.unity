@@ -14793,15 +14793,15 @@ MonoBehaviour:
     her unique sense of rhythm and musical talent, and the villagers love and admire
     her.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f8499e74db5d3cc418cc8f1076b68761, type: 2}
-  m_sharedMaterial: {fileID: -8667995590594304559, guid: f8499e74db5d3cc418cc8f1076b68761, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b88bd5c11dca11d428bd7a0b39580ea9, type: 2}
+  m_sharedMaterial: {fileID: -1680170419797540463, guid: b88bd5c11dca11d428bd7a0b39580ea9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4290230199
+  m_fontColor: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15449,7 +15449,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &703483046
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18293,7 +18293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &819913968
 Transform:
   m_ObjectHideFlags: 0
@@ -24114,7 +24114,8 @@ GameObject:
   - component: {fileID: 1057687685}
   - component: {fileID: 1057687684}
   - component: {fileID: 1057687687}
-  - component: {fileID: 1057687690}
+  - component: {fileID: 1057687692}
+  - component: {fileID: 1057687691}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -24269,7 +24270,7 @@ MonoBehaviour:
   navScaleUp: {x: 1.1, y: 1.1, z: 1.1}
   outlineMaterial: {fileID: 2100000, guid: 5100a8a242323cd4383a254ff722fef2, type: 2}
   Type: MenuButton
---- !u!114 &1057687690
+--- !u!114 &1057687691
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24278,13 +24279,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1057687682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee158225ee1e59f4791627785501d950, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bc2cfa04affc1a4a8fd6a8ca11560d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shaderTypes: 0
-  normalStrength: 5
-  normalSmoothing: 1
-  computingNormal: 0
+--- !u!114 &1057687692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057687682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b719996c4202324191c171b7f44a3c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1060849947
 GameObject:
   m_ObjectHideFlags: 0
@@ -24297,7 +24306,7 @@ GameObject:
   - component: {fileID: 1060849950}
   - component: {fileID: 1060849949}
   m_Layer: 5
-  m_Name: Image
+  m_Name: SkillIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24320,8 +24329,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.2800293, y: -1.5099792}
-  m_SizeDelta: {x: 94.86, y: 94.86}
+  m_AnchoredPosition: {x: -0.2, y: -0.7}
+  m_SizeDelta: {x: 70.3, y: 70.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1060849949
 MonoBehaviour:
@@ -24343,7 +24352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 16fb15ad7e477c146aa9237f2ea1058c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: adeca7b8be77da047a6787332e546b03, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -31774,7 +31783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 263.72446, y: -204}
+  m_AnchoredPosition: {x: 263.72446, y: -217.2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1319710967
@@ -31839,15 +31848,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: When Linastrit enters Fever Time, she becomes invulnerable to damage.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f8499e74db5d3cc418cc8f1076b68761, type: 2}
-  m_sharedMaterial: {fileID: -8667995590594304559, guid: f8499e74db5d3cc418cc8f1076b68761, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b88bd5c11dca11d428bd7a0b39580ea9, type: 2}
+  m_sharedMaterial: {fileID: -1680170419797540463, guid: b88bd5c11dca11d428bd7a0b39580ea9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292607750
-  m_fontColor: {r: 0.025157154, g: 1, b: 0.85813624, a: 1}
+    rgba: 4292410624
+  m_fontColor: {r: 0, g: 0.990566, b: 0.84735173, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -31900,7 +31909,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0.000053405765, z: -412.84964, w: 0}
+  m_margin: {x: 0, y: 0.000053405765, z: -359.23758, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -32263,8 +32272,11 @@ Material:
   m_Shader: {fileID: 4800000, guid: a36b7719ff0465b42ab1407d67672c5f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_ValidKeywords:
+  - GRADIENT_ON
+  - RADIALGRADIENT_ON
+  m_InvalidKeywords:
+  - _GRADISRADIAL_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -32377,7 +32389,7 @@ Material:
     - _GradBlend: 1
     - _GradBoostX: 1.2
     - _GradBoostY: 1.2
-    - _GradIsRadial: 0
+    - _GradIsRadial: 1
     - _GrassManualAnim: 1
     - _GrassManualToggle: 0
     - _GrassRadialBend: 0.1
@@ -32482,9 +32494,9 @@ Material:
     - _ColorSwapRed: {r: 1, g: 1, b: 1, a: 1}
     - _FadeBurnColor: {r: 1, g: 1, b: 0, a: 1}
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GradBotLeftCol: {r: 0, g: 0, b: 1, a: 1}
+    - _GradBotLeftCol: {r: 1, g: 0.29874206, b: 0.93022674, a: 1}
     - _GradBotRightCol: {r: 0, g: 1, b: 0, a: 1}
-    - _GradTopLeftCol: {r: 1, g: 0, b: 0, a: 1}
+    - _GradTopLeftCol: {r: 1, g: 0.6289308, b: 0.9471931, a: 1}
     - _GradTopRightCol: {r: 1, g: 1, b: 0, a: 1}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _HitEffectColor: {r: 1, g: 1, b: 1, a: 1}
@@ -67353,7 +67365,7 @@ GameObject:
   - component: {fileID: 2113930270}
   - component: {fileID: 2113930269}
   m_Layer: 5
-  m_Name: Book
+  m_Name: SkillBackg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67378,7 +67390,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 110, y: -219}
-  m_SizeDelta: {x: 67.25, y: 83.16}
+  m_SizeDelta: {x: 101.94, y: 126.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2113930269
 MonoBehaviour:
@@ -67416,9 +67428,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 508899534, guid: 8f30fd29076a87b4a98fbb61f4d73435, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 641cb664224da25418d4b22233c3ab53, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
