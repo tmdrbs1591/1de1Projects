@@ -33,7 +33,7 @@ public class LinaSkill : MonoBehaviour
         StartCoroutine(SkillPanelCor());
         SkillParticl.SetActive(true);
         AutoBox.SetActive(true);
-        yield return new WaitForSeconds(5); // 5초동안 자동공격 시작
+        yield return new WaitForSeconds(6); // 5초동안 자동공격 시작
         AutoBox.SetActive(false);
         SkillParticl.SetActive(false);
 
