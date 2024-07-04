@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FifthStage : MonoBehaviour
+public class FifthStage : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
 {
     public ParallaxScroll map;
     public GameObject SpeedEffect;

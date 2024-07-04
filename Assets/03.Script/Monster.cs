@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MonsterSpawner : MonoBehaviour
+public class MonsterSpawner : MonoBehaviour // 코드 삭제 예정
 {
     public GameObject monsterPrefab; // 생성할 몬스터 프리팹
     double currentTime = 0d;

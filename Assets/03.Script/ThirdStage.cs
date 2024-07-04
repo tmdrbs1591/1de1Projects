@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using System.IO;
 
-public class ThirdStage : ReFirstStage
+public class ThirdStage : ReFirstStage // 상속받은 것과 주석 같음
 {
     void Start()
     {

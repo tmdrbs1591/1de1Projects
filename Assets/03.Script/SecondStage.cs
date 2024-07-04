@@ -5,15 +5,15 @@ using UnityEditor;
 using System.IO;
 using System;
 
-public class SecondStage : ReFirstStage
+public class SecondStage : ReFirstStage //기본 스테이지 값들 상속
 {
     public GameObject powerEffect;
     public GameObject powerMap;
 
-    void Start()
+    void Start() //상속받은 스크립트 주석과 같다
     {
         Song.Stop();
-        thecomboManager = FindObjectOfType<ComboManager>();
+        thecomboManager = FindObjectOfType<ComboManager>(); //상속받은 스크립트 주석과 같다
         theEffectManager = FindObjectOfType<EffectManager>();
         theTimingManager = GetComponent<TimingManager>();
 

@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class ObjectManager : MonoBehaviour
+public class ObjectManager : MonoBehaviour // 코드 삭제 예정이라 주석 없음
 {
     public GameObject objParent;
 

@@ -6,8 +6,8 @@ using DG.Tweening;
 
 public class PlaayerController : MonoBehaviour
 {
-    TimingManager theTimingManager;
-    public ButtonManager buttonManager;
+    TimingManager theTimingManager;// 타이밍 관리자 객체
+    public ButtonManager buttonManager;// 버튼 관리자 객체
 
     public GameObject DiePanel; //죽으면 나오는 패널
     public GameObject HitPanel;//빨간색 히트 이펙트 패널
@@ -22,50 +22,56 @@ public class PlaayerController : MonoBehaviour
     private Animator animator;
 
     [SerializeField]
-    Slider HpBar;
+    Slider HpBar; // 체력바 UI
     [SerializeField]
-    Slider HpBar2;
+    Slider HpBar2;// 체력바 2번째 UI
+
+    public bool invincibility; // 무적인지
     void Start()
     {
-        transform.position = new Vector3(-11f, -2.82f,2);
-        animator = GetComponent<Animator>();
-        StartCoroutine(ApplyRootMotion());
+        transform.position = new Vector3(-11f, -2.82f,2);// 시작 위치 설정
+        animator = GetComponent<Animator>(); // Animator 컴포넌트 가져오기
+        StartCoroutine(ApplyRootMotion()); // Root 모션 적용
+
+        // appearPosition으로 2초 동안 부드럽게 이동
         transform.DOMove(appearPosition, 2f);
-        theTimingManager = FindObjectOfType<TimingManager>();
-       
+        theTimingManager = FindObjectOfType<TimingManager>(); // TimingManager 찾아서 설정하기
+
     }
 
     void Update()
     {
-        if (!buttonManager.isCountDown) { 
-           
-        HpBar.value = Mathf.Lerp(HpBar.value, (float)CurHP / (float)MaxHP, Time.deltaTime * 20);
+        if (!buttonManager.isCountDown) {
+            // HP바 값 조정 (부드럽게)
+            HpBar.value = Mathf.Lerp(HpBar.value, (float)CurHP / (float)MaxHP, Time.deltaTime * 20);
         HpBar2.value = Mathf.Lerp(HpBar2.value, (float)CurHP / (float)MaxHP, Time.deltaTime * 3);
 
-        Die();
-        Key();
-        FourTrackKey();
+        Die();// 사망 체크
+            Key(); // 키 입력 처리
+            FourTrackKey();// 4트랙 키 입력 처리
         }
     }
     public void TakeDamage(int damage) // 데미지 입기
     {
-        CurHP -= damage;
-        StartCoroutine(Hit());
-        CameraShake.instance.Shake();
+        if (invincibility)
+            return;
+        CurHP -= damage;// 현재 HP에서 데미지만큼 감소
+        StartCoroutine(Hit());// 피격 이펙트 재생
+        CameraShake.instance.Shake();// 카메라 흔들림 효과
     }
     IEnumerator Hit()//패널 한번 깜빡이는 코루틴
     {
-        HitPanel.SetActive(true);
-        yield return new WaitForSeconds(0.25f);
-        HitPanel.SetActive(false);
+        HitPanel.SetActive(true); // 피격 이펙트 패널 활성화
+        yield return new WaitForSeconds(0.25f);// 0.25초 대기
+        HitPanel.SetActive(false); // 피격 이펙트 패널 비활성화
 
     }
-    void Die()
+    void Die() // 사망 상태 체크
     {
         if (CurHP <= 0)
         {
-            Death = true;
-            DiePanel.SetActive(true);
+            Death = true;// 사망 상태 설정
+            DiePanel.SetActive(true); // 사망 패널 활성화
 
         }
     }
@@ -78,7 +84,7 @@ public class PlaayerController : MonoBehaviour
             bool wPressed = Input.GetKeyDown(KeySetting.keys[KeyAction.W]);
             bool ePressed = Input.GetKeyDown(KeySetting.keys[KeyAction.E]);
 
-         
+            // Q와 W가 동시에 눌린 경우
             if ((Input.GetKey(KeySetting.keys[KeyAction.Q]) && wPressed) || (Input.GetKey(KeySetting.keys[KeyAction.W]) && qPressed))
             {
                 theTimingManager.CheckTimingWithKey("QW");
@@ -133,9 +139,9 @@ public class PlaayerController : MonoBehaviour
     }
     IEnumerator ApplyRootMotion()
     {
-        animator.applyRootMotion = true;
-        yield return new WaitForSeconds(2f);
-        animator.applyRootMotion = false;
+        animator.applyRootMotion = true; // Root 모션 활성화
+        yield return new WaitForSeconds(2f);// 2초 대기
+        animator.applyRootMotion = false; // Root 모션 비활성화
     }
 
 

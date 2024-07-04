@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class FourTrackPlayerController : MonoBehaviour
+public class FourTrackPlayerController : MonoBehaviour // 코드 삭제 예정이라 주석 없음
 {
     TimingManager theTimingManager;
 
@@ -24,6 +24,8 @@ public class FourTrackPlayerController : MonoBehaviour
     Slider HpBar;
     [SerializeField]
     Slider HpBar2;
+
+    public bool invincibility; // 무적인지
     void Start()
     {
         transform.position = new Vector3(-11f, -2.82f, 2);
@@ -44,6 +46,8 @@ public class FourTrackPlayerController : MonoBehaviour
     }
     public void TakeDamage(int damage) // 데미지 입기
     {
+        if (invincibility)
+            return;
         CurHP -= damage;
         StartCoroutine(Hit());
         CameraShake.instance.Shake();

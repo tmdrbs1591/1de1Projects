@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirstStage : MonoBehaviour
+public class FirstStage : MonoBehaviour // 코드 삭제 예정이라 주석 없음
 {
 
     public GameObject ClearPanel; // 클리어패널

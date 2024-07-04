@@ -6,22 +6,22 @@ using UnityEngine.UI;
 public class LoadingImage : MonoBehaviour
 {
     [SerializeField]
-    Image[] backGroundImage;
+    Image[] backGroundImage; // 이미지 배열
 
     void Start()
     {
-        // Ensure we have at least one image in the array
+        // 배열에 이미지가 할당되어 있는지 확인
         if (backGroundImage.Length > 0)
         {
-            // Get a random index within the array bounds
+            // 배열 범위 내에서 임의의 인덱스 선택 
             int randomIndex = Random.Range(0, backGroundImage.Length);
 
-            // Activate the selected image
+            // 선택된 이미지 활성화
             backGroundImage[randomIndex].gameObject.SetActive(true);
         }
         else
         {
-            Debug.LogWarning("No images assigned to backGroundImage array.");
+            Debug.LogWarning("No images assigned to backGroundImage array.");// 배열에 이미지가 할당되지 않았을 경우 경고 출력
         }
     }
 

@@ -17,10 +17,8 @@ Material:
   - GRADIENT_ON
   - OUTBASEPIXELPERF_ON
   - OUTBASE_ON
-  - RADIALGRADIENT_ON
   - WAVEUV_ON
-  m_InvalidKeywords:
-  - _GRADISRADIAL_ON
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -133,7 +131,7 @@ Material:
     - _GradBlend: 1
     - _GradBoostX: 1.46
     - _GradBoostY: 1.2
-    - _GradIsRadial: 1
+    - _GradIsRadial: 0
     - _GrassManualAnim: 1
     - _GrassManualToggle: 0
     - _GrassRadialBend: 0.1
@@ -239,9 +237,9 @@ Material:
     - _FadeBurnColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlowColor: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
     - _GradBotLeftCol: {r: 0.6666666, g: 0.6666666, b: 1, a: 1}
-    - _GradBotRightCol: {r: 0, g: 1, b: 0, a: 1}
-    - _GradTopLeftCol: {r: 1, g: 1, b: 1, a: 1}
-    - _GradTopRightCol: {r: 1, g: 1, b: 0, a: 1}
+    - _GradBotRightCol: {r: 0, g: 0.6511247, b: 1, a: 1}
+    - _GradTopLeftCol: {r: 1, g: 0.0990566, b: 0.8621197, a: 1}
+    - _GradTopRightCol: {r: 0, g: 0.9582813, b: 1, a: 1}
     - _GreyscaleTintColor: {r: 1, g: 1, b: 1, a: 1}
     - _HitEffectColor: {r: 1, g: 1, b: 1, a: 1}
     - _HologramStripeColor: {r: 0, g: 1, b: 1, a: 1}

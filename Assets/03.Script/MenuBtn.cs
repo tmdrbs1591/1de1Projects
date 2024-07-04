@@ -6,13 +6,13 @@ using System.Collections;
 
 public class MenuBtn : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ISelectHandler, IDeselectHandler
 {
-    public ButtonManager buttonManager;
-    [SerializeField] float startDelay;
+    public ButtonManager buttonManager; // 버튼 관리자 객체
+    [SerializeField] float startDelay;// 버튼 애니메이션 시작 딜레이
     [SerializeField] float scaleDuration = 0.2f; // 스케일 애니메이션 실행 시간
     [SerializeField] Vector3 scaleUp = new Vector3(1.2f, 1.2f, 1.2f); // 마우스 오버 시 스케일
     [SerializeField] Vector3 navScaleUp = new Vector3(1.1f, 1.1f, 1.1f); // 네비게이션 시 스케일
 
-    Button menuBtn;
+    Button menuBtn; // Unity UI Button 컴포넌트
 
     public Material outlineMaterial; // 아웃라인 메테리얼
 
