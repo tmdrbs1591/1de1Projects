@@ -56,7 +56,7 @@ public class ButtonManager : MonoBehaviour
                 UpdatePanelFlags(topPanel, false);
                 Play();
             }
-            else if (!isSetting && !isCharPanel && SettingPanel != null)
+            else if (!isSetting && !isCharPanel && SettingPanel != null && !isCountDown)
             {
                 SettingPanel.SetActive(true);
                 if (music.audioSource.isPlaying) // 음악이 재생 중이라면 중단합니다.

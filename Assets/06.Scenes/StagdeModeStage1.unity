@@ -4414,8 +4414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a14a41a09a4bc4ba84e6c6a0d63554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maincamera: {fileID: 519420031}
-  ShakeRange: 0.1
+  shakeRange: 0.2
   duration: 0.1
 --- !u!4 &410583989
 Transform:
