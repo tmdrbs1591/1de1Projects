@@ -289,6 +289,48 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
                 noteCount++;
             }
         }
+        else if (noteCount < 86)
+        {
+            if (currentTime >= beatInterval * 4f)
+            {
+                messageBox.SetActive(false);
+                autoBox.SetActive(false);
+                SpawnEWNote();
+                currentTime -= beatInterval * 2f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 87)
+        {
+            if (currentTime >= beatInterval * 8f)
+            {
+                SpawnSpaceNote();
+                autoBox.SetActive(true); // 자동시연을 위해 autobox 활성화
+                TextUpdate("QWE를 눌러 상중하단의 몰려오는 오는 적들을 공격할 수 있어!");
+                currentTime -= beatInterval * 8f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 100)
+        {
+            if (currentTime >= beatInterval * 0.2f)
+            {
+                SpawnSpaceNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 125)
+        {
+            if (currentTime >= beatInterval * 2f)
+            {
+                messageBox.SetActive(false);
+                autoBox.SetActive(false);
+                SpawnSpaceNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+            }
+        }
     }
 
     IEnumerator ClearPanelCor()
