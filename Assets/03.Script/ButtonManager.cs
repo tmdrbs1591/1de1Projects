@@ -129,9 +129,9 @@ public class ButtonManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void Title() // 타이틀 씬 가기
+    public void Title(string SceneName) // 타이틀 씬 가기
     {
-        SceneManager.LoadScene("Title");
+        LoadingManager.LoadScene(SceneName);
         Time.timeScale = 1;
     }
 

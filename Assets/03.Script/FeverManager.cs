@@ -7,8 +7,8 @@ public class FeverManager : MonoBehaviour
 {
     [SerializeField] GameObject Effect;// 피버타임 이펙트를 담당하는 게임 오브젝트
 
-    [SerializeField] Slider feverSlider = null;// 피버타임 슬라이더 UI
-    [SerializeField] float feverThreshold = 2.0f; // 피버타임이 시작되는 슬라이더 값의 임계치
+    [SerializeField] public Slider feverSlider = null;// 피버타임 슬라이더 UI
+    [SerializeField] public float feverThreshold = 2.0f; // 피버타임이 시작되는 슬라이더 값의 임계치
 
     [SerializeField] int increaseScore = 10; // 기본 점수 증가량
     int currentScore = 0;// 현재 점수
@@ -61,11 +61,11 @@ public class FeverManager : MonoBehaviour
         currentScore += scoreIncrease;// 현재 점수 증가
     }
 
-    void StartFeverTime() // 피버타임을 시작하는 메서드
+   public void StartFeverTime() // 피버타임을 시작하는 메서드
     {
         AudioManager.instance.PlaySound(transform.position, 6, Random.Range(1f, 1f), 1);// 오디오 재생
         feverTime = true; // 피버타임 시작
-        feverSlider.value = currentScore / 1000f; // 초기값을 현재 값으로 설정
+        feverSlider.value = 1f; // 초기값을 현재 값으로 설정
         StartCoroutine(FeverTime());// 피버타임 코루틴 시작
     }
 

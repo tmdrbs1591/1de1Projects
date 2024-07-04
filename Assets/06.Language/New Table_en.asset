@@ -40,7 +40,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6494562553856
-    m_Localized: LinRan meditates for 10 seconds, recovering 10 HP every 10 seconds.
+    m_Localized: 'Linlan creates a shield for 6 seconds with mysterious energy.
+
+      There
+      is no damage during shield activation.'
     m_Metadata:
       m_Items: []
   - m_Id: 6965012467712
@@ -51,8 +54,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7593700888576
-    m_Localized: When entering Fever Time, Sean mounts his motorcycle, doubling his
-      stamina.
+    m_Localized: Sean sprints at high speed on a motorcycle and enters Fever Time.
     m_Metadata:
       m_Items: []
   - m_Id: 9612301963264

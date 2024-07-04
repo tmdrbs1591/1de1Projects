@@ -31,7 +31,7 @@ public class ClearPanel : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Return))// Enter 키가 눌리면
         {
-            LoadingManager.LoadScene("Title");// Title 씬으로 로딩
+            LoadingManager.LoadScene("StageMode");// Title 씬으로 로딩
         }
     }
 

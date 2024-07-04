@@ -53,6 +53,8 @@ public class LinLanSkill : MonoBehaviour
 
     public void SkillOn() // 스킬 온 버튼에서도 실행해야하기 때문에 public으로
     {
+        AudioManager.instance.PlaySound(transform.position, 14, Random.Range(1f, 1f), 1);// 오디오 재생
+        AudioManager.instance.PlaySound(transform.position, 16, Random.Range(1f, 1f), 1);// 오디오 재생
         StartCoroutine(SkillCor());
     }
 
@@ -64,7 +66,7 @@ public class LinLanSkill : MonoBehaviour
         if (FourPlaayerController != null) FourPlaayerController.invincibility = true;
         SkillParticl.SetActive(true);
         ShieldPtc.SetActive(true);
-        yield return new WaitForSeconds(8); //8초동안 무적
+        yield return new WaitForSeconds(6); //6초동안 무적
         if (plaayerController != null) plaayerController.invincibility = false;
         if (FourPlaayerController != null) FourPlaayerController.invincibility = false;
         SkillParticl.SetActive(false);
