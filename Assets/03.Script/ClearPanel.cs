@@ -7,7 +7,7 @@ public class ClearPanel : MonoBehaviour
 {
     public Sprite[] sprites;  // 클리어 패널에서 사용할 스프라이트 배열
     public Image image;// 이미지 컴포넌트
-
+    public string scenceName = "StageMode";
     void OnEnable()
     {
         StartCoroutine(CameraShakes()); // 카메라 흔들림 효과를 시작하는 코루틴을 실행
@@ -31,7 +31,7 @@ public class ClearPanel : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Return))// Enter 키가 눌리면
         {
-            LoadingManager.LoadScene("StageMode");// Title 씬으로 로딩
+            LoadingManager.LoadScene(scenceName);// Title 씬으로 로딩
         }
     }
 

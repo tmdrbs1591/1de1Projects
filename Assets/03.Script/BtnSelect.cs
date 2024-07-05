@@ -8,16 +8,17 @@ public class BtnSelect : MonoBehaviour
     public KeyCode key; // 첫 번째 입력 키
     public KeyCode key2;  // 두 번째 입력 키
     public KeyCode key3;  // 세 번째 입력 키
-    public KeyCode key4;  // 네  번째 입력 키
+    public KeyCode key4;  // 네 번째 입력 키
     public string type; // 버튼 선택 타입
 
     public GameObject MenuBtn; // 메뉴 버튼
     public GameObject SettingBtn;  // 설정 버튼
 
     public ButtonManager buttonManager; // 버튼 매니저 
-    private void OnEnable()
-    {
 
+    private void OnEnable()
+    {  // 현재 선택된 버튼을 해제
+        DeselectAllButtons();
         // 타입에 따라 초기 버튼 선택
         if (type == "StageModeBtn")
             SelectFirstButton();
@@ -28,30 +29,34 @@ public class BtnSelect : MonoBehaviour
         {
             SettingBtn.SetActive(false);
             MenuBtn.SetActive(false);
-
         }
-
     }
+
     private void OnDisable() // 비활성화될 때 호출되는 메서드
     {
+
         // 초기 버튼 선택
         SelectFirstButton();
-        if (type == "SettingBtn")// 타입에 따라 버튼 상태 변경
+
+        // 타입에 따라 버튼 상태 변경
+        if (type == "SettingBtn")
             MenuBtn.SetActive(true);
         if (type == "NextSettingBtn")
             SettingBtn.SetActive(true);
     }
+
     void Update() // 매 프레임마다 호출되는 업데이트 메서드
     {
         // 버튼 네비게이션을 막는 상태가 아니라면 입력 처리
-        if (!buttonManager.isNavimpossible) { 
-        if (Input.GetKeyDown(key) || Input.GetKeyDown(key2) || Input.GetKeyDown(key3) || Input.GetKeyDown(key4)) // 설정된 입력 키를 통해 버튼 선택
+        if (!buttonManager.isNavimpossible)
+        {
+            if (Input.GetKeyDown(key) || Input.GetKeyDown(key2) || Input.GetKeyDown(key3) || Input.GetKeyDown(key4)) // 설정된 입력 키를 통해 버튼 선택
             {
-            if (!IsAnyButtonSelected())   // 아무 버튼도 선택되지 않았다면 첫 번째 버튼 선택
+                if (!IsAnyButtonSelected()) // 아무 버튼도 선택되지 않았다면 첫 번째 버튼 선택
                 {
-                SelectFirstButton();
+                    SelectFirstButton();
+                }
             }
-        }
         }
     }
 
@@ -59,7 +64,7 @@ public class BtnSelect : MonoBehaviour
     {
         foreach (Button button in buttons)
         {
-            if (button != null && button.gameObject == UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject)  // 버튼이 존재하고 현재 선택된 게임 오브젝트인지 확인
+            if (button != null && button.gameObject == UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject) // 버튼이 존재하고 현재 선택된 게임 오브젝트인지 확인
             {
                 return true;
             }
@@ -73,5 +78,10 @@ public class BtnSelect : MonoBehaviour
         {
             buttons[0].Select();
         }
+    }
+
+    void DeselectAllButtons() // 현재 선택된 버튼을 해제하는 메서드
+    {
+        UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
     }
 }

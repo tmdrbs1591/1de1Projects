@@ -24,7 +24,6 @@ public class SettingButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public string Type;
 
     private Vector3 originalPosition;
-
     private void Awake()
     {
         // Awake에서 초기 위치를 저장
@@ -36,8 +35,9 @@ public class SettingButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         // 위치를 초기화하고 애니메이션을 시작
         transform.position = originalPosition;
         StartCoroutine(AnimateButton());
+          // 기본 메테리얼로 교체합니다.
+        buttonImage.material = originalMaterial;
     }
-
     void Start()
     {
         buttonImage = GetComponent<Image>();

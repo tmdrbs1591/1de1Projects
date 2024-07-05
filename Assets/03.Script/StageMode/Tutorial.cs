@@ -20,6 +20,10 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
     public TMP_Text messageText;
     public GameObject messageBox;
     public GameObject autoBox;
+
+
+    public GameObject AutoPanel; //자동 시연때 나올 패널 
+    public Animator AutoPanelAnim; //자동 시연때 실행할 애니메이션
     enum BeatType
     {
         Whole = 1,
@@ -42,6 +46,9 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
     [SerializeField] GameObject go7 = null;
 
 
+    [SerializeField] LinaSkill linaSkill;
+
+
     TimingManager theTimingManager;
     EffectManager theEffectManager;
     ComboManager thecomboManager;
@@ -52,14 +59,21 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
     }
     void Start()
     {
+        
         Song.Stop();
         thecomboManager = FindObjectOfType<ComboManager>();
         theEffectManager = FindObjectOfType<EffectManager>();
         theTimingManager = GetComponent<TimingManager>();
+        linaSkill.skillpossible = false;
     }
 
     void FixedUpdate()
     {
+        if (linaSkill != null) // Controller가 null이 아닌 경우, 즉 플레이어 컨트롤러가 존재할 때
+        {
+            linaSkill = FindObjectOfType<LinaSkill>(); // Scene에서 플레이어 컨트롤러를 찾아서 할당
+
+        }
         if (thePlayerController != null)
         {
             thePlayerController = FindObjectOfType<PlaayerController>();
@@ -95,6 +109,8 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         {
             if (currentTime >= beatInterval * 1.99f)
             {
+                AutoPanel.SetActive(true);
+                AutoPanelAnim.SetBool("isAutoPanel", true);
                 SpawnQNote();
                 autoBox.SetActive(true); // 자동시연을 위해 autobox 활성화
                 TextUpdate("Q를 눌러 상단의 적을 공격할 수 있어!");
@@ -115,6 +131,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         {
             if (currentTime >= beatInterval * 4f)
             {
+                AutoPanelAnim.SetBool("isAutoPanel", false);
                 autoBox.SetActive(false); 
                 messageBox.SetActive(false);
                 SpawnQNote();
@@ -153,6 +170,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         {
             if (currentTime >= beatInterval * 1.99f)
             {
+                AutoPanelAnim.SetBool("isAutoPanel", true);
                 SpawnWNote();
                 autoBox.SetActive(true); // 자동시연을 위해 autobox 활성화
                 TextUpdate("W를 눌러 중단의 적을 공격할 수 있어!");
@@ -173,6 +191,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         {
             if (currentTime >= beatInterval * 4f)
             {
+                AutoPanelAnim.SetBool("isAutoPanel", false);
                 messageBox.SetActive(false);
                 autoBox.SetActive(false);
                 SpawnWNote();
@@ -184,6 +203,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         {
             if (currentTime >= beatInterval * 4f)
             {
+                AutoPanelAnim.SetBool("isAutoPanel", true);
                 SpawnENote();
                 autoBox.SetActive(true); // 자동시연을 위해 autobox 활성화
                 TextUpdate("E를 눌러 하단의 적을 공격할 수 있어!");
@@ -204,6 +224,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         {
             if (currentTime >= beatInterval * 4f)
             {
+                AutoPanelAnim.SetBool("isAutoPanel", false);
                 messageBox.SetActive(false);
                 autoBox.SetActive(false);
                 SpawnENote();
@@ -242,6 +263,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         {
             if (currentTime >= beatInterval * 3f)
             {
+                AutoPanelAnim.SetBool("isAutoPanel", true);
                 SpawnQWNote();
                 autoBox.SetActive(true); // 자동시연을 위해 autobox 활성화
                 TextUpdate("QW를 눌러 상중단의 동시에 오는 적들을 공격할 수 있어!");
@@ -262,6 +284,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         {
             if (currentTime >= beatInterval * 4f)
             {
+                AutoPanelAnim.SetBool("isAutoPanel", false);
                 messageBox.SetActive(false);
                 autoBox.SetActive(false);
                 SpawnQWNote();
@@ -273,6 +296,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         {
             if (currentTime >= beatInterval * 4f)
             {
+                AutoPanelAnim.SetBool("isAutoPanel", true);
                 SpawnEWNote();
                 autoBox.SetActive(true); // 자동시연을 위해 autobox 활성화
                 TextUpdate("WE를 눌러 중하단의 동시에 오는 적들을 공격할 수 있어!");
@@ -293,6 +317,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         {
             if (currentTime >= beatInterval * 4f)
             {
+                AutoPanelAnim.SetBool("isAutoPanel", false);
                 messageBox.SetActive(false);
                 autoBox.SetActive(false);
                 SpawnEWNote();
@@ -302,32 +327,102 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         }
         else if (noteCount < 87)
         {
-            if (currentTime >= beatInterval * 8f)
+            if (currentTime >= beatInterval * 7f)
             {
+                AutoPanelAnim.SetBool("isAutoPanel", true);
                 SpawnSpaceNote();
                 autoBox.SetActive(true); // 자동시연을 위해 autobox 활성화
                 TextUpdate("QWE를 눌러 상중하단의 몰려오는 오는 적들을 공격할 수 있어!");
+                currentTime -= beatInterval * 7f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 110)
+        {
+            if (currentTime >= beatInterval * 0.1f)
+            {
+                SpawnSpaceNote();
+                currentTime -= beatInterval * 0.1f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 137)
+        {
+            if (currentTime >= beatInterval * 5.5f)
+            {
+                AutoPanelAnim.SetBool("isAutoPanel", false);
+                messageBox.SetActive(false);
+                autoBox.SetActive(false);
+                SpawnSpaceNote();
+                currentTime -= beatInterval * 0.1f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 138)
+        {
+            if (currentTime >= beatInterval * 15f)
+            {
+                AutoPanelAnim.SetBool("isAutoPanel", true);
+                linaSkill.skillpossible = true;
+                linaSkill.SkillOn();
+                TextUpdate("Space를 길게 꾹 눌러 스킬을 사용할 수 있어!");
+                currentTime -= beatInterval * 15f;
+                noteCount++;
+            }
+        }
+      
+        else if (noteCount < 160)
+        {
+            if (currentTime >= beatInterval * 4f)
+            {
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 161)
+        {
+            if (currentTime >= beatInterval * 2f)
+            {
+                currentTime -= beatInterval * 2f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 190)
+        {
+            if (currentTime >= beatInterval * 10f)
+            {
+                AutoPanelAnim.SetBool("isAutoPanel", false);
+                messageBox.SetActive(false);
+                SpawnRandomNote();
+                currentTime -= beatInterval * 0.2f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 191)
+        {
+            if (currentTime >= beatInterval * 18f)
+            {
+                TextUpdate("완벽해!");
+                currentTime -= beatInterval * 18f;
+                noteCount++;
+            }
+        }
+        else if (noteCount < 192)
+        {
+            if (currentTime >= beatInterval * 8f)
+            {
+                TextUpdate("수고했어!!");
                 currentTime -= beatInterval * 8f;
                 noteCount++;
             }
         }
-        else if (noteCount < 100)
+        else if (noteCount < 193)
         {
-            if (currentTime >= beatInterval * 0.2f)
+            if (currentTime >= beatInterval * 12f)
             {
-                SpawnSpaceNote();
-                currentTime -= beatInterval * 0.2f;
-                noteCount++;
-            }
-        }
-        else if (noteCount < 125)
-        {
-            if (currentTime >= beatInterval * 2f)
-            {
-                messageBox.SetActive(false);
-                autoBox.SetActive(false);
-                SpawnSpaceNote();
-                currentTime -= beatInterval * 0.2f;
+                currentTime -= beatInterval * 12f;
+                ClearPanel.SetActive(true);
                 noteCount++;
             }
         }

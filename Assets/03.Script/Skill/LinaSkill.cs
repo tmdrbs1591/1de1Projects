@@ -14,6 +14,7 @@ public class LinaSkill : MonoBehaviour
 
     [SerializeField] private float skillCoolTime = 0.5f;
     private float skillCurTime;
+    public bool skillpossible = true;
 
     void Start()
     {
@@ -23,9 +24,10 @@ public class LinaSkill : MonoBehaviour
 
     void Update()
     {
-        if (skillCurTime <= 0)
+        if (skillCurTime <= 0 )
         {
-            if (Input.GetKeyDown(KeyCode.Space)) // 나중에 키세팅 매니저에서 받아와서
+
+            if (Input.GetKeyDown(KeyCode.Space) && skillpossible)// 나중에 키세팅 매니저에서 받아와서
             {
                 SkillOn();
                 skillCurTime = skillCoolTime;
@@ -47,6 +49,7 @@ public class LinaSkill : MonoBehaviour
 
     public void SkillOn() // 스킬 온 버튼에서도 실행해야하기 때문에 public으로
     {
+       
         AudioManager.instance.PlaySound(transform.position, 13, Random.Range(1f, 1f), 1);// 오디오 재생
         AudioManager.instance.PlaySound(transform.position, 16, Random.Range(1f, 1f), 1);// 오디오 재생
         StartCoroutine(SkillCor());
