@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ReturntoPool : MonoBehaviour
 {
+    public string prefabsName;
     private void OnEnable()
     {
         StartCoroutine(ReturntoPools());
@@ -16,6 +17,6 @@ public class ReturntoPool : MonoBehaviour
     IEnumerator ReturntoPools()
     {
         yield return new WaitForSeconds(2f);
-        ObjectPool.ReturnToPool("NoteEffect", gameObject);
+        ObjectPool.ReturnToPool(prefabsName, gameObject);
     }
 }

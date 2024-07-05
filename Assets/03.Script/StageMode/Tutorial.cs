@@ -332,7 +332,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
                 AutoPanelAnim.SetBool("isAutoPanel", true);
                 SpawnSpaceNote();
                 autoBox.SetActive(true); // 자동시연을 위해 autobox 활성화
-                TextUpdate("QWE를 눌러 상중하단의 몰려오는 오는 적들을 공격할 수 있어!");
+                TextUpdate("QWE를 길게 꾹 눌러 상중하단의 몰려오는 오는 적들을 공격할 수 있어!");
                 currentTime -= beatInterval * 7f;
                 noteCount++;
             }
@@ -365,7 +365,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
                 AutoPanelAnim.SetBool("isAutoPanel", true);
                 linaSkill.skillpossible = true;
                 linaSkill.SkillOn();
-                TextUpdate("Space를 길게 꾹 눌러 스킬을 사용할 수 있어!");
+                TextUpdate("Space를 눌러 스킬을 사용할 수 있어!");
                 currentTime -= beatInterval * 15f;
                 noteCount++;
             }

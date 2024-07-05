@@ -111,7 +111,7 @@ public class TimingManager : MonoBehaviour
                                 ObjectPool.SpawnFromPool("NoteEffect2", child.position, Quaternion.identity);
 
                             }
-
+                           
                         }
                         // 노트 비활성화 및 리스트에서 제거
                         SetActiveRecursively(boxNoteList[i], false);

@@ -17201,11 +17201,11 @@ MonoBehaviour:
     poolName: AudioObject
     poolObject: {fileID: 708117791136189665, guid: b444c2fc411f8634280b8dc8959ab1ac, type: 3}
     parentObject: {fileID: 0}
-  - poolCount: 20
+  - poolCount: 50
     poolName: NoteEffect
     poolObject: {fileID: 1211301365084078, guid: ed6b8128683f4094f92b7a556760b26b, type: 3}
     parentObject: {fileID: 0}
-  - poolCount: 20
+  - poolCount: 50
     poolName: NoteEffect2
     poolObject: {fileID: 4099757707819287619, guid: 5d02dfa7892a9d549bf623270fed16ec, type: 3}
     parentObject: {fileID: 0}

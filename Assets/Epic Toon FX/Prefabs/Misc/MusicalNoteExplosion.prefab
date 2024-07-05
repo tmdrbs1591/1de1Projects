@@ -14601,3 +14601,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae7a993ca69e69c4fb4204badc9180b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabsName: NoteEffect
