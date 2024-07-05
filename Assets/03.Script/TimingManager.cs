@@ -103,12 +103,15 @@ public class TimingManager : MonoBehaviour
                             {
                                // Destroy(Instantiate(childEffectPrefab, child.position, Quaternion.identity, parentEffect.transform),2f);
                                 ObjectPool.SpawnFromPool("NoteEffect", child.position, Quaternion.identity);
+                                ObjectPool.SpawnFromPool("NoteEffect2", child.position, Quaternion.identity);
                             }
                             else
                             {
                                 Destroy(Instantiate(FeverchildEffectPrefab, child.position, Quaternion.identity, parentEffect.transform),2f);
+                                ObjectPool.SpawnFromPool("NoteEffect2", child.position, Quaternion.identity);
+
                             }
-                           
+
                         }
                         // 노트 비활성화 및 리스트에서 제거
                         SetActiveRecursively(boxNoteList[i], false);
