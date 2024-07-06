@@ -67,6 +67,75 @@ public class StageSoundChange : MonoBehaviour
         {
             audio.clip = songs[8];
         }
+
+
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.SecondTheFirstStage)
+        {
+            audio.clip = songs[1];
+        }
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.SecondTheSecondStage)
+        {
+            audio.clip = songs[2];
+        }
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.SecondTheThirdStage)
+        {
+            audio.clip = songs[3];
+        }
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.SecondThefourthStage)
+        {
+            audio.clip = songs[4];
+
+        }
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.SecondThefifthStage)
+        {
+            audio.clip = songs[5];
+        }
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.SecondTheSixthStage)
+        {
+            audio.clip = songs[6];
+        }
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.SecondTheSeventhStage)
+        {
+            audio.clip = songs[7];
+        }
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.SecondTheEighthStage)
+        {
+            audio.clip = songs[8];
+        }
+
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdTheFirstStage)
+        {
+            audio.clip = songs[1];
+        }
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdTheSecondStage)
+        {
+            audio.clip = songs[2];
+        }
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdTheThirdStage)
+        {
+            audio.clip = songs[3];
+        }
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdThefourthStage)
+        {
+            audio.clip = songs[4];
+
+        }
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdThefifthStage)
+        {
+            audio.clip = songs[5];
+        }
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdTheSixthStage)
+        {
+            audio.clip = songs[6];
+        }
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdTheSeventhStage)
+        {
+            audio.clip = songs[7];
+        }
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdTheEighthStage)
+        {
+            audio.clip = songs[8];
+        }
         else
         {
             PlaySong(0);

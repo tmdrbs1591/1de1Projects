@@ -447,7 +447,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
     }
     void SpawnRandomNote()
     {
-        int randomIndex = Random.Range(1, 5);
+        int randomIndex = Random.Range(1, 4);
         GameObject t_note = null;
         switch (randomIndex)
         {
@@ -461,9 +461,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
             case 3:
                 t_note = Instantiate(go3, tfNoteAppear.position, Quaternion.identity);
                 break;
-            case 4:
-                t_note = Instantiate(go7, tfNoteAppear.position, Quaternion.identity);
-                break;
+         
             default:
                 break;
         }

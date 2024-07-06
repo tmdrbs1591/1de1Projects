@@ -72,6 +72,16 @@ public class StageModeSoundManager : MonoBehaviour
         else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.SecondTheSixthStage) PlaySong(14);
         else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.SecondTheSeventhStage) PlaySong(15);
         else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.SecondTheEighthStage) PlaySong(16);
+
+
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdTheFirstStage) PlaySong(17);
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdTheSecondStage) PlaySong(18);
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdTheThirdStage) PlaySong(19);
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdThefourthStage) PlaySong(20);
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdThefifthStage) PlaySong(21);
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdTheSixthStage) PlaySong(22);
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdTheSeventhStage) PlaySong(23);
+        else if (StageModeStageManager.instance.currentStage == StageModeStageManager.Stage.ThirdTheEighthStage) PlaySong(24);
         else
         {
             PlaySong(0);

@@ -84,8 +84,13 @@ public class EditorManager : MonoBehaviour
     void Update()
     {
         if (Input.mouseScrollDelta.y != 0)
-            time += Mathf.Sign(Input.mouseScrollDelta.y) / 2; // 마우스 스크롤로 시간 조정
-          // 각 키 입력에 따라 노트 추가
+        {
+            float scrollAmount = Mathf.Sign(Input.mouseScrollDelta.y) / 2;
+            time += scrollAmount; // 마우스 스크롤로 시간 조정
+            audioSource.time = Mathf.Clamp(audioSource.time + scrollAmount, 0, audioSource.clip.length); // 오디오 시간 조정
+        }
+
+        // 각 키 입력에 따라 노트 추가
         if (Input.GetKeyDown(KeyCode.Q)) Add("Q");
         if (Input.GetKeyDown(KeyCode.W)) Add("W");
         if (Input.GetKeyDown(KeyCode.E)) Add("E");

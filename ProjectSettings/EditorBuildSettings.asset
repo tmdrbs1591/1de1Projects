@@ -24,6 +24,12 @@ EditorBuildSettings:
     path: Assets/06.Scenes/StagdeModeStage1.unity
     guid: f7972dbb05d69cc42a7dc0b67933d05f
   - enabled: 1
+    path: Assets/06.Scenes/StagdeModeStage2.unity
+    guid: 60f4a6b8484224e4f93f44814e3c695e
+  - enabled: 1
+    path: Assets/06.Scenes/StagdeModeStage3.unity
+    guid: 4bd033a3537252f4ba452cd9d7d4f558
+  - enabled: 1
     path: Assets/06.Scenes/TTitle.unity
     guid: 601ab60e403adb940a779a42b20a54ca
   - enabled: 1
