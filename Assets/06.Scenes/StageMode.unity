@@ -42751,7 +42751,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Iya Iya
+  m_text: ' Lian Ai Audio Navigation '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce1c39dc543a96344a5f67de96b2a367, type: 2}
   m_sharedMaterial: {fileID: 2952003651432021203, guid: ce1c39dc543a96344a5f67de96b2a367, type: 2}
@@ -42814,7 +42814,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -248.33185, w: 0}
+  m_margin: {x: 0, y: 0, z: -764.7736, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -44732,7 +44732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cDimage: {fileID: 690919870}
   cdSprites:
-  - {fileID: 21300000, guid: 3bdb5aa3db4096941b9a3f96b234cd3d, type: 3}
+  - {fileID: 21300000, guid: cfe53c09d7e0b24428ebfe4df4d9b9da, type: 3}
   - {fileID: 21300000, guid: e4ca72d55a1c1b54bb45e5124331ee18, type: 3}
   - {fileID: 21300000, guid: cfe53c09d7e0b24428ebfe4df4d9b9da, type: 3}
   - {fileID: 21300000, guid: 5f675bb121ec458418db92fd6416fffb, type: 3}

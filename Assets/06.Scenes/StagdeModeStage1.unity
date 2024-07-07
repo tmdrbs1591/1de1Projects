@@ -13273,8 +13273,8 @@ MonoBehaviour:
   WPanel: {fileID: 1427607492}
   EPanel: {fileID: 136425354}
   Death: 0
-  MaxHP: 15000
-  CurHP: 15000
+  MaxHP: 150
+  CurHP: 150
   appearPosition: {x: -6.2, y: -2.9}
   HpBar: {fileID: 1269317807}
   HpBar2: {fileID: 29881437}
