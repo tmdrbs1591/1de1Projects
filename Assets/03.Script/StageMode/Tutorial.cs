@@ -90,7 +90,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
             if (currentTime >= beatInterval * 5.4f)
             {
                 Song.Play();
-                TextUpdate("반가워!");
+                TextUpdate($"반가워,{UserInfo.Data.nickname}!") ;
                 currentTime -= beatInterval * 5.4f;
                 noteCount++;
             }
