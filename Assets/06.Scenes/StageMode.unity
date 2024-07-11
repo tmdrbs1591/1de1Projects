@@ -65538,8 +65538,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cDimage: {fileID: 954720604}
   cdSprites:
-  - {fileID: 21300000, guid: cfe53c09d7e0b24428ebfe4df4d9b9da, type: 3}
-  - {fileID: 21300000, guid: e4ca72d55a1c1b54bb45e5124331ee18, type: 3}
+  - {fileID: 21300000, guid: 5f675bb121ec458418db92fd6416fffb, type: 3}
+  - {fileID: 21300000, guid: 5f675bb121ec458418db92fd6416fffb, type: 3}
   - {fileID: 21300000, guid: cfe53c09d7e0b24428ebfe4df4d9b9da, type: 3}
   - {fileID: 21300000, guid: e4ca72d55a1c1b54bb45e5124331ee18, type: 3}
   - {fileID: 21300000, guid: ec76e1207731f6f4e90307c4b883e615, type: 3}
