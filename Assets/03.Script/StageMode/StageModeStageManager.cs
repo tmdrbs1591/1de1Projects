@@ -98,45 +98,21 @@ public class StageModeStageManager : MonoBehaviour
             }
             else if (currentStage == Stage.FirstTheThirdStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage1"));
             }
             else if (currentStage == Stage.FirstThefourthStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage1"));
             }
             else if (currentStage == Stage.FirstThefifthStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage1"));
             }
             else if (currentStage == Stage.FirstTheSixthStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage1"));
             }
             else if (currentStage == Stage.FirstTheSeventhStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage1"));
             }
             else if (currentStage == Stage.FirstTheEighthStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage1"));
             }
             else if (currentStage == Stage.SecondTheFirstStage)
             {
@@ -147,52 +123,24 @@ public class StageModeStageManager : MonoBehaviour
             }
             else if (currentStage == Stage.SecondTheSecondStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage2"));
             }
             else if (currentStage == Stage.SecondTheThirdStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage2"));
             }
             else if (currentStage == Stage.SecondThefourthStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage2"));
             }
             else if (currentStage == Stage.SecondThefifthStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage2"));
             }
             else if (currentStage == Stage.SecondTheSixthStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage2"));
             }
             else if (currentStage == Stage.SecondTheSeventhStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage2"));
             }
             else if (currentStage == Stage.SecondTheEighthStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage2"));
             }
             else if (currentStage == Stage.ThirdTheFirstStage)
             {
@@ -203,52 +151,24 @@ public class StageModeStageManager : MonoBehaviour
             }
             else if (currentStage == Stage.ThirdTheSecondStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage3"));
             }
             else if (currentStage == Stage.ThirdTheThirdStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage3"));
             }
             else if (currentStage == Stage.ThirdThefourthStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage3"));
             }
             else if (currentStage == Stage.ThirdThefifthStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage3"));
             }
             else if (currentStage == Stage.ThirdTheSixthStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage3"));
             }
             else if (currentStage == Stage.ThirdTheSeventhStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage3"));
             }
             else if (currentStage == Stage.ThirdTheEighthStage)
             {
-                AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
-
-                Fadein.SetActive(true);
-                StartCoroutine(SceneLate("StagdeModeStage3"));
             }
             else
             {

@@ -35,7 +35,7 @@ public class DiePanel : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Return))
         {
-            LoadingManager.LoadScene("Title");// Enter 키를 누르면 타이틀 씬으로 로드
+            LoadingManager.LoadScene("Menu");// Enter 키를 누르면 타이틀 씬으로 로드
         }
     }
 
