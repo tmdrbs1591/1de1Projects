@@ -22434,7 +22434,7 @@ MonoBehaviour:
   - Stage3
   - Stage3
   - Stage1
-  - Stage1
+  - Stage3-1
   - Stage3-2
   - Stage3-2
   - Stage1
@@ -28376,7 +28376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5f675bb121ec458418db92fd6416fffb, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -42751,7 +42751,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' Lian Ai Audio Navigation '
+  m_text: Jade Harmony
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce1c39dc543a96344a5f67de96b2a367, type: 2}
   m_sharedMaterial: {fileID: 2952003651432021203, guid: ce1c39dc543a96344a5f67de96b2a367, type: 2}
@@ -49135,7 +49135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1250561475
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50095,7 +50095,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Iya Iya
+  m_text: Ocean Breeze
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce1c39dc543a96344a5f67de96b2a367, type: 2}
   m_sharedMaterial: {fileID: 2952003651432021203, guid: ce1c39dc543a96344a5f67de96b2a367, type: 2}
@@ -71025,7 +71025,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8a5d7cbdbacfbbd46a53a16244a19493, type: 3}
   - {fileID: 8300000, guid: 8a5d7cbdbacfbbd46a53a16244a19493, type: 3}
   - {fileID: 8300000, guid: 8a5d7cbdbacfbbd46a53a16244a19493, type: 3}
-  - {fileID: 8300000, guid: 644c81ececab5e048b611abc540b0c8b, type: 3}
+  - {fileID: 8300000, guid: a3c38799888729748b7fc7c380ba2da3, type: 3}
   - {fileID: 8300000, guid: 0c5a6d0dbb6e2fa45b5b98661320f3b4, type: 3}
   - {fileID: 8300000, guid: 0c5a6d0dbb6e2fa45b5b98661320f3b4, type: 3}
   - {fileID: 8300000, guid: 0c5a6d0dbb6e2fa45b5b98661320f3b4, type: 3}

@@ -147,7 +147,7 @@ public class StageModeStageManager : MonoBehaviour
                 AudioManager.instance.PlaySound(transform.position, 2, Random.Range(1.0f, 1.0f), 1);
 
                 Fadein.SetActive(true);
-                StartCoroutine(SceneLate("Stage1"));
+                StartCoroutine(SceneLate("StagdeModeStage3"));
             }
             else if (currentStage == Stage.ThirdTheSecondStage)
             {
