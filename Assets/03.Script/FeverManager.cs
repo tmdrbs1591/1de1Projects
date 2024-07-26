@@ -63,7 +63,7 @@ public class FeverManager : MonoBehaviour
 
    public void StartFeverTime() // 피버타임을 시작하는 메서드
     {
-        AudioManager.instance.PlaySound(transform.position, 6, Random.Range(1f, 1f), 1);// 오디오 재생
+       // AudioManager.instance.PlaySound(transform.position, 6, Random.Range(1f, 1f), 1);// 오디오 재생
         feverTime = true; // 피버타임 시작
         feverSlider.value = 1f; // 초기값을 현재 값으로 설정
         StartCoroutine(FeverTime());// 피버타임 코루틴 시작

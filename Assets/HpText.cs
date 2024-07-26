@@ -19,6 +19,6 @@ public class HpText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hpText.text = thePlayerController.MaxHP.ToString() + "/" + thePlayerController.CurHP.ToString();
+        hpText.text = thePlayerController.CurHP.ToString();
     }
 }
