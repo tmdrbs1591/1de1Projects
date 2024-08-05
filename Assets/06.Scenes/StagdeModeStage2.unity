@@ -1803,12 +1803,12 @@ MonoBehaviour:
   Glitch: {fileID: 0}
   Flash: {fileID: 0}
   tfNoteAppear: {fileID: 1150853093}
-  go1: {fileID: 7274178576524805104, guid: 8e28fdd08ed09694bbe5e35bea12dae5, type: 3}
-  go2: {fileID: 7274178576524805104, guid: 2157e84cb9420224e937a4bff6829171, type: 3}
-  go3: {fileID: 7274178576524805104, guid: 719d27ca24bada34e992484c61ef62bb, type: 3}
-  go4: {fileID: 7274178576524805104, guid: 57614447847cb864cb099a1e1da494d9, type: 3}
-  go5: {fileID: 7274178576524805104, guid: aa474b92673ea2c449aa7ab01275485d, type: 3}
-  go6: {fileID: 7274178576524805104, guid: 11d2aa0af9817ab4f9613341c6ca4745, type: 3}
+  go1: {fileID: 7274178576524805104, guid: f4aaf5ff27c9f0841a8ed0b1b77aaae5, type: 3}
+  go2: {fileID: 7274178576524805104, guid: 7b3f0d251c3c2c74ab84123976365ac6, type: 3}
+  go3: {fileID: 7274178576524805104, guid: 1f56df9280b88b94d956e802d10b8fd3, type: 3}
+  go4: {fileID: 7274178576524805104, guid: b9f51f381fd85f24191826940d7f40d8, type: 3}
+  go5: {fileID: 7274178576524805104, guid: e3913640ddcade941aec1574ca915246, type: 3}
+  go6: {fileID: 9075277913583204845, guid: 426dbd2db7fe58e43b0a2145cf7a7a3d, type: 3}
   theTimingManager: {fileID: 0}
   theEffectManager: {fileID: 0}
   thecomboManager: {fileID: 0}
