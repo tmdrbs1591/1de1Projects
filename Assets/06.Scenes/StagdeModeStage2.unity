@@ -6654,7 +6654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d088cedbc4021254e9308f45b448b9e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Effect: {fileID: 562565535}
+  Effect: {fileID: 1110310441}
   feverSlider: {fileID: 562565538}
   feverThreshold: 1
   increaseScore: 10
@@ -11994,6 +11994,11 @@ PrefabInstance:
       addedObject: {fileID: 95931643}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 039f0809d882b7f44ac9a410a3f7fa26, type: 3}
+--- !u!1 &1110310441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 155770, guid: 039f0809d882b7f44ac9a410a3f7fa26, type: 3}
+  m_PrefabInstance: {fileID: 1110310440}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1132338004
 GameObject:
   m_ObjectHideFlags: 0

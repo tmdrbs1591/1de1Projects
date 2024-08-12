@@ -6410,7 +6410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d088cedbc4021254e9308f45b448b9e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Effect: {fileID: 535587021}
+  Effect: {fileID: 1110310441}
   feverSlider: {fileID: 535587024}
   feverThreshold: 1
   increaseScore: 10
@@ -12427,6 +12427,11 @@ PrefabInstance:
       addedObject: {fileID: 95931643}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 039f0809d882b7f44ac9a410a3f7fa26, type: 3}
+--- !u!1 &1110310441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 155770, guid: 039f0809d882b7f44ac9a410a3f7fa26, type: 3}
+  m_PrefabInstance: {fileID: 1110310440}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1132338004
 GameObject:
   m_ObjectHideFlags: 0
@@ -21231,7 +21236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songs:
   - {fileID: 8300000, guid: 0c5a6d0dbb6e2fa45b5b98661320f3b4, type: 3}
-  - {fileID: 8300000, guid: 7529e020aedbf6b439da983e94399a4c, type: 3}
+  - {fileID: 8300000, guid: 32d1037c4edb34c4b83eb9f2400fa9f9, type: 3}
   - {fileID: 8300000, guid: 5519f4e298af14f4e83d087afdc67fe0, type: 3}
   - {fileID: 8300000, guid: 51b31adeeb995164d9653e2d3f0f5ff2, type: 3}
   - {fileID: 8300000, guid: 4dfae81a19c6b6b469b7da84808fb635, type: 3}
