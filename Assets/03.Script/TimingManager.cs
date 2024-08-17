@@ -123,8 +123,8 @@ public class TimingManager : MonoBehaviour
 
                         // 콤보 증가, 점수 증가, 피버 상태 관리, 판정 기록 등 처리
                         theScoreManager.IncreaseScore(x);//점수증가
-                       
-                        if (Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.E))
+
+                       if ((Input.GetKey(KeySetting.keys[KeyAction.Q]) && Input.GetKey(KeySetting.keys[KeyAction.W]) && Input.GetKey(KeySetting.keys[KeyAction.E])))
                             return;
                             theFeverManager.IncreaseFever(x);//판정연출
                          judgmentRecord[x]++;//판정기록

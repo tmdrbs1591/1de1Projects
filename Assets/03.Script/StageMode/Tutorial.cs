@@ -365,6 +365,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
                 AutoPanelAnim.SetBool("isAutoPanel", true);
                 linaSkill.skillpossible = true;
                 linaSkill.SkillOn();
+                linaSkill.skillpossible = false;
                 TextUpdate("Space를 눌러 스킬을 사용할 수 있어!");
                 currentTime -= beatInterval * 15f;
                 noteCount++;
@@ -376,6 +377,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
             if (currentTime >= beatInterval * 4f)
             {
                 SpawnRandomNote();
+                StartCoroutine(SkilltrueCor());
                 currentTime -= beatInterval * 0.2f;
                 noteCount++;
             }
@@ -384,6 +386,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         {
             if (currentTime >= beatInterval * 2f)
             {
+
                 currentTime -= beatInterval * 2f;
                 noteCount++;
             }
@@ -598,5 +601,12 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         messageBox.SetActive(false);
         messageText.text = message;
         messageBox.SetActive(true);
+    }
+    IEnumerator SkilltrueCor()
+    {
+        yield return new WaitForSeconds(6f);
+        linaSkill.skillpossible = true;
+
+
     }
 }
