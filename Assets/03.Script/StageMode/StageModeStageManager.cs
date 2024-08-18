@@ -47,6 +47,9 @@ public class StageModeStageManager : MonoBehaviour
 
     [SerializeField] GameObject fixedPanel;
 
+    [SerializeField] GameObject GravityPanel;
+
+
     bool charpanel = false;
 
 
@@ -113,6 +116,9 @@ public class StageModeStageManager : MonoBehaviour
             }
             else if (currentStage == Stage.FirstTheEighthStage)
             {
+                GravityPanel.SetActive(true);  
+                Fadein.SetActive(true);
+                StartCoroutine(SceneLate("Stage5"));
             }
             else if (currentStage == Stage.SecondTheFirstStage)
             {
@@ -172,8 +178,9 @@ public class StageModeStageManager : MonoBehaviour
             }
             else
             {
+                GravityPanel.SetActive(false);
                 //AudioManager.instance.PlaySound(transform.position, 5, Random.Range(1.0f, 1.0f), 1);
-               // FixedPanel();
+                // FixedPanel();
             }
         }
 
