@@ -406,7 +406,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         {
             if (currentTime >= beatInterval * 18f)
             {
-                TextUpdate("완벽해!");
+                TextUpdate("수고했어!!");
                 currentTime -= beatInterval * 18f;
                 noteCount++;
             }
@@ -415,7 +415,7 @@ public class Tutorial : MonoBehaviour  // 코드 삭제 예정이라 주석 없음
         {
             if (currentTime >= beatInterval * 8f)
             {
-                TextUpdate("수고했어!!");
+                TextUpdate("이제 자유롭게 플레이 해봐~!");
                 currentTime -= beatInterval * 8f;
                 noteCount++;
             }
